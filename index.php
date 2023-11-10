@@ -5,10 +5,10 @@ include('include/header.php');
  ?>
   <style type="text/css">
   	.active-page {
-    background-color: #007bff;
+    background-color: #FF0000;
     color: #fff;
     border-radius: 50%;
-    border-color: #007bff;
+    border-color: #FF00AA;
 }
   </style>
     <div class="hero-wrap js-fullheight" style="background-image: url('images/bg_2.jpg');" data-stellar-background-ratio="0.5">

@@ -3,7 +3,7 @@ $page='blog';
 include('include/header.php');
 include('include/h-header.php');
  ?>
-<h1>hello im under the water</h1>
+
     <section class="ftco-section bg-light">
       <div class="container">
         <div class="row d-flex">
