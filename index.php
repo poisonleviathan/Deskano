@@ -11,7 +11,7 @@ include('include/header.php');
     border-color: #FF00AA;
 }
 
-<h2>Oshadha was here</h2>
+<h2>MoMo was here</h2>
   </style>
     <div class="hero-wrap js-fullheight" style="background-image: url('images/bg_2.jpg');" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
