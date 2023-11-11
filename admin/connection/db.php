@@ -1,4 +1,4 @@
 <?php
- $conn=mysqli_connect("localhost","root","","Deskano");
+ $conn=mysqli_connect("localhost","root","","deskano");
 
  ?>
