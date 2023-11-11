@@ -26,7 +26,7 @@
            <table id="example" class="display" style="width:100%">
         <thead>
             <tr>
-                <th>#SL</th>
+                <th>ID</th>
                
                 <th>Set 1</th>
                 <th>Set 2</th>
@@ -69,7 +69,7 @@
         </tbody>
         <tfoot>
             <tr>
-              <th>#SL</th>
+              <th>ID</th>
                
                 <th>Set 1</th>
                 <th>Set 2</th>

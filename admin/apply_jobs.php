@@ -26,16 +26,10 @@
            <table id="example" class="display" style="width:100%">
         <thead>
             <tr>
-                <th>#SL</th>
-               
-               
+                <th>Id</th>
                 <th>Job Title</th>
-               
-               
                 <th>Job Seeker Name</th>
                 <th>Job Seeker Email</th>
-                
-
                 <th>Action</th>
             </tr>
         </thead>
@@ -61,7 +55,7 @@ ON job_apply.id_job = all_jobs.job_id  where customer_email='{$_SESSION['email']
                 
                 <td><?php echo $row['job_seeker']; ?></td>
                 
-                <!-- <td><a href="http://localhost/job_portal/files/<?php echo $row['file']; ?>">Download File </a></td> -->
+                <!-- <td><a href="http://localhost/Deskano/files/<?php echo $row['file']; ?>">Download File </a></td> -->
                 
                  <td>
                     <div class="row">
@@ -77,7 +71,7 @@ ON job_apply.id_job = all_jobs.job_id  where customer_email='{$_SESSION['email']
         </tbody>
         <tfoot>
             <tr>
-                <th>#SL</th>
+                <th>ID</th>
                 <th>Job Title</th>
                 <th>Job Seeker Name</th>
                 <th>Job Seeker Email</th>

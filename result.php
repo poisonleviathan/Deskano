@@ -146,7 +146,7 @@ body {
         <p class="lead">Your Form Successfully Added!</p>
 
         <p class="lead">
-          <a href="http://localhost/job_portal"  class="btn btn-lg btn-secondary">Back</a>
+          <a href="http://localhost/Deskano"  class="btn btn-lg btn-secondary">Back</a>
         </p>
       </main>
 

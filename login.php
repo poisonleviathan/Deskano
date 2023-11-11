@@ -191,7 +191,7 @@
    if (mysqli_num_rows($query)>0) {
        
      $_SESSION['email']= $email;
-      echo "<script>window.location.href = 'http://localhost/job_portal'; </script>";
+      echo "<script>window.location.href = 'http://localhost/Deskano'; </script>";
    
    }else{
      echo "<script>alert('Email or password is  incorrect ,Please try again')</script>";
@@ -219,7 +219,7 @@
        
      $_SESSION['email']= $email;
    //   header('location:admin_dashboard.php');
-     echo "<script>window.location.href = 'http://localhost/job_portal/admin/admin_dashboard.php'; </script>";
+     echo "<script>window.location.href = 'http://localhost/Deskano/admin/admin_dashboard.php'; </script>";
    
    }else{
      echo "<script>alert('Email or password is  incorrect ,Please try again')</script>";

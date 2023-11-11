@@ -36,7 +36,7 @@ $info = mysqli_fetch_array($sql);
 <!-- Latest compiled JavaScript -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Job Portal</title>
+    <title>Deskano</title>
     <script type="text/javascript" src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.0.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
@@ -45,55 +45,6 @@ $info = mysqli_fetch_array($sql);
   color: black !important;
 }
 </style>
-
-<!-- link for jquery style -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-
-    <!-- link for bootstrap style -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-    <script src="assets/js/geodatasource-cr.js"></script>
-    <link rel="stylesheet" href="/country-region-dropdown-menu-master/assets/css/geodatasource-countryflag.css">
-
-    <!-- link for semantic-ui style -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js" integrity="sha512-dqw6X88iGgZlTsONxZK9ePmJEFrmHwpuMrsUChjAw1mRUhUITE5QU9pkcSox+ynfLhL15Sv2al5A0LVyDCmtUw==" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ==" crossorigin="anonymous" />
-
-    <!-- link to all languages po files -->
-    <link rel="gettext" type="application/x-po" href="/country-region-dropdown-menu-master/languages/ar/LC_MESSAGES/ar.po" />
-    <link rel="gettext" type="application/x-po" href="/country-region-dropdown-menu-master/languages/cs/LC_MESSAGES/cs.po" />
-    <link rel="gettext" type="application/x-po" href="/country-region-dropdown-menu-master/languages/da/LC_MESSAGES/da.po" />
-    <link rel="gettext" type="application/x-po" href="/country-region-dropdown-menu-master/languages/de/LC_MESSAGES/de.po" />
-    <link rel="gettext" type="application/x-po" href="/country-region-dropdown-menu-master/languages/en/LC_MESSAGES/en.po" />
-    <link rel="gettext" type="application/x-po" href="/country-region-dropdown-menu-master/languages/es/LC_MESSAGES/es.po" />
-    <link rel="gettext" type="application/x-po" href="/country-region-dropdown-menu-master/languages/fr/LC_MESSAGES/fr.po" />
-    <link rel="gettext" type="application/x-po" href="/country-region-dropdown-menu-master/languages/it/LC_MESSAGES/it.po" />
-    <link rel="gettext" type="application/x-po" href="/country-region-dropdown-menu-master/languages/ja/LC_MESSAGES/ja.po" />
-    <link rel="gettext" type="application/x-po" href="/country-region-dropdown-menu-master/languages/ko/LC_MESSAGES/ko.po" />
-    <link rel="gettext" type="application/x-po" href="/country-region-dropdown-menu-master/languages/ms/LC_MESSAGES/ms.po" />
-    <link rel="gettext" type="application/x-po" href="/country-region-dropdown-menu-master/languages/nl/LC_MESSAGES/nl.po" />
-    <link rel="gettext" type="application/x-po" href="/country-region-dropdown-menu-master/languages/pt/LC_MESSAGES/pt.po" />
-    <link rel="gettext" type="application/x-po" href="/country-region-dropdown-menu-master/languages/ru/LC_MESSAGES/ru.po" />
-    <link rel="gettext" type="application/x-po" href="/country-region-dropdown-menu-master/languages/sv/LC_MESSAGES/sv.po" />
-    <link rel="gettext" type="application/x-po" href="/country-region-dropdown-menu-master/languages/vi/LC_MESSAGES/vi.po" />
-    <link rel="gettext" type="application/x-po" href="/country-region-dropdown-menu-master/languages/zh-cn/LC_MESSAGES/zh-cn.po" />
-    <link rel="gettext" type="application/x-po" href="/country-region-dropdown-menu-master/languages/zh-tw/LC_MESSAGES/zh-tw.po" />
-
-    <script type="text/javascript" src="/country-region-dropdown-menu-master/assets/js/Gettext.js"></script>
-    <!-- amChart Resources -->
-    <script src="https://www.amcharts.com/lib/3/ammap.js"></script>
-
-    <style>
-       #chartdiv {
-          width: 100%;
-          height: 500px;
-       }	
-     </style>
-  </head>
 
 
 
