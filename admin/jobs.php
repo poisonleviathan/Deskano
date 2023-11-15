@@ -25,8 +25,7 @@
         <thead>
             
             <tr>
-                <th>#SL</th>
-               
+                <th>ID</th>
                 <th>Employer Email</th>
                 <th>Job Title</th>
                 <th>Description</th>
@@ -67,13 +66,13 @@
         </tbody>
         <tfoot>
             <tr>
-                 <th>#SL</th>
-                  <th>Admin name</th>
-                <th>Job Title</th>
-                <th>Description</th>
-                <th>Country</th>
-                <th>State</th>
-                <th>City</th>
+              <th>ID</th>
+              <th>Admin name</th>
+              <th>Job Title</th>
+              <th>Description</th>
+              <th>Country</th>
+              <th>State</th>
+              <th>City</th>
               <th>Action</th>
             </tr>
         </tfoot>

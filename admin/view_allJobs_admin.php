@@ -22,7 +22,8 @@
             <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="admin_dashboard.php">Dashoard</a></li>
-              <li class="breadcrumb-item"><a href="#">Jobs</a></li>
+              <li class="breadcrumb-item"><a href="jobs.php">Jobs</a></li>
+              <li class="breadcrumb-item"><a href="#">View job</a></li>
             
             </ol>
           </nav>

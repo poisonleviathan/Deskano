@@ -24,8 +24,7 @@
            <table id="example" class="display" style="width:100%">
         <thead>
             <tr>
-                <th>#SL</th>
-               
+                <th>ID</th>
                 <th>Company Name</th>
                 <th>Description</th>
                 <th>Admin</th>
@@ -60,18 +59,17 @@
         </tbody>
         <tfoot>
             <tr>
-                 <th>#SL</th>
-                  <th>Company Name</th>
+                <th>ID</th>
+                <th>Company Name</th>
                 <th>Description</th>
                 <th>Admin</th>
-                 <th>Action</th>
-            
+                <th>Action</th>
             </tr>
         </tfoot>
     </table>
 
 
-          <canvas class="my-4" id="myChart" width="900" height="380"></canvas>
+          <canvIDclass="my-4" id="myChart" width="900" height="380"></canvas>
           <div class="table-responsive">
             
           </div>

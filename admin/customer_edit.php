@@ -39,32 +39,32 @@ $id=$_GET['edit'];
              <form action="" method="post" style="margin:3%; padding: 3%;" name="customer_form" id="customer_form">
                  <div class="form-group">
                     <label for="Cutomer Email">Enter  Email</label>
-                    <input type="email" name="email" id="email"  value=" <?php echo $email; ?>" class="form-control" placeholder="Enter Cutomer Email">
+                    <input type="email" name="email" id="email"  value=" <?php echo $email ?>" class="form-control" placeholder="Enter Cutomer Email">
                  </div>
                     <div class="form-group">
                     <label for="Cutomer Username">Enter Username</label>
-                    <input type="text"  name="Username" value=" <?php echo $admin_username; ?>" id="Username" class="form-control" placeholder="Enter Cutomer Username">
+                    <input type="text"  name="Username" value=" <?php echo $admin_username ?>" id="Username" class="form-control" placeholder="Enter Cutomer Username">
                  </div>
                   <div class="form-group">
                     <label for="First name">Enter Password</label>
-                    <input type="pass"  name="Password" id="Password"  value=" <?php echo $admin_pass; ?>" class="form-control" placeholder="Enter Password">
+                    <input type="pass"  name="Password" id="Password"  value=" <?php echo $admin_pass ?>" class="form-control" placeholder="Enter Password">
                  </div>
                
                   <div class="form-group">
                     <label for="First name">Enter Fisrt Name</label>
-                    <input type="text" name="first_name" value=" <?php echo $first_name; ?>" id="first_name" class="form-control" placeholder="Enter first Name">
+                    <input type="text" name="first_name" value=" <?php echo $first_name ?>" id="first_name" class="form-control" placeholder="Enter first Name">
                  </div>
                   <div class="form-group">
                     <label for="Last name">Enter last Name</label>
-                    <input type="text"  name="last_name"  value=" <?php echo $last_name; ?>" id="last_name" class="form-control" placeholder="Enter first Name">
+                    <input type="text"  name="last_name"  value=" <?php echo $last_name ?>" id="last_name" class="form-control" placeholder="Enter first Name">
                  </div>
-                     <div class="form-group">
+                     <!-- <div class="form-group">
                     <label for="Admin Type">Admin Type</label>
-                    <select name="admin_type" name="admin_type"  value=" <?php echo $admin_type; ?>" class="form-control" id="admin_type">
-                      <!-- <option value="1"> Super Admin</option> -->
+                    <select name="admin_type" name="admin_type"  value=" <?php echo $admin_type ?>" class="form-control" id="admin_type">
+                      <option value="1"> Super Admin</option>
                       <option value="2"> Customer </option>
                     </select>
-                    </div>
+                    </div> -->
 
                     <input type="hidden" name="id" id="id" value= " <?php echo $_GET['edit']; ?>">
                       <div class="form-group">
@@ -125,9 +125,9 @@ $id=$_GET['edit'];
  	$admin_type=$_POST['admin_type'];
  	
 
-  $query1=mysqli_query($conn,"update admin_login  set admin_email='$email',admin_username='$Username', admin_pass='$Password', 	first_name='$first_name', last_name='$last_name',admin_type='$admin_type' where id='$id'");
+  $query1=mysqli_query($conn,"update admin_login  set admin_email='$email',admin_username='$Username', admin_pass='$Password', 	first_name='$first_name', last_name='$last_name' where id='$id'");
   if ($query1) {
-  	echo "<script>alert('Record has been Update successfully  !!!!')</script>";
+  	echo "<script>alert('Record has been Updated successfully  !!!!')</script>";
   }else{
   	echo "<script>alert('some error Please try again  !!!!')</script>";
   }

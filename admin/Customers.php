@@ -19,20 +19,19 @@
               <div class="btn-group mr-2">
                
               </div>
-              <a class="btn btn-primary" href="add_cutomer.php">Add Customer</a>
+              <a class="btn btn-primary" href="add_cutomer.php">Add an Admin</a>
             </div>
           </div>
 
            <table id="example" class="display" style="width:100%">
         <thead>
             <tr>
-                <th>#SL</th>
-               
+                <th>ID</th>
                 <th>Email</th>
                 <th>Username</th>
-                 <th>Fist Name</th>
-                  <th>last Name</th>
-                   <th>Action</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Action</th>
                
             </tr>
         </thead>
@@ -64,12 +63,12 @@
         </tbody>
         <tfoot>
             <tr>
-                 <th>#SL</th>
-                 <th>Email</th>
+                <th>ID</th>
+                <th>Email</th>
                 <th>Username</th>
-                 <th>Fist Name</th>
-                  <th>last Name</th>
-                     <th>Action</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Action</th>
             
             </tr>
         </tfoot>

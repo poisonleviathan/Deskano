@@ -4,7 +4,7 @@
  ?>
 <?php 
 include('connection/db.php');
- echo $edit= $_GET['edit'];
+$edit = $_GET['edit'];
 $query=mysqli_query($conn,"select * from  all_jobs where job_id='$edit'");
 // var_dump($query);
 while ($row=mysqli_fetch_array($query)) {
@@ -15,9 +15,6 @@ while ($row=mysqli_fetch_array($query)) {
  $City=$row['city'];
  $keyword=$row['keyword'];
 }
-
-
-
  ?>
   <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
             <nav aria-label="breadcrumb">
@@ -39,7 +36,7 @@ while ($row=mysqli_fetch_array($query)) {
           </div>
           <div style="width: 60%; margin-left: 20%; background-color: #F2F4F4;" >
             <div id="msg"></div>
-             <form action="job_edit.php" method="post" style="margin:3%; padding: 3%;" name="job_form" id="job_form">
+             <form action="" method="post" style="margin:3%; padding: 3%;" name="job_form" id="job_form">
                  <div class="form-group">
                     <label for="Cutomer Email">JOB Title</label>
                      <input type="text"  value="<?php echo $Title; ?> " name="job_title" id="job_title" class="form-control" placeholder="Enter Job Title  ">
@@ -49,8 +46,8 @@ while ($row=mysqli_fetch_array($query)) {
                     
                     <textarea name="Description" id="Description"  class="form-control" cols="30" rows="10"><?php echo $Description; ?></textarea>
                  </div>
-                 <input type="hidden" name="id" id="is" value="<?php echo $_GET['edit']; ?>">
-                                  <div class="form-group">
+                 <input type="hidden" name="id" id="id" value="<?php echo $_GET['edit']; ?>">
+                 <div class="form-group">
                     <label for="Cutomer Username">Enter Keyword</label>
                     
                    <input type="text" class="form-control" value="<?php echo $keyword; ?>" name="Keyword" id="Keyword" placeholder="Enter Keyword">
@@ -85,7 +82,7 @@ while ($row=mysqli_fetch_array($query)) {
                           $query=mysqli_query($conn,"select * from  job_category");
                            while ($row=mysqli_fetch_array($query)) {
                             ?>
-                              <option value="<?php echo $row['id'] ?>"><?php echo $row['category']; ?></option>
+                              <option value="<?php echo $row['id'] ?>"><?php echo $row['category'] ?></option>
                             <?php
                            }
                            ?>
@@ -94,11 +91,8 @@ while ($row=mysqli_fetch_array($query)) {
                   </div>
                       <div class="form-group">
                    
-                    <input type="submit" class="btn btn-block btn-success" placeholder="Save" name="submit" id="submit">
+                    <input type="submit" class="btn btn-block btn-success" placeholder="Save" name="submit" id="submit" >
                  </div>
-           
-
-
              </form>
 
 
@@ -236,45 +230,42 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $user_email = $_SESSION['email'];
 
     // Get the IDs for country, state, and city based on their names
-    $country_query = mysqli_query($conn, "SELECT name FROM countries WHERE id = '$country_name'");
-    $state_query = mysqli_query($conn, "SELECT name FROM states WHERE id = '$state_name'");
-    $city_query = mysqli_query($conn, "SELECT name FROM cities WHERE id = '$city_name'");
+    // $country_query = mysqli_query($conn, "SELECT name FROM countries WHERE id = '$country_name'");
+    // $state_query = mysqli_query($conn, "SELECT name FROM states WHERE id = '$state_name'");
+    // $city_query = mysqli_query($conn, "SELECT name FROM cities WHERE id = '$city_name'");
 
-    // Check if the queries were successful
-    // if ($country_query && $state_query && $city_query) {
-        // Fetch the names
-        $country_row = mysqli_fetch_assoc($country_query);
-        $state_row = mysqli_fetch_assoc($state_query);
-        $city_row = mysqli_fetch_assoc($city_query);
+    // // Check if the queries were successful
+    // // if ($country_query && $state_query && $city_query) {
+    //     // Fetch the names
+    //     $country_row = mysqli_fetch_assoc($country_query);
+    //     $state_row = mysqli_fetch_assoc($state_query);
+    //     $city_row = mysqli_fetch_assoc($city_query);
 
-        // Get the names
-        $country_name = $country_row['name'];
-        $state_name = $state_row['name'];
-        $city_name = $city_row['name'];
+    //     // Get the names
+    //     $country_name = $country_row['name'];
+    //     $state_name = $state_row['name'];
+    //     $city_name = $city_row['name'];
 
         // Update the database record
         $query = mysqli_query($conn, "UPDATE all_jobs SET
             job_title = '$job_title',
             des = '$description',
-            country = '$country_name',
-            state = '$state_name',
-            city = '$city_name',
+            -- country = '$country_name',
+            -- state = '$state_name',
+            -- city = '$city_name',
             category = '$category',
             Keyword = '$keyword'
             WHERE job_id = '$job_id'");
 
-        if ($query) {
-            // Data updated successfully
-            echo "Data updated successfully.";
-                header("Location: Job_create.php"); // Replace with the actual target page URL
-    exit;
-        } else {
-            // Error occurred while updating data
-            echo "Error: " . mysqli_error($conn);
-        }
+if ($query) {
+  echo "<script>alert('Record has been Updated successfully  !!!!')</script>";
+}else{
+  echo "<script>alert('some error Please try again  !!!!')</script>";
+}
     } else {
         // Error occurred while fetching names
         echo "Error: " . mysqli_error($conn);
+        header("Location: Job_create.php");
     }
 
     mysqli_close($conn); // Close the database connection
