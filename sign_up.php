@@ -143,8 +143,8 @@ if (empty($email) || empty($password) || empty($first_name) || empty($last_name)
             // Insert data into the database
             // $query = "INSERT INTO jobskeer (email, password, first_name, middle_name, last_name, dob, mobile_number, exp, college, anual_salery, status, qualification) VALUES ('$email', '$hashedPassword', '$first_name', '$middle_name', '$last_name', '$dob', '$mobile_number', '$experience', '$collegename', '$salary', 'Active', '$qualification')";
 
-            $conn1=mysqli_connect("localhost","root","","job_portal");
-            $conn2=mysqli_connect("localhost","root","","job_portal");
+            $conn1=mysqli_connect("localhost","root","","Deskano");
+            $conn2=mysqli_connect("localhost","root","","Deskano");
 
             $querry ="INSERT INTO profiles (name, dob, number, email, user_email) VALUES ('$first_name', '$dob', '$mobile_number', '$email', '$email')";
             $query = "INSERT INTO jobskeer (email, password, first_name, last_name, dob, mobile_number, status) VALUES ('$email', '$hashedPassword', '$first_name', '$last_name', '$dob', '$mobile_number', 'Active')";
@@ -201,7 +201,7 @@ if (empty($email) || empty($password) || empty($first_name) || empty($last_name)
                             } catch (Exception $e) {
                                 echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
                             }
-                echo "<script>window.location.href = 'http://localhost/job_portal'; </script>";
+                echo "<script>window.location.href = 'http://localhost/Deskano'; </script>";
             } else {
                 echo "<script>alert('Some Error Please Try Again!')</script>";
             }

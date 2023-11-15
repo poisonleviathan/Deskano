@@ -24,8 +24,7 @@
            <table id="example" class="display" style="width:100%">
         <thead>
             <tr>
-                <th>#SL</th>
-               
+                <th>ID</th>
                 <th>Category Name</th>
                 <th>Description</th>
                 <th>Action</th>
@@ -58,10 +57,10 @@
         </tbody>
         <tfoot>
             <tr>
-                 <th>#SL</th>
-                  <th>Category Name</th>
+                <th>ID</th>
+                <th>Category Name</th>
                 <th>Description</th>
-                 <th>Action</th>
+                <th>Action</th>
             
             </tr>
         </tfoot>

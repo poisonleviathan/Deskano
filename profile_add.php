@@ -192,7 +192,7 @@ if (!empty($sql_check)) {
        
 
         <p class="lead">
-          <a href="http://localhost/job_portal/my_profile.php"  class="btn btn-lg btn-secondary">Back</a>
+          <a href="http://localhost/Deskano/my_profile.php"  class="btn btn-lg btn-secondary">Back</a>
         </p>
       </main>
 
@@ -214,7 +214,7 @@ if (!empty($sql_check)) {
 
 <!--     <script type="text/javascript">
 function Redirect(){
-  window.location.href = ("http://localhost/job_portal");
+  window.location.href = ("http://localhost/Deskano");
 }
 document.write("Please wait you will be redirected in 10sec");
 setTimeout('Redirect(), 10000);

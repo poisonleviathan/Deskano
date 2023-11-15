@@ -113,7 +113,7 @@ if (empty($email) || empty($password) || empty($first_name) || empty($last_name)
                $query = "INSERT INTO employer(first_name, last_name, email, password, company_name, mobile, status) VALUES ('$first_name', '$last_name', '$email', '$hashedPassword', '$company_name', '$mobile_number', 'Active')";
                 if (mysqli_query($conn, $query)) {
                     echo "<script>alert('Your registration was successful! We will review your eligibility.')</script>";
-                    echo "<script>window.location.href = 'http://localhost/job_portal'; </script>";
+                    echo "<script>window.location.href = 'http://localhost/Deskano'; </script>";
                 } else {
                 echo "<script>alert('Some Error Please Try Again!')</script>";
             }

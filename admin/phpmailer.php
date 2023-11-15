@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $mail->Password = 'deskano1234';
         $mail->SMTPSecure = 'ssl';
         $mail->Port = 587;
-        $mail->setFrom($from, 'Learn Code Zone');
+        $mail->setFrom($from, 'Deskano');
         $mail->addAddress($to, 'Job Applicant');
         $mail->isHTML(true);
         $mail->Subject = 'Interview Call';

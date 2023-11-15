@@ -6,7 +6,7 @@
 include('connection/db.php');
 $query=mysqli_query($conn,"select * from  admin_login where admin_type='2'");
 // var_dump($query);
-  ?>
+  ?> 
 
   <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
             <nav aria-label="breadcrumb">

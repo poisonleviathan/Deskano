@@ -18,7 +18,7 @@ while ($row=mysqli_fetch_array($query)) {
 
 
 <?php
- $conn=mysqli_connect("localhost","root","","job_portal");
+ $conn=mysqli_connect("localhost","root","","Deskano");
 
 // Check connection
 if ($conn->connect_error) {

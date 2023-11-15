@@ -127,7 +127,7 @@ body {
 </head>
 <body>
 	<!--  <p class="lead">
-          <a href="http://localhost/job_portal"  class="btn btn-lg btn-secondary">Back</a>
+          <a href="http://localhost/Deskano"  class="btn btn-lg btn-secondary">Back</a>
         </p> -->
       
 <?php 
@@ -145,7 +145,7 @@ if ($query) {
  ?>
     <br><br><br><br><br><br><br>
     <p class="lead">
-          <a href="http:/job_portal/admin/apply_jobs.php"  class="btn btn-lg btn-secondary">Back</a>
+          <a href="http:/Deskano/admin/apply_jobs.php"  class="btn btn-lg btn-secondary">Back</a>
         </p>
       </main>
 
@@ -159,7 +159,7 @@ if ($query) {
      <script> 
       window.setTimeout(function(){
       
-        window.location.href = 'http:/job_portal/admin/apply_jobs.php';
+        window.location.href = 'http:/Deskano/admin/apply_jobs.php';
 
     }, 5000);
 

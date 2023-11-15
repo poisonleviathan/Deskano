@@ -103,7 +103,7 @@
 
            <div class="form-group">
                 <label style="color: #1F618D; font-size: 15px" >Job Seeker File :</label>
-                <p  style="font-size: 13px" ><a href="http://localhost/job_portal/files/<?php echo $row['file']; ?>">Download File </a></p>
+                <p  style="font-size: 13px" ><a href="http://localhost/Deskano/files/<?php echo $row['file']; ?>">Download File </a></p>
            </div> <hr>   
 
 
