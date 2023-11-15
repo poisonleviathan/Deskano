@@ -28,7 +28,7 @@
               <li class="nav-item">
                 <a class="nav-link" href="Customers.php">
                    <i class="fa fa-users" aria-hidden="true"></i>
-                  Customers
+                  Admins
                 </a>
               </li>
               <li class="nav-item">
@@ -78,9 +78,6 @@
             </ul>
           </div>
         </nav>
-
-
-
 <?php 
   }else if(mysqli_num_rows($sql)>0){
  ?>

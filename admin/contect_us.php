@@ -24,8 +24,7 @@
            <table id="example" class="display" style="width:100%">
         <thead>
             <tr>
-                <th>#SL</th>
-               
+                <th>ID</th>
                 <th>Email</th>
                 <th>Name</th>
                 <th>Subject</th>
@@ -67,13 +66,12 @@
         </tbody>
         <tfoot>
             <tr>
-                 <th>#SL</th>
+                <th>ID</th>
                 <th>Email</th>
                 <th>Name</th>
                 <th>Subject</th>
                 <th>Message</th>
                 <th>Action</th>
-            
             </tr>
         </tfoot>
     </table>

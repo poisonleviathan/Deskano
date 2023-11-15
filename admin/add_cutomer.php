@@ -7,7 +7,7 @@
             <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="admin_dashboard.php">Dashoard</a></li>
-              <li class="breadcrumb-item"><a href="Customers.php">Customers</a></li>
+              <li class="breadcrumb-item"><a href="Customers.php">Admins</a></li>
               <li class="breadcrumb-item"><a href="#">Add Admin</a></li>
             
             </ol>
@@ -25,25 +25,25 @@
             <div id="msg"></div>
              <form action="" method="post" style="margin:3%; padding: 3%;" name="customer_form" id="customer_form">
                  <div class="form-group">
-                    <label for="Cutomer Email">Enter  Email</label>
-                    <input type="email" name="email" id="email" class="form-control" placeholder="Enter Cutomer Email">
+                    <label for="Cutomer Email">Enter Email</label>
+                    <input type="email" name="email" id="email" class="form-control" placeholder="Enter Admin Email" require>
                  </div>
                     <div class="form-group">
                     <label for="Cutomer Username">Enter Username</label>
-                    <input type="text"  name="Username" id="Username" class="form-control" placeholder="Enter Cutomer Username">
+                    <input type="text"  name="Username" id="Username" class="form-control" placeholder="Enter Admin Username" require>
                  </div>
                   <div class="form-group">
                     <label for="First name">Enter Password</label>
-                    <input type="pass"  name="Password" id="Password" class="form-control" placeholder="Enter Password">
+                    <input type="pass"  name="Password" id="Password" class="form-control" placeholder="Enter Password" require>
                  </div>
                
                   <div class="form-group">
-                    <label for="First name">Enter Fisrt Name</label>
-                    <input type="text" name="first_name" id="first_name" class="form-control" placeholder="Enter first Name">
+                    <label for="First name">Enter First Name</label>
+                    <input type="text" name="first_name" id="first_name" class="form-control" placeholder="Enter first Name" require>
                  </div>
                   <div class="form-group">
                     <label for="Last name">Enter last Name</label>
-                    <input type="text"  name="last_name" id="last_name" class="form-control" placeholder="Enter first Name">
+                    <input type="text"  name="last_name" id="last_name" class="form-control" placeholder="Enter last Name" require>
                  </div>
                   <!-- <div class="form-group">
                     <label for="Admin Type">Admin Type</label>
@@ -56,12 +56,7 @@
                    
                     <input type="submit" class="btn btn-block btn-success" placeholder="Save" name="submit" id="submit">
                  </div>
-           
-
-
              </form>
-
-
           </div>
 
           <canvas class="my-4" id="myChart" width="900" height="380"></canvas>
@@ -102,7 +97,6 @@
         var Password=$("#Password").val();
         var first_name=$("#first_name").val();
         var last_name=$("#last_name").val();
-        var admin_type=$("#admin_type").val();
         var data= $("#customer_form").serialize();
 
          $.ajax({

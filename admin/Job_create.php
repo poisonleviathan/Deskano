@@ -26,7 +26,7 @@
            <table id="example" class="display compact" style="width:100%">
         <thead>
             <tr>
-                <th>#SL</th>
+                <th>ID</th>
                 <th>Admin E-mail</th>
                 <th>Job Title</th>
                 <th>Country</th>
@@ -48,7 +48,6 @@
             	<td><?php echo $i; ?></td>
                 <td><?php echo $row['customer_email']; ?></td>
                 <td><?php echo $row['job_title']; ?></td>
-              
                 <td><?php echo $row['country']; ?></td>
                 <td><?php echo $row['state']; ?></td>
                 <td><?php echo $row['city']; ?></td>
@@ -66,7 +65,7 @@
         </tbody>
         <tfoot>
             <tr>
-                <th>#SL</th>
+                <th>ID</th>
                 <th>Admin name</th>
                 <th>Job Title</th>
                 <th>Country</th>
