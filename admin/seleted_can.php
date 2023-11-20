@@ -24,16 +24,13 @@
            <table id="example" class="display" style="width:100%">
         <thead>
             <tr>
-                <th>#SN</th>
-               
+                <th>ID</th>
                 <th>Email</th>
                 <th>Name</th>
                 <th>Experience</th>
                 <th>Mobile</th>
                 <th>College</th>
                 <th>Company</th>
-               
-
             </tr>
         </thead>
         <tbody>
@@ -76,7 +73,7 @@
         </tbody>
         <tfoot>
             <tr>
-                 <th>#SL</th>
+                 <th>ID</th>
                  <th>Email</th>
                 <th>Name</th>
                 <th>Experience</th>

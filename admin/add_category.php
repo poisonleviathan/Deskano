@@ -7,7 +7,7 @@
             <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="admin_dashboard.php">Dashoard</a></li>
-              <li class="breadcrumb-item"><a href="category.php">Categopry</a></li>
+              <li class="breadcrumb-item"><a href="category.php">Category</a></li>
               <li class="breadcrumb-item"><a href="#">Add Category</a></li>
             
             </ol>
@@ -33,19 +33,11 @@
                     
                     <textarea name="Description" id="Description"  class="form-control" cols="30" rows="10"></textarea>
                  </div>
-                 
-
-                  
                       <div class="form-group">
                    
                     <input type="submit" class="btn btn-block btn-success" placeholder="Save" name="submit" id="submit">
                  </div>
-           
-
-
              </form>
-
-
           </div>
 
           <canvas class="my-4" id="myChart" width="900" height="380"></canvas>
@@ -88,7 +80,7 @@
             return false;
               }
 
-             if (category=='') {
+          if (category=='') {
             alert("Please Enter Category Name !!");
             return false;
               }
@@ -100,7 +92,7 @@
                 url:"category_add.php",
                 data:data,
                 success:function(data){
-                 alert(data);
+                alert(data);
                 }
           });
      });

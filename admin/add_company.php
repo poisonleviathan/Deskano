@@ -4,7 +4,7 @@
  ?>
  <?php 
 include('connection/db.php');
-$query=mysqli_query($conn,"select * from  admin_login where admin_type='2'");
+$query=mysqli_query($conn,"select * from  admin_login where admin_email = '".$_SESSION['email']."'");
 // var_dump($query);
   ?> 
 
@@ -39,26 +39,17 @@ $query=mysqli_query($conn,"select * from  admin_login where admin_type='2'");
                     <textarea name="Description" id="Description"  class="form-control" cols="30" rows="10"></textarea>
                  </div>
                  
-               <div class="form-group">
+                <div class="form-group">
                     <label for="Cutomer Username">Select Company Admin</label>
-                    
-                  <select name="admin" class="form-control" id="admin">
-                     <?php 
-                      while ($row=mysqli_fetch_array($query)) { ?>
-                        <option value="<?php echo $row['admin_email']; ?>"><?php echo $row['admin_email']; ?> </option>
-                        
+                    <?php 
+                    while ($row=mysqli_fetch_array($query)) { ?>
+                  <input name="admin" class="form-control" id="admin" value="<?php echo $_SESSION['email'] ?>" readonly>
                   <?php    }   ?>
-                  </select>
-                 </div>
+                </div>
                  
-                  
-                      <div class="form-group">
-                   
-                    <input type="submit" class="btn btn-block btn-success" placeholder="Save" name="submit" id="submit">
-                 </div>
-           
-
-
+                <div class="form-group">
+                  <input type="submit" class="btn btn-block btn-success" placeholder="Save" name="submit" id="submit">
+                </div>
              </form>
 
 

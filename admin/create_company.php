@@ -36,7 +36,7 @@
         <?php 
          include('connection/db.php');
 
-        $query=mysqli_query($conn,"select * from  company");
+        $query=mysqli_query($conn,"SELECT * FROM  company WHERE admin = '".$_SESSION['email']."'");
         while($row=mysqli_fetch_array($query)){
         ?>
                     

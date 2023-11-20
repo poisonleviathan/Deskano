@@ -58,38 +58,20 @@ $query=mysqli_query($conn,"select * from  job_category");
                       </select>
                   </div> -->
 
-                  <div class="container">
-                      <div class="row">
-                          <div class="col-md-12 text-center" >
-                          </div>
-                          <div class="col-md-12">
-                                  <form class="form-horizontal">
-                                      <div class="form-group">
-                                          <label class="col-sm-2 control-label">Country</label>
-                                          <div class="col-sm-10">
-                                              <select class="form-control gds-cr" country-data-region-id="gds-cr-one" data-language="en"></select>
-                                          </div>
-                                      </div>
-                                      <div class="form-group">
-                                          <label for="gds-cr-one" class="col-sm-2 control-label">Region</label>
-                                          <div class="col-sm-10">
-                                              <select class="form-control" id="gds-cr-one"></select><br>
-                                              <div id="chartdiv"></div>
-                                          </div>
-                                      </div>
-                                  </form>
-                          </div>
-                      </div>
-                  </div>
-
-
                   <div class="form-group">
-                    <label for="">City</label>
-                         <select name="city" class="cities form-control" id="cityId">
-                              <option value="">Select City</option>
-                          </select>
+                    <div class="form-group">
+                        <label for="">Country</label>
+                        <select name="country" class="form-control gds-cr" id="countryId" country-data-region-id="gds-cr-one" data-language="en"></select>
+                    </div>
+                    <div class="form-group">
+                        <label for="gds-cr-one">Region/Province</label>
+                        <select name="state" class="form-control" id="gds-cr-one"></select>
+                    </div>
                   </div>
-                 
+                  <div class="form-group">
+                    <label for="city">City</label>
+                     <input type="text"  name="city" id="cityId" class="form-control" placeholder="Enter Your City">
+                 </div>
 
                   <div class="form-group">
                     <label for="">Select Category</label>
@@ -109,12 +91,7 @@ $query=mysqli_query($conn,"select * from  job_category");
                    
                     <input type="submit" class="btn btn-block btn-success" placeholder="Save" name="submit" id="submit">
                  </div>
-           
-
-
              </form>
-
-
           </div>
 
           <canvas class="my-4" id="myChart" width="900" height="380"></canvas>
@@ -154,7 +131,7 @@ $query=mysqli_query($conn,"select * from  job_category");
         alert(Description);
         var job_title=$("#job_title").val();
         var countryId=$("#countryId").val();
-        var stateId=$("#stateId").val();
+        var stateId=$("#gds-cr-one").val();
         var cityId=$("#cityId").val();
 
           if (job_title=='') {
@@ -168,13 +145,13 @@ $query=mysqli_query($conn,"select * from  job_category");
             // alert("Please Select Country !!");
             // return false;
             //   }
-            //         if (stateId=='') {
+            //         if (gds-cr-one=='') {
             // alert("Please Select State !!");
             // return false;
             //   }
 
             //  if (cityId=='') {
-            // alert("Please Select City !!");
+            // alert("Please Enter City !!");
             // return false;
             //   }
 
@@ -283,7 +260,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $state_id = $state_row['name'];
         $city_id = $city_row['name'];
 
-        $query = mysqli_query($conn, "INSERT INTO all_jobs (customer_email, job_title, des, category, Keyword) VALUES ('$user_email', '$job_title', '$description', '$category', '$keyword')");
+        $query = mysqli_query($conn, "INSERT INTO all_jobs (customer_email, job_title, des, category, Keyword, country, state, city) VALUES ('$user_email', '$job_title', '$description', '$category', '$keyword', '$country_name', '$state_name', '$city_name')");
 
         if ($query) {
             // Data inserted successfully

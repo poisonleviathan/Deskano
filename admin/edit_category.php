@@ -8,7 +8,7 @@ $id=$_GET['edit'];
  $query= mysqli_query($conn,"select * from job_category where id = '$id'");
  while ($row=mysqli_fetch_array($query)) {
  	 $category=$row['category'];
- 	 $des=$row['category_des'];
+ 	 $des=$row['des'];
  	
  }
 
@@ -17,8 +17,8 @@ $id=$_GET['edit'];
             <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="admin_dashboard.php">Dashoard</a></li>
-              <li class="breadcrumb-item"><a href="category.php">Company</a></li>
-              <li class="breadcrumb-item"><a href="#">Update Company</a></li>
+              <li class="breadcrumb-item"><a href="category.php">Category</a></li>
+              <li class="breadcrumb-item"><a href="#">Update Category</a></li>
             
             </ol>
           </nav>
@@ -36,28 +36,17 @@ $id=$_GET['edit'];
              <form action="" method="post" style="margin:3%; padding: 3%;" name="customer_form" id="customer_form">
                  <div class="form-group">
                     <label for="Cutomer Email">Enter  Category Name</label>
-                    <input type="Company" name="category" id="category"  value=" <?php echo $category; ?>" class="form-control" placeholder="Enter company name">
+                    <input type="Company" name="category" id="category"  value="<?php echo $category ?>" class="form-control" placeholder="Enter company name">
                  </div>
                     <div class="form-group">
                     <label for="Cutomer Username">Enter Description</label>
-                    <textarea name="des" id="des" class="form-control" cols="30" rows="10">
-                      <?php echo $des; ?>
-                    </textarea>
+                    <textarea name="des" id="des" class="form-control" cols="30" rows="10"><?php echo $des ?></textarea>
                  </div>
-                 
-               
-                  
-                 
-                 
-
-                    <input type="hidden" name="id" id="id" value= " <?php echo $_GET['edit']; ?>">
+                    <input type="hidden" name="id" id="id" value= "<?php echo $_GET['edit']; ?>">
                       <div class="form-group">
                    
                     <input type="submit" class="btn btn-block btn-success" placeholder="Update" name="submit" id="submit">
                  </div>
-           
-
-
              </form>
 
 

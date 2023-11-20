@@ -63,7 +63,7 @@
                 <a class="nav-link" href="JobSkeers_auth.php">
                 <i class="fa fa-users" aria-hidden="true"></i>
 
-                 JobSeekers
+                 Employees
                 </a>
               </li>
 

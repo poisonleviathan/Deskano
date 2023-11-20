@@ -56,7 +56,7 @@
                     <div class="row">
                        <div  class="btn-group">
                           <a href="job_edit.php?edit=<?php echo $row['job_id'];  ?>" class="btn btn-success"><span class="fa fa-pencil"></span> </a>
-                           <a href="job_delete.php?del=<?php echo $row['job_id'];  ?>" class="btn btn-danger"><span class="fa fa-trash"></span> </a>
+                          <a href="job_delete.php?del=<?php echo $row['job_id'];  ?>" class="btn btn-danger"><span class="fa fa-trash"></span> </a>
                        </div>
                     </div>
                  </td>
