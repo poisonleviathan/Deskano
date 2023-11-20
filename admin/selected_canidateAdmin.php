@@ -12,16 +12,10 @@
             </ol>
           </nav>
           <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
-       <h1 class="h2">Selected JobSeekers List </h1>
-            <div class="btn-toolbar mb-2 mb-md-0">
-              <div class="btn-group mr-2">
-               
-              </div>
-              <a class="btn btn-primary" href="add_company.php">Add Company</a>
-            </div>
+            <h1 class="h2">Selected Candidates' List </h1>
           </div>
 
-          <table id="example" class="display" style="width:100%">
+    <table id="example" class="display" style="width:100%">
         <thead>
             <tr>
                 <th>ID</th>
@@ -31,8 +25,6 @@
                 <th>Mobile</th>
                 <th>College</th>
                 <th>Company</th>
-               
-
             </tr>
         </thead>
         <tbody>
@@ -68,8 +60,6 @@
                <td><?php echo $GetCompany['company']; ?></td>
                
             
-             
-                 <!--  -->
             </tr>
           <?php $i++; }  ?>
         </tbody>

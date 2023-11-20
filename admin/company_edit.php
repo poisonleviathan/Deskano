@@ -7,8 +7,9 @@
 $id=$_GET['edit'];
  $query= mysqli_query($conn,"select * from company where company_id = '$id'");
  while ($row=mysqli_fetch_array($query)) {
- 	 $company_name=$row['company'];
- 	 $des=$row['des'];
+ 	 $company_name = $row['company'];
+ 	 $des = $row['des'];
+   $email = $row['admin'];
  	
  }
 
@@ -46,28 +47,14 @@ $id=$_GET['edit'];
                   <div type="hidden" class="form-group">
                     <label for="Cutomer Username">Select Company Admin</label>
                     
-                  <select type="hidden" name="admin" class="form-control" id="admin">
-                     <?php 
-                     include('connection/db.php');
-                       $sql=mysqli_query($conn,"select * from  admin_login where admin_type='2'");
-                      while ($row=mysqli_fetch_array($sql)) { ?>
-                        <option value="<?php echo $row['admin_email']; ?>"><?php echo $row['admin_email'] ?> </option>
-                        
-                  <?php    }   ?>
-                  </select>
+                    <input name="admin" class="form-control" id="admin" value="<?php echo $email ?>" readonly>
                  </div>
-                  
-                 
-                 
 
                     <input type="hidden" name="id" id="id" value= " <?php echo $_GET['edit']; ?>">
                       <div class="form-group">
                    
                     <input type="submit" class="btn btn-block btn-success" placeholder="Update" name="submit" id="submit">
                  </div>
-           
-
-
              </form>
 
 

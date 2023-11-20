@@ -4,6 +4,7 @@
  ?>
   <?php 
   $sql= "select * from all_jobs LEFT JOIN employer ON all_jobs.customer_email=employer.email LEFT JOIN job_category ON all_jobs.category=job_category.id where job_id=".$_GET['id'];
+  $sql1= "select * from all_jobs where job_id=".$_GET['id'];
 
    $query=mysqli_query($conn,$sql);
     while($row=mysqli_fetch_array($query)){ 
@@ -12,10 +13,14 @@
       $comapany_name= $row['company_name'];
       $comapany_email= $row['customer_email'];
       $job_title= $row['job_title'];
-      $des= $row['des'];
-      $address= $row['city']." ". $row['state']." ". $row['country'];
+      $address= $row['city'].", ". $row['state'].", ". $row['country'];
       $category= $row['category'];
-    } ?>
+    }
+    
+    $query1=mysqli_query($conn,$sql1);
+    while($row=mysqli_fetch_array($query1)){
+      $des= $row['des'];
+    }?>
 
 
   <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
@@ -39,8 +44,6 @@
 
 
     <div class="col-lg-12">
-
-
 
 
     	 <table id="example" class="display" style="width:100%">
@@ -93,12 +96,7 @@
 
     	 </table>
     	
-
-    
-
     </div>
-
-      
 
       </main>    
          </div>

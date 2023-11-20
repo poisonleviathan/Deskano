@@ -7,18 +7,12 @@
             <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="admin_dashboard.php">Dashoard</a></li>
-              <li class="breadcrumb-item"><a href="#">JobSeekers</a></li>
+              <li class="breadcrumb-item"><a href="#">Employees</a></li>
             
             </ol>
           </nav>
           <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
-       <h1 class="h2">JobSeekers List </h1>
-            <div class="btn-toolbar mb-2 mb-md-0">
-              <div class="btn-group mr-2">
-               
-              </div>
-              <a class="btn btn-primary" href="add_company.php">Add Company</a>
-            </div>
+            <h1 class="h2">Employee List </h1>
           </div>
 
            <table id="example" class="display" style="width:100%">
