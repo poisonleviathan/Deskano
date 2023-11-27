@@ -59,7 +59,6 @@
                   </label>
                   </div> -->
                   <button class="btn btn-lg btn-primary btn-block"  name="employersubmit" type="submit" >Login</button>
-               <!-- <input class="btn btn-lg btn-primary btn-block" type="submit"  name="employersubmit" placeholder="sign in"> -->
                <a href="employer_sign_up.php">Create an Account</a>
               
             </form>
@@ -144,7 +143,7 @@
       <div class="row">
          <div class="col-md-12 text-center">
             <p>
-               Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This Website is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://learncodezone.com" target="_blank">Learn Code Zone</a>
+               Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This Website is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by Deskano Official Team</a>
             </p>
          </div>
       </div>

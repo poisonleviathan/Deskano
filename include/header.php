@@ -5,7 +5,7 @@ error_reporting(0);
  $header=mysqli_query($conn,"select * from profiles where user_email='{$_SESSION['email']}'");
  while ($row=mysqli_fetch_array($header)) {
   $img=$row['img'];
-  $name=$row['name'];
+  $name=$row['first_name'];
  }
  ?>
 <!DOCTYPE html>
@@ -53,7 +53,7 @@ error_reporting(0);
     
 	  <nav class="navbar navbar-expand-lg navbar-light ftco_navbar  ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
-	      <a class="navbar-brand" href="index.php">Job Portal</a>
+	      <a class="navbar-brand" href="index.php">DESKANO</a>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
 	      </button>
@@ -75,7 +75,7 @@ error_reporting(0);
               <li  class="nav-item ">
 
             <div class="dropdown">
-               <img src="profile_img/<?php if(empty($img)){echo "logo.png";}else{ echo $img;} ?>" class="img-circle dropdown-toggle" type="button" data-toggle="dropdown" alt="Cinque Terre" width="50" height="50">
+               <img src="profile_img/<?php if(empty($img)){echo "logo.png";}else{ echo $img;} ?>" class="img-circle dropdown-toggle" type="button" data-toggle="dropdown" alt="Profile picture" width="50" height="50">
                <ul class="dropdown-menu">
                 <li><a href="my_profile.php">My Profile</a></li>
                  <li ><a href="logout.php" >logout</a></li>

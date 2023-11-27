@@ -5,7 +5,7 @@
   $query=mysqli_query($conn,"delete from admin_login where id ='$del'");
   if ($query) {
   	 echo "<script>alert('Record has been successfully Deleted !!!!')</script>";
-  	 header('location:Customers.php');
+  	 header('location:SuperCustomer.php');
   }else{
   	echo "<script>alert('Record has been successfully Deleted !!!!')</script>";
   }

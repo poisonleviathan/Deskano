@@ -7,8 +7,7 @@
  <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
             <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="admin_dashboard.php">Dashoard</a></li>
-              <li class="breadcrumb-item"><a href="#">Jobs</a></li>
+              <li class="breadcrumb-item"><a href="admin_dashboard.php">Dashboard</a></li>
             
             </ol>
           </nav>

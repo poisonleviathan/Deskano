@@ -1,7 +1,7 @@
 <?php 
    $page='home';
    include('include/header.php');
-   
+   $conn=mysqli_connect("localhost","root","","deskano");
     ?>
     <section class="ftco-about d-md-flex"></section>
     <div class="container" style="padding-top: 8%;">
@@ -14,15 +14,11 @@
                 <form class="signup-form" action="sign_up.php" method="post">
                     <h1>Job Seekers Sign Up</h1>
                     <div class="row" style="margin-bottom:9px">
-                        <div class="col-lg-4 col-md-4 col-sm-12">
+                        <div class="col-sm-12 col-lg-6 col-md-6">
                             <label for="first_name">First Name <span style="color:red">*</span></label>
                             <input type="text" id="first_name" class="form-control" name="first_name"  required autofocus>
                         </div>
-                        <div class="col-lg-4 col-md-4 col-sm-12">
-                            <label for="middle_name">Middle Name</label>
-                            <input type="text" id="middle_name" class="form-control" name="middle_name" >
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-12">
+                        <div class="col-sm-12 col-lg-6 col-md-6">
                             <label for="last_name">Last Name <span style="color:red">*</span></label>
                             <input type="text" id="last_name" class="form-control" name="last_name"  required autofocus>
                         </div>
@@ -101,7 +97,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
 $email = mysqli_real_escape_string($conn, $_POST['email']);
 echo $password = $_POST['Password']; // Do not MD5 hash yet
 $first_name = mysqli_real_escape_string($conn, $_POST['first_name']);
-$middle_name = mysqli_real_escape_string($conn, $_POST['middle_name']);
 $last_name = mysqli_real_escape_string($conn, $_POST['last_name']);
 $dob = mysqli_real_escape_string($conn, $_POST['dob']);
 $mobile_number = mysqli_real_escape_string($conn, $_POST['mobile_number']);
@@ -143,17 +138,17 @@ if (empty($email) || empty($password) || empty($first_name) || empty($last_name)
             // Insert data into the database
             // $query = "INSERT INTO jobskeer (email, password, first_name, middle_name, last_name, dob, mobile_number, exp, college, anual_salery, status, qualification) VALUES ('$email', '$hashedPassword', '$first_name', '$middle_name', '$last_name', '$dob', '$mobile_number', '$experience', '$collegename', '$salary', 'Active', '$qualification')";
 
-            $conn1=mysqli_connect("localhost","root","","Deskano");
-            $conn2=mysqli_connect("localhost","root","","Deskano");
+            $conn1=mysqli_connect("localhost","root","","deskano");
+            $conn2=mysqli_connect("localhost","root","","deskano");
 
-            $querry ="INSERT INTO profiles (name, dob, number, email, user_email) VALUES ('$first_name', '$dob', '$mobile_number', '$email', '$email')";
+            $querry ="INSERT INTO profiles (first_name, last_name, dob, number, email, user_email) VALUES ('$first_name', '$last_name', '$dob', '$mobile_number', '$email', '$email')";
             $query = "INSERT INTO jobskeer (email, password, first_name, last_name, dob, mobile_number, status) VALUES ('$email', '$hashedPassword', '$first_name', '$last_name', '$dob', '$mobile_number', 'Active')";
 
             if ($conn1->query($querry) == TRUE) {
 
             }
 
-            if (mysqli_query($conn, $query)) {
+            if (mysqli_query($conn1, $query)) {
                         try {
                                 // Server settings for sending email
                                 $mail = new PHPMailer(true);

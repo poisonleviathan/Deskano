@@ -7,7 +7,8 @@ $query=mysqli_query($conn,"select * from profiles where user_email='{$_SESSION['
 
 while ($row=mysqli_fetch_array($query)) {
 	 $img=$row['img'];
-	 $name=$row['name'];
+	 $first_name=$row['first_name'];
+   $last_name=$row['last_name'];
 	 $dob=$row['dob'];
 	 $number=$row['number'];
 	 $email=$row['email'];
@@ -49,7 +50,7 @@ $conn->close();
    	 	
       <div class="row">
       	  <div class="col-md-6">
-      	  	<img src="profile_img/<?php if(!empty($img)){ echo $img;}else{ echo 'logo.png' ;} ?>" class="img-thumbnail" alt="Cinque Terre">
+      	  	<img src="profile_img/<?php if(!empty($img)){ echo $img;}else{ echo 'logo.png' ;} ?>" class="img-thumbnail" alt="Profile picture">
       	  </div>
 
           <div class="col-md-4">
@@ -61,12 +62,20 @@ $conn->close();
  <div style="margin-left: 30%;">
  <div class="row">
  	 <div class="col-md-6">
- 	 	 <td> Enter Your Name : </td>
+ 	 	 <td> Enter Your First Name : </td>
  	 </div>
  	  <div class="col-md-6">
- 	 	 <td><input type="text" name="name" id="name" value="<?php if(!empty($name)) echo $name; ?>" placeholder="Enter Your name ..." class="form-group" > </td>
+ 	 	 <td><input type="text" name="first_name" id="first_name" value="<?php if(!empty($first_name)) echo $first_name; ?>" placeholder="Enter Your first name ..." class="form-group" > </td>
  	 </div>
- 	
+ </div>
+
+ <div class="row">
+ 	 <div class="col-md-6">
+ 	 	 <td> Enter Your Last Name : </td>
+ 	 </div>
+ 	  <div class="col-md-6">
+ 	 	 <td><input type="text" name="last_name" id="last_name" value="<?php if(!empty($last_name)) echo $last_name; ?>" placeholder="Enter Your last name ..." class="form-group" > </td>
+ 	 </div>
  </div>
 
  <div class="row">
@@ -126,20 +135,29 @@ include('connection/db.php');
 if(isset($_POST['submit'])){
     $id = $_POST['id'];
     $img = $_POST['img'];
-    $name = $_POST['name'];
+    $first_name = $_POST['first_name'];
+    $last_name = $_POST['last_name'];
     $dob = $_POST['dob'];
     $number = $_POST['number'];
     $email = $_POST['email'];
     $user_email = $_POST['user_email'];
 }
-$query = mysqli_query($conn, "UPDATE profiles SET name = '$name', dob = '$dob', number = '$number', email = '$email', user_email = '$user_email'");
+$query = mysqli_query($conn, "UPDATE profiles SET first_name = '$first_name', last_name = '$last_name', dob = '$dob', number = '$number', email = '$email', user_email = '$user_email'");
+$query1 = mysqli_query($conn, "UPDATE jobskeer SET first_name = '$first_name', last_name = '$last_name', dob = '$dob', mobile_number = '$number', email = '$email'");
+if (isset($_POST['submit']) && $query1){
+
+}
 if (isset($_POST['submit']) && $query){
     echo "<script>alert('Record has been updated successfully!')</script>";
 }
 
 if(!empty($img)){
   $sql = mysqli_query($conn, "UPDATE profiles SET img = '$img'");
-  if (isset($_POST['submit']) && $sql){}
+  if (isset($_POST['submit']) && $sql){
+
+  }else{
+
+  }
 }
 
 ?>
