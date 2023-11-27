@@ -63,18 +63,15 @@ $query=mysqli_query($conn,"select * from admin_login where admin_email='$email' 
 
 // var_dump($query);
   if ($query) {
- 
-if (mysqli_num_rows($query)>0) {
-    
-  $_SESSION['email']= $email;
-  header('location:admin_dashboard.php');
+    if (mysqli_num_rows($query)>0) {
+      
+    $_SESSION['email']= $email;
+    header('location:admin_dashboard.php');
 
-}else{
-  echo "<script>alert('Email or password is  incorrect ,Please try again')</script>";
-}
-
-
-}
+    }else{
+      echo "<script>alert('Email or password is  incorrect, Please try again')</script>";
+    }
+  }
 }
 
 

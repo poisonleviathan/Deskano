@@ -52,7 +52,7 @@ while ($row=mysqli_fetch_array($query)) {
         <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-12 ftco-animate">
               <h2 class="mb-3" style="color: #154360 "><td><?php echo ucfirst($title) ?></td></h2>
-              <h5 style="color: #154360 "><?php echo $country?>, <?php echo $state ?>, <?php echo $city ?></h5>
+              <h5 style="color: #154360 "><?php echo $city?>, <?php echo $state ?>, <?php echo $country ?></h5>
                <div style="height: 47vh; overflow: scroll;">
                   <p style="color: #1A5276"><?php echo ucfirst($des); ?></p>
                </div>
@@ -66,68 +66,65 @@ while ($row=mysqli_fetch_array($query)) {
                 <input type="hidden" name="id_job" value="<?php echo $id_job; ?> " id="id_job">
                <div class="row" style="margin-bottom:10px">
                   <div class="col-sm-6">
-                    <label for="" style="font-weight: bold;color: #1A5276">Enter Your First Name</label>
+                    <label for="" style="font-weight: bold;color: #1A5276">Enter Your First Name <span style="color:red">*</span></label>
                     <input type="text" class="form-control" name="first_name" id="first_name" value="<?php echo $firstname; ?> " placeholder="First Name..." required autofocus>
                   </div>
                   <div class="col-sm-6">
-                    <label for="" style="font-weight: bold;color: #1A5276">Enter Your Last Name</label>
+                    <label for="" style="font-weight: bold;color: #1A5276">Enter Your Last Name <span style="color:red">*</span></label>
                     <input type="text" class="form-control" name="last_name" id="last_name" value="<?php echo $lastname; ?> " placeholder="Last Name..." required autofocus>
                   </div>
               </div>
 
                 <div class="row" style="margin-bottom:10px">
                    <div class="col-sm-6">
-                    <label for="" style="font-weight: bold;color: #1A5276">Enter DOB</label>
+                    <label for="" style="font-weight: bold;color: #1A5276">Enter DOB <span style="color:red">*</span></label>
                     <input type="date" class="form-control" name="dob" id="dob" value="<?php echo $dob; ?> " placeholder="date of birth..." required autofocus>
                   </div>
                   <div class="col-sm-6">
-                    <label for="" style="font-weight: bold;color: #1A5276">Choose Resume</label>
+                    <label for="" style="font-weight: bold;color: #1A5276">Choose Resume <span style="color:red">*</span></label>
                     <input type="file" name="file" id="file" class="form-control" required autofocus>
                   </div>
-
                 </div>
+
                 <div class="row" style="margin-bottom:10px">
-                   <div class="col-sm-6">
-                    <label for="" style="font-weight: bold;color: #1A5276">Enter Your Contact Number</label>
-                    <input type="number" class="form-control" name="number" id="number" size="10" value="<?php echo $id; ?>" maxlength="10" title="Enter 10 digit mobile number" placeholder="Mobile number" required autofocus>
-                  </div>
-                  
                   <div class="col-sm-6">
-                    <label for="" style="font-weight: bold;color: #1A5276">Email</label>
+                    <label for="" style="font-weight: bold;color: #1A5276">Enter Your Contact Number <span style="color:red">*</span></label>
+                    <input type="number" class="form-control" name="number" id="number" size="10" maxlength="10" title="Enter 10 digit mobile number" placeholder="Mobile number" required autofocus>
+                  </div>
+                  <div class="col-sm-6">
+                    <label for="" style="font-weight: bold;color: #1A5276">Email <span style="color:red">*</span></label>
                     <input type="text" class="form-control "  value="<?php echo $_SESSION['email']; ?> " disabled>
                   </div>
-
                 </div>
+
                 <div class="row" style="margin-bottom:10px">
-                   <div class="col-md-6">
-                    <label style="float: left; font-weight: bold;color: #1A5276" >Experience</label>
+                  <div class="col-sm-6">
+                    <label style="float: left; font-weight: bold;color: #1A5276" >Experience <span style="color:red">*</span></label>
                     <input type="number" class="form-control" name="experience" maxlength="2" placeholder="3" class="form-control" required>
-              </div>
-
-                  
-                <div class="col-md-6" id="college_name">
-                <label style="float: left; font-weight: bold;color: #1A5276" >Name of College</label>
-                 <input type="text" name="collegename" class="form-control"required >   
-               </div>
+                  </div>
+                  <div class="col-sm-6" id="college_name">
+                    <label style="float: left; font-weight: bold;color: #1A5276" >Name of College <span style="color:red">*</span></label>
+                    <input type="text" name="collegename" class="form-control"required >   
+                  </div> 
                 </div>
 
 
 
                 <div class="row" style="margin-bottom:10px">
-                   <div class="col-sm-4">
+                  <div class="col-sm-4">
                     <label for="" style="font-weight: bold;color: #1A5276">Last Qualification</label>
-                    <input type="text" class="form-control" name="qualification" id="qualification" maxlength="100" placeholder="Last Qualification" required autofocus>
+                    <input type="text" class="form-control" name="qualification" id="qualification" maxlength="100" placeholder="Last Qualification" autofocus>
                   </div>
 
-                   <div class="col-sm-4">
+                  <div class="col-sm-4">
                     <label for="" style="font-weight: bold;color: #1A5276">Pass-Out Year</label>
-                    <input type="number" class="form-control" name="passout" id="passout" maxlength="10" placeholder="Pass-Out Year" required autofocus>
+                    <input type="number" class="form-control" name="passout" id="passout" maxlength="10" placeholder="Pass-Out Year" autofocus>
                   </div>
 
                   
-                  <div class="col-sm-4">
-                    <label for="" style="font-weight: bold;color: #1A5276">Percentage(%)</label>
-                    <input type="number" class="form-control " required="required" name="percentage" maxlength="3" placeholder="percentage">
+                  <div class="col-sm-4" id="expecting_salary">
+                    <label style="float: left; font-weight: bold;color: #1A5276" >Expecting salary</label>
+                    <input type="number" name="expectingSalary" class="form-control" placeholder="Bid your skills" >   
                   </div>
                 </div>   
                 <?php //}; ?>
@@ -136,17 +133,9 @@ while ($row=mysqli_fetch_array($query)) {
            </div>
             </form>
                </div>
-          
-  
- 
             </div>
         </div>
       </div>
 <?php 
 include('include/footer.php');
 ?>
-    
-  
-
-
-

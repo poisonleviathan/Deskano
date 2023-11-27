@@ -11,8 +11,8 @@ $query=mysqli_query($conn,"select * from  job_category");
             <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="admin_dashboard.php">Dashoard</a></li>
-              <li class="breadcrumb-item"><a href="Jobs.php">Jobs</a></li>
-              <li class="breadcrumb-item"><a href="#">Edit JOB</a></li>
+              <li class="breadcrumb-item"><a href="Job_create.php">Job create</a></li>
+              <li class="breadcrumb-item"><a href="#">Create job</a></li>
             
             </ol>
           </nav>
@@ -128,44 +128,32 @@ $query=mysqli_query($conn,"select * from  job_category");
      $(document).ready(function(){
      $("#submit").click(function(){
         var Description=$("#Description").val();
-        alert(Description);
         var job_title=$("#job_title").val();
         var countryId=$("#countryId").val();
         var stateId=$("#gds-cr-one").val();
         var cityId=$("#cityId").val();
 
-          if (job_title=='') {
+          if (job_title == '') {
             alert("Please Enter Job Title!!");
             return false;
-              }
+          }
+          // else if (Description == '') {
+          //   alert("Please write the Description !!");
+          //   return false;
+          // }
+          else if (countryId == '') {
+            alert("Please select the Country !!");
+            return false;
+          }
+          else if (stateId == '') {
+            alert("Please select State !!");
+            return false;
+          }
 
-
-
-            //         if (countryId=='') {
-            // alert("Please Select Country !!");
-            // return false;
-            //   }
-            //         if (gds-cr-one=='') {
-            // alert("Please Select State !!");
-            // return false;
-            //   }
-
-            //  if (cityId=='') {
-            // alert("Please Enter City !!");
-            // return false;
-            //   }
-
-
-        // var data= $("#job_form").serialize();
-
-        //   $.ajax({
-        //         type:"POST",
-        //         url:"add_new_job.php",
-        //         data:data,
-        //         success:function(data){
-        //          alert(data);
-        //         }
-        //   });
+          else if (cityId == '') {
+            alert("Please enter City !!");
+            return false;
+          }
      });
      });last_name
 
@@ -175,54 +163,6 @@ $query=mysqli_query($conn,"select * from  job_category");
     // Initialize CKEditor
     CKEDITOR.replace('Description');
 </script>
-<!-- <script>
-$(document).ready(function() {
-    // Populate the Country dropdown on page load
-    $.ajax({
-        url: 'get_countries.php', // Replace with the actual URL to fetch countries
-        type: 'GET',
-        success: function(data) {
-            $('#countryId').html(data);
-        }
-    });
-
-    // Handle change event for the Country dropdown
-    $('#countryId').change(function() {
-        var countryId = $(this).val();
-        if (countryId !== '') {
-            // Fetch and populate States based on the selected Country
-            $.ajax({
-                url: 'get_states.php?country_id=' + countryId, // Replace with the actual URL to fetch states
-                type: 'GET',
-                success: function(data) {
-                    $('#stateId').html(data);
-                    $('#cityId').html('<option value="">Select City</option>'); // Reset the City dropdown
-                }
-            });
-        } else {
-            $('#stateId').html('<option value="">Select State</option>');
-            $('#cityId').html('<option value="">Select City</option>');
-        }
-    });
-
-    // Handle change event for the State dropdown
-    $('#stateId').change(function() {
-        var stateId = $(this).val();
-        if (stateId !== '') {
-            // Fetch and populate Cities based on the selected State
-            $.ajax({
-                url: 'get_cities.php?state_id=' + stateId, // Replace with the actual URL to fetch cities
-                type: 'GET',
-                success: function(data) {
-                    $('#cityId').html(data);
-                }
-            });
-        } else {
-            $('#cityId').html('<option value="">Select City</option>');
-        }
-    });
-});
-</script> -->
 
   </body>
 </html>
@@ -239,9 +179,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $state_name = $_POST['state'];
     $city_name = $_POST['city'];
     $category = $_POST['category'];
+    $user_email = $_SESSION['email'];
+
+    $sql="select * from admin_login where admin_email = '$user_email'";
+    $query2=mysqli_query($conn,$sql);
+    $row1=mysqli_fetch_array($query2);
 
     // Get the user's email from the session
-    $user_email = $_SESSION['email'];
+    
+    $first_name = $row1['first_name'];
+    $last_name = $row1['last_name'];
 
     // Get the IDs for country, state, and city based on their names
     // $country_query = mysqli_query($conn, "SELECT name FROM countries WHERE id = '$country_name'");
@@ -260,7 +207,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $state_id = $state_row['name'];
         $city_id = $city_row['name'];
 
-        $query = mysqli_query($conn, "INSERT INTO all_jobs (customer_email, job_title, des, category, Keyword, country, state, city) VALUES ('$user_email', '$job_title', '$description', '$category', '$keyword', '$country_name', '$state_name', '$city_name')");
+        $query = mysqli_query($conn, "INSERT INTO all_jobs (first_name, last_name, customer_email, job_title, des, category, Keyword, country, state, city) VALUES ('$first_name', '$last_name', '$user_email', '$job_title', '$description', '$category', '$keyword', '$country_name', '$state_name', '$city_name')");
 
         if ($query) {
             // Data inserted successfully

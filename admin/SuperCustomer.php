@@ -31,6 +31,7 @@
                 <th>Username</th>
                 <th>First Name</th>
                 <th>Last Name</th>
+                <th>Action</th>
                
             </tr>
         </thead>
@@ -49,6 +50,14 @@
                 <td><?php echo $row['admin_username']; ?></td>
                  <td><?php echo $row['first_name']; ?></td>
                  <td><?php echo $row['last_name']; ?></td>
+                 <td>
+                    <div class="row">
+                       <div  class="btn-group">
+                          <a href="customer_edit.php?edit=<?php echo $row['id'];  ?>" class="btn btn-success"><span class="fa fa-pencil-square-o"></span> </a>
+                           <a href="customer_delete.php?del=<?php echo $row['id'];  ?>" class="btn btn-danger"><span class="fa fa-trash"></span> </a>
+                       </div>
+                    </div>
+                 </td>
             </tr>
           <?php }  ?>
         </tbody>
@@ -59,6 +68,7 @@
                 <th>Username</th>
                 <th>First Name</th>
                 <th>Last Name</th>
+                <th>Action</th>
             
             </tr>
         </tfoot>

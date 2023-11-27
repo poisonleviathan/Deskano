@@ -37,7 +37,7 @@
         <?php 
          include('connection/db.php');
 
-        $query=mysqli_query($conn,"select * from  contact_form");
+        $query=mysqli_query($conn,"select * from contact_admin");
         while($row=mysqli_fetch_array($query)){
         ?>
                     
@@ -54,7 +54,7 @@
                        <div  class="btn-group">
                           <form method="POST" action="contect_us.php">
                             <input type="hidden" name="userid" value="<?php echo $row['id'];?>">
-                              <a href="contact_delete.php?del=<?php echo $row['id'];  ?>" class="btn btn-danger"><span class="fa fa-remove"></span> </a>
+                              <a href="employer_contact_delete.php?del=<?php echo $row['id'];  ?>" class="btn btn-danger"><span class="fa fa-remove"></span> </a>
                           </form>
                         </div>
                     </div>

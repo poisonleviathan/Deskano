@@ -27,8 +27,7 @@
         <?php 
          include('connection/db.php');
      $id=$_GET['id'];
-      $sql= "select * from job_apply LEFT JOIN all_jobs
-             ON job_apply.id_job = all_jobs.job_id   where id='$id'";
+      $sql= "select * from job_apply LEFT JOIN all_jobs ON job_apply.id_job = all_jobs.job_id   where id='$id'";
 
          $query=mysqli_query($conn,$sql);
      
@@ -56,7 +55,7 @@
               
               <div class="form-group">
                 <label for="" style="color: #1F618D; font-size: 15px">Job Seeker Name :</label>
-                 <p  style="font-size: 13px" ><?php echo ucfirst($row['first_name']); ?> <?php echo ucfirst($row['last_name']); ?></p>
+                 <p  style="font-size: 13px" ><?php echo ucfirst($row['First_name']); ?> <?php echo ucfirst($row['Last_name']); ?></p>
              </div> <hr>   
               
                 <div class="form-group">
@@ -69,19 +68,18 @@
                  <p  style="font-size: 13px" ><?php echo ucfirst($row['dob']) ?></p>
              </div> <hr>  
 
-                
-
-              <div class="form-group">
-                <label style="color: #1F618D; font-size: 15px" >Experience :</label>
-                 <p  style="font-size: 13px" ><?php 
-                       if(empty( ucfirst($row['experience']))){
+             <!-- <?php 
+                       if(!empty( ucfirst($row['experience']))){
                         echo "Freasher";
                        }else{
                         echo ucfirst($row['experience'])." yr";
                        }
+                 ?> -->
+                
 
-
-                 ?></p>
+              <div class="form-group">
+                <label style="color: #1F618D; font-size: 15px" >Experience :</label>
+                 <p style="font-size: 13px" ><?php echo ucfirst($row['experience'])." yr" ?></p>
              </div> <hr>   
 
 
@@ -91,9 +89,8 @@
              </div> <hr>   
 
                <div class="form-group">
-                <label style="color: #1F618D; font-size: 15px" >Percentage :</label>
-                 <p  style="font-size: 13px" ><?php               
-                         echo ucfirst($row['percentage']." %"); ?></p>
+                <label style="color: #1F618D; font-size: 15px" >Expecting salary :</label>
+                 <p  style="font-size: 13px" ><?php echo ucfirst("Rs. ".$row['salary']."/="); ?></p>
              </div> <hr>   
                <div class="form-group">
                 <label style="color: #1F618D; font-size: 15px" >Passout:</label>
@@ -105,12 +102,6 @@
                 <label style="color: #1F618D; font-size: 15px" >Job Seeker File :</label>
                 <p  style="font-size: 13px" ><a href="http://localhost/Deskano/files/<?php echo $row['file']; ?>">Download File </a></p>
            </div> <hr>   
-
-
-  
-         
-
-                
 
           <?php   }  ?>
          <a href="send_mail.php?id=<?php echo $id ;?>" class="btn btn-success">Accept</a>

@@ -33,7 +33,7 @@ ON job_apply.id_job = all_jobs.job_id   where id='$id'";
          $query=mysqli_query($conn,$sql);
      
         while($row=mysqli_fetch_array($query)){
-            $name= $row['first_name']." ".$row['last_name'];
+            $name= $row['First_name']." ".$row['Last_name'];
              $email= $row['job_seeker'];
              $mobile= $row['mobile_number'];
              $exp= $row['experience'];
@@ -51,7 +51,7 @@ ON job_apply.id_job = all_jobs.job_id   where id='$id'";
           }
           
         ?>
-                 <h1><?php echo strtoupper($row['first_name']); ?> <?php echo strtoupper($row['last_name']); ?></h1>
+                 <h1><?php echo strtoupper($row['First_name']); ?> <?php echo strtoupper($row['Last_name']); ?></h1>
                  <hr>   
         
             	<input type="hidden" id="id" name="id" value="<?php echo $id; ?>">
@@ -68,7 +68,7 @@ ON job_apply.id_job = all_jobs.job_id   where id='$id'";
               <div class="form-group">
                 <label for="">Mail:</label>
                  <td> <textarea name="body" id="body" class="form-control"  rows="20">
-                    <p>Dear <?php echo strtoupper($row['first_name']); ?> <?php echo strtoupper($row['last_name']); ?>,</p>
+                    <p>Dear <?php echo strtoupper($row['First_name']); ?> <?php echo strtoupper($row['Last_name']); ?>,</p>
 
                     <p>We are pleased to invite you for an interview for the position of [Job Title] at [Company Name]. Your application has been reviewed, and we are impressed with your qualifications and experience.</p>
 
