@@ -226,6 +226,12 @@
                   Contact Admin
                 </a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="employer_profile.php">
+                  <i class="fa fa-user" aria-hidden="true"></i>
+                  Edit Profile
+                </a>
+              </li>
             </ul>
           </div>
         </nav>
