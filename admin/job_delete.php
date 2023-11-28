@@ -9,7 +9,7 @@
   	 echo "<script>alert('Record has been successfully Deleted !!!!')</script>";
   	 header('location:Job_create.php');
   }else{
-  	echo "<script>alert('Record has been successfully Deleted !!!!')</script>";
+  	echo "<script>alert('Please try again!')</script>";
   }
 
  ?>

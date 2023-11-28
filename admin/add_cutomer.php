@@ -7,7 +7,7 @@
             <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="admin_dashboard.php">Dashoard</a></li>
-              <li class="breadcrumb-item"><a href="Customers.php">Admins</a></li>
+              <li class="breadcrumb-item"><a href="SuperCustomer.php">Admins</a></li>
               <li class="breadcrumb-item"><a href="#">Add Admin</a></li>
             
             </ol>

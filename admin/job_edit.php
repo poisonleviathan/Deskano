@@ -21,12 +21,12 @@ while ($row=mysqli_fetch_array($query)) {
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="admin_dashboard.php">Dashoard</a></li>
               <li class="breadcrumb-item"><a href="Job_create.php">ALL Job List</a></li>
-              <li class="breadcrumb-item"><a href="#">Add JOB</a></li>
+              <li class="breadcrumb-item"><a href="#">Edit JOB</a></li>
             
             </ol>
           </nav>
           <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
-       <h1 class="h2"> Add JOB</h1>
+       <h1 class="h2">Edit JOB</h1>
             <div class="btn-toolbar mb-2 mb-md-0">
               <div class="btn-group mr-2">
                
@@ -54,25 +54,20 @@ while ($row=mysqli_fetch_array($query)) {
                  </div>
                   <div class="form-group">
                     <label for="">Country</label>
-                    <select name="country" class="countries form-control" value="<?php echo $country; ?>" id="countryId">
-                    <option value="">Select Country</option>
-                </select>
+                    <select name="country" class="form-control gds-cr" id="countryId" value="<?php echo $country; ?>" country-data-region-id="gds-cr-one" data-language="en"></select>
+                
                   </div>
                   
 
                   <div class="form-group">
-                    <label for="">State</label>
-                    <select name="state" class="states form-control"  value="<?php echo $state; ?>" id="stateId">
-                          <option value="">Select State</option>
-                      </select>
+                    <label for="">Region/Province</label>
+                    <select name="state" class="form-control" value="<?php echo $state?>" id="gds-cr-one"></select>
                   </div>
 
 
                   <div class="form-group">
                     <label for="">City</label>
-                         <select name="city" class="cities form-control" value="<?php echo $city; ?>" id="cityId">
-                              <option value="">Select City</option>
-                          </select>
+                    <input type="text"  name="city" id="cityId" value="<?php echo $City ?>" class="form-control" placeholder="Enter Your City">
                   </div>
 
                   <div class="form-group">
@@ -134,7 +129,7 @@ while ($row=mysqli_fetch_array($query)) {
         var Description=$("#Description").val();
         var job_title=$("#job_title").val();
         var countryId=$("#countryId").val();
-        var stateId=$("#stateId").val();
+        var stateId=$("#gds-cr-one").val();
         var cityId=$("#cityId").val();
 
           if (job_title=='') {
@@ -145,7 +140,19 @@ while ($row=mysqli_fetch_array($query)) {
              if (Description=='') {
             alert("Please Enter Description!!");
             return false;
-              }
+              }else if (countryId == '') {
+            alert("Please select the Country !!");
+            return false;
+          }
+          else if (stateId == '') {
+            alert("Please select Region/Province !!");
+            return false;
+          }
+
+          else if (cityId == '') {
+            alert("Please enter City !!");
+            return false;
+          }
 
         var data= $("#job_form").serialize();
 
@@ -159,54 +166,7 @@ while ($row=mysqli_fetch_array($query)) {
     // Initialize CKEditor
     CKEDITOR.replace('Description');
 </script>
-<script>
-$(document).ready(function() {
-    // Populate the Country dropdown on page load
-    $.ajax({
-        url: 'get_countries.php', // Replace with the actual URL to fetch countries
-        type: 'GET',
-        success: function(data) {
-            $('#countryId').html(data);
-        }
-    });
 
-    // Handle change event for the Country dropdown
-    $('#countryId').change(function() {
-        var countryId = $(this).val();
-        if (countryId !== '') {
-            // Fetch and populate States based on the selected Country
-            $.ajax({
-                url: 'get_states.php?country_id=' + countryId, // Replace with the actual URL to fetch states
-                type: 'GET',
-                success: function(data) {
-                    $('#stateId').html(data);
-                    $('#cityId').html('<option value="">Select City</option>'); // Reset the City dropdown
-                }
-            });
-        } else {
-            $('#stateId').html('<option value="">Select State</option>');
-            $('#cityId').html('<option value="">Select City</option>');
-        }
-    });
-
-    // Handle change event for the State dropdown
-    $('#stateId').change(function() {
-        var stateId = $(this).val();
-        if (stateId !== '') {
-            // Fetch and populate Cities based on the selected State
-            $.ajax({
-                url: 'get_cities.php?state_id=' + stateId, // Replace with the actual URL to fetch cities
-                type: 'GET',
-                success: function(data) {
-                    $('#cityId').html(data);
-                }
-            });
-        } else {
-            $('#cityId').html('<option value="">Select City</option>');
-        }
-    });
-});
-</script>
   </body>
 </html>
 <?php
@@ -250,9 +210,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $query = mysqli_query($conn, "UPDATE all_jobs SET
             job_title = '$job_title',
             des = '$description',
-            -- country = '$country_name',
-            -- state = '$state_name',
-            -- city = '$city_name',
+            country = '$country_name',
+            state = '$state_name',
+            city = '$city_name',
             category = '$category',
             Keyword = '$keyword'
             WHERE job_id = '$job_id'");
