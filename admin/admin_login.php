@@ -69,7 +69,7 @@ $query=mysqli_query($conn,"select * from admin_login where admin_email='$email' 
     header('location:admin_dashboard.php');
 
     }else{
-      echo "<script>alert('Email or password is  incorrect, Please try again')</script>";
+      echo "<script>alert('Email or password is incorrect, Please try again')</script>";
     }
   }
 }
