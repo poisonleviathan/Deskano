@@ -19,7 +19,7 @@
               <div class="btn-group mr-2">
                
               </div>
-              <a class="btn btn-primary" href="add_cutomer.php">Add an Admin</a>
+              
             </div>
           </div>
 
