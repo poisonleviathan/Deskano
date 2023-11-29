@@ -69,6 +69,12 @@
 
    </div>
 </body>
+
+<style>
+   .ftco-section-parallax .parallax-img{
+   background: #CF9966;
+   }
+</style>
 <section class="ftco-section-parallax">
    <div class="parallax-img d-flex align-items-center">
       <div class="container">
@@ -117,6 +123,12 @@
                </ul>
             </div>
          </div>
+
+         <style>
+            .ftco-footer{
+               background: :#2d2d2d;
+            }
+         </style>
          <div class="col-md">
             <div class="ftco-footer-widget mb-4 ml-md-4">
                <h2 class="ftco-heading-2">Workers</h2>
@@ -143,7 +155,9 @@
       <div class="row">
          <div class="col-md-12 text-center">
             <p>
+
                Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This Website is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by Deskano Official Team</a>
+
             </p>
          </div>
       </div>

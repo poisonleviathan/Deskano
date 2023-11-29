@@ -11,15 +11,15 @@ include('include/header.php');
     border-color: #FF00AA;
 }
 
-<h2>MoMo was here</h2>
+
   </style>
-    <div class="hero-wrap js-fullheight" style="background-image: url('images/bg_2.jpg');" data-stellar-background-ratio="0.5">
+    <div class="hero-wrap js-fullheight" style="background-image: url(images/Home.png);" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutsters slider-text js-fullheight align-items-center justify-content-start" data-scrollax-parent="true">
           <div class="col-xl-10 ftco-animate mb-5 pb-5" data-scrollax=" properties: { translateY: '70%' }">
           	<!-- <p class="mb-4 mt-5 pt-5" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">We have <span class="number" data-number="850000">0</span> great job offers you deserve!</p> -->
-            <h1 class="mb-5" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Your Dream <br><span>Job is Waiting</span></h1>
+            <h1 style="font-family: 'Poppins Medium', sans-serif;" class="mb-5" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">"Connect And Thrive"</h1>
 
 						<div class="ftco-search">
 							<div class="row">
@@ -84,6 +84,7 @@ include('include/header.php');
 			              	</form>
 			              </div>
 
+                    
 			              <div class="tab-pane fade" id="v-pills-2" role="tabpanel" aria-labelledby="v-pills-performance-tab">
 			              	<form action="#" class="search-job">
 			              		<div class="row">
@@ -120,10 +121,10 @@ include('include/header.php');
 								              </div>
 							              </div>
 			              			</div>
-			              			<div class="col-md">
+			              			<div class="col-md" id="search">
 			              				<div class="form-group">
-			              					<div class="form-field">
-								                <input type="submit" value="Search" class="form-control btn btn-primary">
+			              					<div class="form-field" id="searchbtn" >
+								                <input type="submit" value="Search"  class="form-control btn btn-primary" >
 								              </div>
 							              </div>
 			              			</div>
@@ -227,50 +228,29 @@ if (isset($_POST['search']) || isset($_GET['page'])) {
     </div>
 <?php } ?>
 
-    <section class="ftco-section services-section bg-light">
-      <div class="container">
-        <div class="row d-flex">
-          <div class="col-md-3 d-flex align-self-stretch ftco-animate">
-            <div class="media block-6 services d-block">
-              <div class="icon"><span class="flaticon-resume"></span></div>
-              <div class="media-body">
-                <h3 class="heading mb-3">Find Your Dream Job</h3>
-                <p>Explore millions of job opportunities waiting for you.</p>
-              </div>
-            </div>      
-          </div>
-          <div class="col-md-3 d-flex align-self-stretch ftco-animate">
-            <div class="media block-6 services d-block">
-              <div class="icon"><span class="flaticon-collaboration"></span></div>
-              <div class="media-body">
-                <h3 class="heading mb-3">Manage Your Listings</h3>
-                <p>Easily manage and update your job listings.</p>
-              </div>
-            </div>    
-          </div>
-          <div class="col-md-3 d-flex align-self-stretch ftco-animate">
-            <div class="media block-6 services d-block">
-              <div class="icon"><span class="flaticon-promotions"></span></div>
-              <div class="media-body">
-                <h3 class="heading mb-3">Explore Top Careers</h3>
-                <p>Discover the most promising career opportunities.</p>
-              </div>
-            </div>      
-          </div>
-          <div class="col-md-3 d-flex align-self-stretch ftco-animate">
-            <div class="media block-6 services d-block">
-              <div class="icon"><span class="flaticon-employee"></span></div>
-              <div class="media-body">
-                <h3 class="heading mb-3">Find Expert Candidates</h3>
-                <p>Search for highly skilled candidates for your company.</p>
-              </div>
-            </div>      
-          </div>
-        </div>
-      </div>
-    </section>
+  
+    <style>
+      
+      #Jobs{
+      background-color:#2d2d2d;
+   
+    }
+    #Jobs a{
+      color: white !important;
+    }
+    #Jobs h2{
+      color: white !important;
+    }
+    .number{
+      color: #CF9966!important;
+      
+    }
+    .category li a span.number{
+      background-color: #545454;
+    }
 
-    <section class="ftco-section ftco-counter">
+      </style>
+    <section class="ftco-section ftco-counter"id="Jobs">
     	<div class="container">
     		<div class="row justify-content-center mb-5 pb-3">
           <div class="col-md-7 heading-section text-center ftco-animate">
@@ -362,8 +342,30 @@ if (isset($_POST['search']) || isset($_GET['page'])) {
     	</div>
     </section>
 
- <section class="ftco-section testimony-section">
-      <div class="container">
+    <style>
+      #seekers{
+
+background-color: #CF9966;}
+#seekers p{
+
+color:#2d2d2d;}
+
+.pt-4, .py-4{
+  background-color:rgb(255 255 255 / 39%);
+  padding:15px;
+}
+.testimony-wrap .position {
+  color:#2d2d2d;
+
+}
+.heading-section .subheading{
+  color:#2d2d2d;
+}
+      
+      </style>
+
+ <section class="ftco-section testimony-section"id="seekers">
+      <div class="container" >
         <div class="row justify-content-center mb-5 pb-3">
           <div class="col-md-7 text-center heading-section ftco-animate">
           	<span class="subheading">Testimonial</span>
@@ -448,9 +450,24 @@ if (isset($_POST['search']) || isset($_GET['page'])) {
         </div>
       </div>
     </section> 
+<style>
+.bg-light{
+  background:#2d2d2d !important;
+}
 
-  <section class="ftco-section bg-light">
-      <div class="container">
+.heading-section h2{
+  color: #fff;
+}
+.heading-section .subheading{
+  color: #fff;
+}
+.blog-entry .text .heading a{
+  color: #fff;
+}
+</style>
+  <section class="ftco-section bg-light" id="blog" >
+      <div class="container" >
+      <div class="container "  >
         <div class="row justify-content-center mb-5 pb-3">
           <div class="col-md-7 heading-section text-center ftco-animate">
           	<span class="subheading">Our Blog</span>
@@ -521,31 +538,38 @@ if (isset($_POST['search']) || isset($_GET['page'])) {
         </div>
       </div>
     </section>
-		
-	 	<section class="ftco-section-parallax">
-      <div class="parallax-img d-flex align-items-center">
-        <div class="container">
-          <div class="row d-flex justify-content-center">
-            <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
-              <h2>Subcribe to our Newsletter</h2>
-              <p>Are you on the hunt for your dream job? Look no further! Job Portal  offers a vast database of job listings across diverse industries. Create a profile, upload your resume, and start browsing through opportunities that match your skills, experience, and aspirations. With our advanced search features and personalized job alerts, your next career move is just a click away</p>
-              <div class="row d-flex justify-content-center mt-4 mb-4">
-                <div class="col-md-8">
-                  <form action="#" class="subscribe-form">
-                    <div class="form-group d-flex">
-                      <input type="text" class="form-control" placeholder="Enter email address">
-                      <input type="submit" value="Subscribe" class="submit px-3">
+    <style>
+      #newsletter{
+      background-color: #CF9966;}
+      </style>
+    <section class="ftco-section-parallax" >
+    <div class="parallax-img d-flex align-items-center" id="newsletter">
+        <div class="container"  >
+            <div class="row d-flex justify-content-center"  >
+                <div class="col-md-7 text-center heading-section heading-section-white ftco-animate"  >
+                    <h2>Subscribe to our Newsletter</h2>
+                    <p>Are you on the hunt for your dream job? Look no further! Job Portal offers a vast database of job listings across diverse industries. Create a profile, upload your resume, and start browsing through opportunities that match your skills, experience, and aspirations. With our advanced search features and personalized job alerts, your next career move is just a click away</p>
+                    <div class="row d-flex justify-content-center mt-4 mb-4">
+                        <div class="col-md-8">
+                            <form action="#" class="subscribe-form">
+                                <div class="form-group d-flex">
+                                    <input type="text" class="form-control" placeholder="Enter email address">
+                                    <input type="submit" value="Subscribe" class="submit px-3">
+                                </div>
+                            </form>
+                        </div>
                     </div>
-                  </form>
                 </div>
-              </div>
             </div>
-          </div>
         </div>
-      </div>
-    </section>
-  <footer class="ftco-footer ftco-bg-dark ftco-section">
-      <div class="container">
+    </div>
+</section>
+<style>
+      #Footer{
+      background-color:#2d2d2d;}
+      </style>
+  <footer class="ftco-footer ftco-bg-dark ftco-section"id="Footer">
+      <div class="container" >
         <div class="row mb-5">
         	<div class="col-md">
              <div class="ftco-footer-widget mb-4">
