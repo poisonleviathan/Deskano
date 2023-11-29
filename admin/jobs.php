@@ -20,7 +20,7 @@
             
             <tr>
                 <th>ID</th>
-                <th>Employer Email</th>
+                <th>Admin Email</th>
                 <th>Job Title</th>
                 <th>Description</th>
                 <th>Country</th>
@@ -33,35 +33,35 @@
 
         <?php 
          include('connection/db.php');
-          $i=1;
-        $query=mysqli_query($conn,"select * from   all_jobs");
-        while($row=mysqli_fetch_array($query)){
-        ?>
-                    
-            <tr>
-              <td><?php echo $i; ?></td>
-                <td><?php echo $row['customer_email']; ?></td>
-                <td><?php echo $row['job_title']; ?></td>
-                <td><?php echo substr($row['des'], 0, 200) . '...'; ?></td>
-                <td><?php echo $row['country']; ?></td>
-                <td><?php echo $row['state']; ?></td>
-                <td><?php echo $row['city']; ?></td>
-                
-                 <td>
-                    <div class="row">
-                       <div  class="btn-group">
-                          <a href="view_allJobs_admin.php?id=<?php echo $row['job_id'];  ?>" class="btn btn-success"><span class="fa fa-eye"></span> </a>
-                           <!-- <a href="job_delete.php?del=<?php echo $row['job_id'];  ?>" class="btn btn-danger"><span class="glyphicon glyphicon-view"></span> </a> -->
-                       </div>
-                    </div>
-                 </td>
+         $i=1;
+       $query=mysqli_query($conn,"select * from   all_jobs");
+       while($row=mysqli_fetch_array($query)){
+       ?>
+                   
+           <tr>
+             <td><?php echo $i; ?></td>
+               <td><?php echo $row['customer_email']; ?></td>
+               <td><?php echo $row['job_title']; ?></td>
+               <td><?php echo substr($row['des'], 0, 200) . '...'; ?></td>
+               <td><?php echo $row['country']; ?></td>
+               <td><?php echo $row['state']; ?></td>
+               <td><?php echo $row['city']; ?></td>
+
+            <td>
+              <div class="row">
+                  <div  class="btn-group">
+                    <a href="view_allJobs_admin.php?id=<?php echo $row['job_id'];  ?>" class="btn btn-success"><span class="fa fa-eye"></span> </a>
+                      <!-- <a href="job_delete.php?del=<?php echo $row['job_id'];  ?>" class="btn btn-danger"><span class="glyphicon glyphicon-view"></span> </a> -->
+                  </div>
+              </div>
+            </td>
             </tr>
           <?php $i++;  }  ?>
         </tbody>
         <tfoot>
             <tr>
               <th>ID</th>
-              <th>Admin name</th>
+              <th>Admin Email</th>
               <th>Job Title</th>
               <th>Description</th>
               <th>Country</th>

@@ -42,12 +42,12 @@
          </div>
          <div class="col-md">
             <div class="ftco-footer-widget mb-4">
-               <h2 class="ftco-heading-2">Have a Questions?</h2>
+               <h2 class="ftco-heading-2">Have a Question?</h2>
                <div class="block-23 mb-3">
                   <ul>
-                     <li><span class="icon icon-map-marker"></span><span class="text">1175,Harmu Housing Colony, Ranchi, Jharkhand</span></li>
-                     <li><a href="#"><span class="icon icon-phone"></span><span class="text">+91 8210-099-1423</span></a></li>
-                     <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@learncodezone.com</span></a></li>
+                     <li><span class="icon icon-map-marker"></span><span class="text">542, Peradeniya Rd, Kandy</span></li>
+                     <li><a href="#"><span class="icon icon-phone"></span><span class="text">+94778358111</span></a></li>
+                     <li><a href="#"><span class="icon icon-envelope"></span><span class="text">deskano.official@gmail.com</span></a></li>
                   </ul>
                </div>
             </div>
@@ -56,7 +56,11 @@
       <div class="row">
          <div class="col-md-12 text-center">
             <p>
-               Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This Website is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://learncodezone.com" target="_blank">Deskano</a>
+
+               
+
+               Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This Website is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by Deskano Offiacial Team
+
             </p>
          </div>
       </div>

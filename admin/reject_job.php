@@ -138,7 +138,7 @@ $id=$_GET['id'];
       $query=mysqli_query($conn,"delete from job_apply where id ='$id'");
 
 if ($query) {
-	 echo "data hass been successfully Remove !!";
+	 echo "data has been successfully Remove !!";
 }else{
 	echo " please try again !";
 }

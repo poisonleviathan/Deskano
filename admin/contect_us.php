@@ -7,12 +7,12 @@
             <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="admin_dashboard.php">Dashoard</a></li>
-              <li class="breadcrumb-item"><a href="#">Contect Us</a></li>
+              <li class="breadcrumb-item"><a href="#">Contact Us</a></li>
             
             </ol>
           </nav>
           <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
-       <h1 class="h2">Contect List </h1>
+       <h1 class="h2">Contact List </h1>
             <div class="btn-toolbar mb-2 mb-md-0">
               <div class="btn-group mr-2">
                
@@ -52,12 +52,11 @@
               
                     <div class="row">
                        <div  class="btn-group">
-                        <form method="POST" action="contect_us.php">
-                           <input type="hidden" name="userid" value="<?php echo $row['id'];?>">
-                            <button type="submit" name="activeuser" class="btn btn-success"><span class="glyphicon glyphicon glyphicon-remove"></span> </button>
-                        </form>
-                        
-                          </div>
+                          <form method="POST" action="contect_us.php">
+                            <input type="hidden" name="userid" value="<?php echo $row['id'];?>">
+                              <a href="contact_delete.php?del=<?php echo $row['id'];  ?>" class="btn btn-danger"><span class="fa fa-remove"></span> </a>
+                          </form>
+                        </div>
                     </div>
                
                  </td>
@@ -125,7 +124,7 @@
     if ($query) {
 
      
-      echo "<script>alert('Successfully Remeved !')</script>";
+      echo "<script>alert('Successfully Removed !')</script>";
 
     }else{
       echo "<script>alert('Some Error Please Try Again!')</script>";
