@@ -117,7 +117,11 @@ if (isset($_POST['submit'])) {
         </div>
       </div>
     </section>
-		
+		<style>
+      .ftco-section-parallax .parallax-img{
+        background:#CF9966;
+      }
+    </style>
 		<section class="ftco-section-parallax">
       <div class="parallax-img d-flex align-items-center">
         <div class="container">

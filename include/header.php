@@ -35,12 +35,43 @@ error_reporting(0);
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     
+    <style>
 
+#ftco-navbar {
+  display: block;
+  visibility: visible; 
+  opacity: 1;
+  position: relative;
+  z-index: 999;
+}
+
+.ftco-navbar-light {
+  display: block !important;
+  background: black !important;
+}
+
+.collapse {
+  display: block!important; 
+}
+
+.collapsing {
+  visibility: visible;
+}
+
+.navbar-nav {
+  display: flex!important;
+}
+.hero-wrap .overlay{
+  background:#00000000;
+}
+
+</style>
 <style type="text/css">
   .nav-item a{
-    color: black !important;
+    color: white !important;
   }
 </style>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 <!-- Popper JS -->
@@ -51,9 +82,9 @@ error_reporting(0);
   </head>
   <body>
     
-	  <nav class="navbar navbar-expand-lg navbar-light ftco_navbar  ftco-navbar-light" id="ftco-navbar">
-	    <div class="container">
-	      <a class="navbar-brand" href="index.php">Job Portal</a>
+  <nav class="navbar navbar-expand-lg navbar-light ftco_navbar ftco-navbar-light" id="ftco-navbar" ">
+  <div class="container style="background-color: transparent;">
+    <a class="navbar-brand" href="index.php"><img src="images/Deskano_whit.png"></a>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
 	      </button>
@@ -84,7 +115,7 @@ error_reporting(0);
          </li>
               <?php
              }else{ ?>
-              <li class="nav-item cta mr-md-2"><a href="login.php" class="nav-link">Login</a></li>
+              <li id="login_btn" class="nav-item cta mr-md-2"><a href="login.php" class="nav-link">Login</a></li>
            
               <?php  
              }
