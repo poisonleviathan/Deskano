@@ -28,7 +28,6 @@
             <tr>
                 <th>ID</th>
                 <th>Email</th>
-                <th>Username</th>
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>Action</th>
@@ -47,7 +46,6 @@
             <tr>
                 <td><?php echo $row['id']; ?></td>
                 <td><?php echo $row['admin_email']; ?></td>
-                <td><?php echo $row['admin_username']; ?></td>
                  <td><?php echo $row['first_name']; ?></td>
                  <td><?php echo $row['last_name']; ?></td>
                  <td>
@@ -65,7 +63,6 @@
             <tr>
                 <th>ID</th>
                 <th>Email</th>
-                <th>Username</th>
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>Action</th>

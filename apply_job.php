@@ -24,6 +24,9 @@ if (isset($_POST['submit'])) {
     $qualification = $_POST['qualification'];
     $expectingSalary = $_POST['expectingSalary'];
     $passout = $_POST['passout'];
+    $Country = $_POST['Country'];
+    $State = $_POST['State'];
+    $City = $_POST['City'];
 
     if (strlen($number) != 10) {
         echo '<p class="lead">Please Enter a Valid 10-Digit Mobile Number</p>';
@@ -42,7 +45,7 @@ if (isset($_POST['submit'])) {
 
         // $sql = "INSERT INTO job_apply (first_name, last_name, dob, file, id_job, job_seeker, mobile_number, exp, collage, qualification, percentage, passout) VALUES ('$first_name', '$last_name', '$dob', '$file', '$id_job', '$job_seeker', '$number', '$experience', '$collegename', '$qualification', '$percentage', '$passout')";
 
-        $sql = "INSERT INTO job_apply (First_name, Last_name, dob, file, id_job, job_seeker, mobile_number, experience, qualification, salary, passout, college) VALUES ('$first_name', '$last_name', '$dob', '$file', '$id_job', '$job_seeker', '$number', '$experience', '$qualification', '$expectingSalary', '$passout', '$collegename')";
+        $sql = "INSERT INTO job_apply (First_name, Last_name, dob, file, id_job, job_seeker, mobile_number, experience, qualification, salary, passout, college, country, state, city) VALUES ('$first_name', '$last_name', '$dob', '$file', '$id_job', '$job_seeker', '$number', '$experience', '$qualification', '$expectingSalary', '$passout', '$collegename', '$Country', '$State', '$City')";
         $query = mysqli_query($conn, $sql);
 
       if ($query) {

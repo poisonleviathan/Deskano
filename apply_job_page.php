@@ -96,6 +96,20 @@ while ($row=mysqli_fetch_array($query)) {
                     <input type="text" class="form-control "  value="<?php echo $_SESSION['email']; ?> " disabled>
                   </div>
                 </div>
+                <div class="row">
+                  <div class="col-sm-4">
+                    <label for="" style="font-weight: bold;color: #1A5276">Enter Your Country <span style="color:red">*</span></label>
+                    <select name="Country" class="form-control gds-cr" id="countryId" value="<?php echo $country; ?>" country-data-region-id="gds-cr-one" data-language="en" required></select>
+                  </div>
+                  <div class="col-sm-4">
+                    <label for="" style="font-weight: bold;color: #1A5276">Enter Your Province <span style="color:red">*</span></label>
+                    <select name="State" class="form-control" value="<?php echo $state?>" id="gds-cr-one" required></select>
+                  </div>
+                  <div class="col-sm-4">
+                    <label for="" style="font-weight: bold;color: #1A5276">Enter Your City <span style="color:red">*</span></label>
+                    <input type="text"  name="City" id="cityId" value="<?php echo $City ?>" class="form-control" placeholder="Enter Your City" required>
+                  </div>
+                </div>
 
                 <div class="row" style="margin-bottom:10px">
                   <div class="col-sm-6">

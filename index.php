@@ -40,7 +40,7 @@ include('include/header.php');
 			              				<div class="form-group">
 				              				<div class="form-field">
 				              					<div class="icon"><span class="icon-briefcase"></span></div>
-								                <input type="text" name="key" id="key"  class="form-control" placeholder="eg. Garphic. Web Developer">
+								                <input type="text" name="key" id="key"  class="form-control" placeholder="eg. Web Developer">
 								              </div>
 							              </div>
 			              			</div>
@@ -254,7 +254,7 @@ if (isset($_POST['search']) || isset($_GET['page'])) {
     	<div class="container">
     		<div class="row justify-content-center mb-5 pb-3">
           <div class="col-md-7 heading-section text-center ftco-animate">
-          	<span class="subheading">Categories work wating for you</span>
+          	<span class="subheading">Exciting opportunities, eagerly await your attention!</span>
             <h2 class="mb-4"><span>Current</span> Job Posts</h2>
           </div>
         </div>
@@ -288,7 +288,7 @@ if (isset($_POST['search']) || isset($_GET['page'])) {
         			<li><a href="#">Web Designer <span><span class="number" data-number="8000">0</span></span></a></li>
         			<li><a href="#">Customer Service <span class="number" data-number="4000">0</span></a></li>
         			<li><a href="#">Marketing &amp; Sales <span class="number" data-number="3300">0</span></a></li>
-        			<li><a href="#">Software Development <span class="number" data-number="1356">0</span></a></li>
+        			<li><a href="#">Copy Writing <span class="number" data-number="1356">0</span></a></li>
         		</ul>
         	</div>
         </div>
@@ -324,7 +324,7 @@ if (isset($_POST['search']) || isset($_GET['page'])) {
 		            <div class="block-18 text-center">
 		              <div class="text">
 		                <strong class="number" data-number="30000">0</strong>
-		                <span>Resume</span>
+		                <span>Resumes</span>
 		              </div>
 		            </div>
 		          </div>
@@ -332,7 +332,7 @@ if (isset($_POST['search']) || isset($_GET['page'])) {
 		            <div class="block-18 text-center">
 		              <div class="text">
 		                <strong class="number" data-number="10500">0</strong>
-		                <span>Company</span>
+		                <span>Companies</span>
 		              </div>
 		            </div>
 		          </div>
@@ -368,7 +368,7 @@ color:#2d2d2d;}
       <div class="container" >
         <div class="row justify-content-center mb-5 pb-3">
           <div class="col-md-7 text-center heading-section ftco-animate">
-          	<span class="subheading">Testimonial</span>
+          	<span class="subheading">Testimonials</span>
             <h2 class="mb-4"><span>Satisfied</span> Job Seekers</h2>
           </div>
         </div>
@@ -548,7 +548,7 @@ color:#2d2d2d;}
             <div class="row d-flex justify-content-center"  >
                 <div class="col-md-7 text-center heading-section heading-section-white ftco-animate"  >
                     <h2>Subscribe to our Newsletter</h2>
-                    <p>Are you on the hunt for your dream job? Look no further! Job Portal offers a vast database of job listings across diverse industries. Create a profile, upload your resume, and start browsing through opportunities that match your skills, experience, and aspirations. With our advanced search features and personalized job alerts, your next career move is just a click away</p>
+                    <p>Are you on the hunt for your dream job? Look no further! Deskano offers a vast database of job listings across diverse industries. Create a profile, upload your resume, and start browsing through opportunities that match your skills, experience, and aspirations. With our advanced search features and personalized job alerts, your next career move is just a click away</p>
                     <div class="row d-flex justify-content-center mt-4 mb-4">
                         <div class="col-md-8">
                             <form action="#" class="subscribe-form">
@@ -609,9 +609,9 @@ color:#2d2d2d;}
             	<h2 class="ftco-heading-2">Have a Questions?</h2>
             	<div class="block-23 mb-3">
 	              <ul>
-	                <li><span class="icon icon-map-marker"></span><span class="text">1175,Harmu Housing Colony, Ranchi, Jharkhand</span></li>
-	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+91 8210-099-1423</span></a></li>
-	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@learncod.com</span></a></li>
+	                <li><span class="icon icon-map-marker"></span><span class="text">542, Peradeniya Rd, Kandy</span></li>
+	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+94778358111</span></a></li>
+	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">deskanoofficial.com</span></a></li>
 	              </ul>
 	            </div>
             </div>

@@ -156,19 +156,19 @@ body {
 session_start();
 
 include('connection/db.php');
- $img=$_FILES['img']['name'];
- $user_email= $_SESSION['email'];
-  $first_name=$_POST['first_name'];
-  $last_name=$_POST['last_name'];
-   $number=$_POST['number'];
-   $email=$_POST['email'];
-   $company=$_POST['company'];
+$img=$_FILES['img']['name'];
+$user_email= $_SESSION['email'];
+$first_name=$_POST['first_name'];
+$last_name=$_POST['last_name'];
+$number=$_POST['number'];
+$email=$_POST['email'];
+$company=$_POST['company'];
 $tmp_name =$_FILES['img']['tmp_name'];
 
 $sql=mysqli_query($conn,"select * from employer where email='{$_SESSION['email']}'");
   $sql_check=mysqli_num_rows($sql);
 if (!empty($sql_check)) {
-  $query=mysqli_query($conn,"update employer Set img='$img', first_name='$first_name', last_name = '$last_name', mobile='$number',email='$email', company_name='$company' where email='{$_SESSION['email']}' ");
+  $query=mysqli_query($conn,"update employer Set first_name='$first_name', last_name = '$last_name', mobile='$number',email='$email', company_name='$company' where email='{$_SESSION['email']}' ");
     // $query= mysqli_query($conn,"insert into ()")
     if($query) {
         echo "<h1>Profile updated Successfully !!</h1>";
@@ -176,17 +176,23 @@ if (!empty($sql_check)) {
       echo "<h1>Some Error Please Try Again !!</h1>";
     }
 
-	}else{
+	}if (!empty($img)) {
+    move_uploaded_file($_FILES["img"]["tmp_name"],'profile_img/'.$img);
+    $query=mysqli_query($conn,"update employer Set img='$img' where email='{$_SESSION['email']}'");
+    if($query) {
+      echo "<h1>Profile updated Successfully !!</h1>";
+    }
+  }else{
 			move_uploaded_file($_FILES["img"]["tmp_name"],'profile_img/'.$img);
 
-			$query=mysqli_query($conn,"insert into employer(img,first_name,last_name,mobile,company_name)values('$img','$first_name','$last_name','$number','$company')");
-			// $query= mysqli_query($conn,"insert into ()")
-			if($query) {
-				 echo "<h1>Profile Added Successfully !!</h1>";
-			}else{
-				echo "<h1>Some Error Please Try Again !!</h1>";
-			}
-}
+			// $query=mysqli_query($conn,"insert into employer(first_name,last_name,mobile,company_name)values('$first_name','$last_name','$number','$company')");
+			// // $query= mysqli_query($conn,"insert into ()")
+			// if($query) {
+			// 	 echo "<h1>Profile Added Successfully !!</h1>";
+			// }else{
+			// 	echo "<h1>Some Error Please Try Again !!</h1>";
+			// }
+  }
  ?>
  
 
