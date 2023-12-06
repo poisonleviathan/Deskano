@@ -41,78 +41,113 @@ if ($result->num_rows > 0) {
 $conn->close();
 
 ?>
+<style>
+        body {
+            background-color: #f0f0f0; /* Background color for the entire page */
+        }
 
+        .container {
+            margin: 2% auto;
+            width: 60%;
+            border: 1px solid gray;
+            padding: 20px;
+            border-radius: 10px;
+            backdrop-filter: blur(100px); /* Adjust the blur intensity */
+            background-color: rgba(217, 236, 252, 0.8); /* Adjust the background color and opacity */
+        }
 
- <br>
-   <div style="margin-left: 25%; width: 50%; border: 1px solid gray; padding: 10px; ">
-   	 <form action="empProfile_add.php" method="POST" id="profile_form" name="profile_form" enctype="multipart/form-data">
-   	 	
-      <div class="row">
-      	  <div class="col-md-6">
-      	  	<img src="profile_img/<?php if(!empty($img)){ echo $img;}else{ echo 'logo.png' ;} ?>" class="img-thumbnail" alt="Profile picture">
-      	  </div>
+        .form-control {
+            width: 100%;
+            padding: 8px;
+            margin-top: 10px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
 
-          <div class="col-md-4">
-           <input type="file" class="form-control" name="img" id="img">
-          </div>
-          
-      </div>
-     
- <div style="margin-left: 30%;">
- <div class="row">
- 	 <div class="col-md-6">
- 	 	 <td> Enter Your First Name : </td>
- 	 </div>
- 	  <div class="col-md-6">
- 	 	 <td><input type="text" name="first_name" id="first_name" value="<?php if(!empty($first_name)) echo $first_name; ?>" placeholder="Enter Your first name ..." class="form-group" > </td>
- 	 </div>
- </div>
+        .btn-success {
+            background-color: #28a745;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
 
- <div class="row">
- 	 <div class="col-md-6">
- 	 	 <td> Enter Your Last Name : </td>
- 	 </div>
- 	  <div class="col-md-6">
- 	 	 <td><input type="text" name="last_name" id="last_name" value="<?php if(!empty($last_name)) echo $last_name; ?>" placeholder="Enter Your last name ..." class="form-group" > </td>
- 	 </div>
- </div>
+ <div class="container" style="padding-left: 5%; padding-right: 5%; margin: 2% auto; width: 60%;">
 
- <div class="row">
+    <form action="empProfile_add.php" method="POST" id="profile_form" name="profile_form" enctype="multipart/form-data">
 
- 	 <div class="col-md-6">
- 	 	 <td> Enter Your Mobile Number : </td>
- 	 </div>
+        <div class="profile-form">
+            <div class="row">
+                <div class="col-md-6" style="margin-bottom:10px;">
+                    <img src="profile_img/<?php if(!empty($img)) { echo $img; } else { echo 'logo.png'; } ?>" class="img-thumbnail" alt="Profile picture" style="width:100px; height:100px;">
+                </div>
 
- 	  <div class="col-md-6">
- 	 	 <td><input type="Number" name="number" id="number" value="<?php if(!empty($number)) echo $number; ?>" placeholder="Enter Your Mobile Number ..." class="form-group" > </td>
- 	 </div>
- 	 
- </div>
+                <div class="col-md-6" style="margin-top:auto">
+                    <input type="file" style="padding-top:1%; padding-botton:1%" class="form-control" name="img" id="img">
+                </div>
+            </div>
 
- <div class="row">
-    <div class="col-md-6">
-        <td> Enter Your Company : </td>
-    </div>
-    <div class="col-md-6">
-        <td><input type="text" name="company" id="company" value="<?php if(!empty($company)) echo $company; ?>" placeholder="Enter Your Company ..." class="form-group" > </td>
-    </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="first_name">Enter Your First Name:</label>
+                </div>
+                <div class="col-md-6">
+                    <input type="text" name="first_name" id="first_name" value="<?php if(!empty($first_name)) echo $first_name; ?>" placeholder="Enter Your first name..." class="form-control">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="last_name">Enter Your Last Name:</label>
+                </div>
+                <div class="col-md-6">
+                    <input type="text" name="last_name" id="last_name" value="<?php if(!empty($last_name)) echo $last_name; ?>" placeholder="Enter Your last name..." class="form-control">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="number">Enter Your Mobile Number:</label>
+                </div>
+                <div class="col-md-6">
+                    <input type="Number" name="number" id="number" value="<?php if(!empty($number)) echo $number; ?>" placeholder="Enter Your Mobile Number..." class="form-control">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="company">Enter Your Company:</label>
+                </div>
+                <div class="col-md-6">
+                    <input type="text" name="company" id="company" value="<?php if(!empty($company)) echo $company; ?>" placeholder="Enter Your Company..." class="form-control">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="email">Your Email:</label>
+                </div>
+                <div class="col-md-6">
+                    <input type="Email" name="email" id="email" value="<?php if(!empty($email)) echo $email; ?>" placeholder="Your Email..." class="form-control" readonly>
+                </div>
+            </div>
+
+            <div class="row" style="margin-top: 20px;">
+                <div class="col-md-6">
+                </div>
+                <div class="col-md-6">
+                    <input type="submit" id="submit" value="Update" name="submit" class="btn btn-success">
+                </div>
+            </div>
+
+        </div>
+
+    </form>
+
 </div>
 
-<div class="row">
-    <div class="col-md-6">
-        <td> Your Email : </td>
-    </div>
-    <div class="col-md-6">
-        <td><input type="Email" name="email" id="email" value="<?php if(!empty($email)) echo $email; ?>" placeholder="Your Email ..." class="form-group" readonly> </td>
-        <td><input type="submit" id="submit" placeholder="Update" value="Update" name="submit" class="btn btn-success"></td>
-    </div>
-</div>
-    
- 	 	  
-</div>
-<div class="form-group">
-  
-</div>
 
 
 

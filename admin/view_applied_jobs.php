@@ -67,6 +67,10 @@
                 <label style="color: #1F618D; font-size: 15px" >Job Seeker Date Of Birth :</label>
                  <p  style="font-size: 13px" ><?php echo ucfirst($row['dob']) ?></p>
              </div> <hr>  
+             <div class="form-group">
+                <label for="" style="color: #1F618D; font-size: 15px">Job Seeker Location :</label>
+                 <p  style="font-size: 13px"><?php echo ucfirst($row['Country']); ?>, <?php echo ucfirst($row['State']); ?>, <?php echo ucfirst($row['City']); ?></p>
+             </div> <hr> 
 
              <!-- <?php 
                        if(!empty( ucfirst($row['experience']))){
