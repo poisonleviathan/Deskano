@@ -49,18 +49,16 @@ include('include/header.php');
 			              					<div class="form-field">
 				              					<div class="select-wrap">
 						                      <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-						                      <select name="category" id="category" class="form-control">
-                                    <option value="">Category</option>
-                                    <?php 
-                                    include('connection/db.php');
-                                    $query=mysqli_query($conn,"select * from job_category");
-                                    while ($row=mysqli_fetch_array($query)) { ?>
-                                       <option value="<?php echo $row['id']; ?>"><?php echo $row['category']; ?></option>
+                                    <select name="category" id="category" class="form-control">
+                                      <option value="">Category</option>
+                                      <?php 
+                                      include('connection/db.php');
+                                      $query=mysqli_query($conn,"select * from job_category");
+                                      while ($row=mysqli_fetch_array($query)) { ?>
+                                        <option value="<?php echo $row['id']; ?>"><?php echo $row['category']; ?></option>
 
-                                     <?php } ?>
-						                   
-						                        
-						                      </select>
+                                      <?php } ?>
+                                    </select>
 						                    </div>
 								              </div>
 							              </div>
@@ -362,7 +360,89 @@ color:#2d2d2d;}
   color:#2d2d2d;
 }
       
-      </style>
+.learn1{
+  margin-left: auto;
+  margin-right: auto;
+  text-align:center;
+  width: 50%;
+}
+
+.padding{
+  padding-left:auto;
+  padding-right:auto;
+}
+
+.Searchbtn{
+  width: 40% !important;
+  height: 35px !important;
+}
+
+</style>
+
+<section class="learn1">
+  <div class="container">
+    <h2>Learn with Deskano</h2>
+  </div>
+  <div class="padding col-md-12 tab-wrap">		            
+		<div class="tab-content p-4" id="v-pills-tabContent">
+      <div class="tab-pane fade show active" id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-nextgen-tab">
+        <form action=""  method="post" class="learn search-job">
+          <div class="row">
+            <div class="col-md">
+              <div class="form-group">
+                <div class="form-field">
+                  <div class="select-wrap">
+                    <div class="icon"><span class="ion-ios-arrow-down"></span>
+                    </div>
+                      <select name="category" id="category" class="form-control">
+                        <option value="">Category</option>
+                        <?php 
+                        include('connection/db.php');
+                        $query=mysqli_query($conn,"select * from job_category");
+                        while ($row=mysqli_fetch_array($query)) { ?>
+                            <option value="<?php echo $row['id']; ?>"><?php echo $row['category']; ?></option>
+
+                          <?php } ?>
+                      </select>
+                  </div>   
+                </div> 
+              </div>
+            </div>
+            <div class="col-md">
+              <div class="form-group">
+                <div class="form-field">
+                  <input type="submit" value="Search" name="search" id="search" class="Searchbtn form-control btn btn-primary">
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<?php
+if (isset($_POST['search']) || isset($_GET['page'])) {
+    $page = $_GET['page'];
+
+    if ($page == "") {
+        $keyword = $_POST['key'];
+        $category = $_POST['category'];
+        $page1 = 0;
+    } else {
+        $keyword = $_GET['keyword'];
+        $category = $_GET['category'];
+        $page1 = ($page * 3) - 3;
+    }
+
+    $query1 = "SELECT * FROM all_jobs LEFT JOIN company ON all_jobs.customer_email=company.admin WHERE keyword LIKE '%$keyword%' OR category='$category' LIMIT $page1,3";
+
+    $sql = mysqli_query($conn, $query1);
+
+    $error = mysqli_num_rows($sql);
+?>
+<?php } ?>
 
  <section class="ftco-section testimony-section"id="seekers">
       <div class="container" >

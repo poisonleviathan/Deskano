@@ -185,7 +185,7 @@ if (!empty($sql_check && $sql_check1)) {
 			$query=mysqli_query($conn,"UPDATE profiles SET first_name='$first_name', last_name = '$last_name', dob='$dob',number='$number',email='$email' where user_email='$user_email' ");
 			// $query= mysqli_query($conn,"insert into ()")
 			if($query) {
-				 echo "<h1>Profile Added Successfully !!</h1>";
+        echo "<h1>Profile updated Successfully !!</h1>";
 			}else{
 				echo "<h1>Some Error Please Try Again !!</h1>";
 			}
@@ -195,7 +195,7 @@ if (!empty($img)) {
   move_uploaded_file($_FILES["img"]["tmp_name"],'profile_img/'.$img);
   $query=mysqli_query($conn,"UPDATE profiles SET img='$img' where email='{$_SESSION['email']}'");
   if($query) {
-    echo "<h1>Profile updated Successfully !!</h1>";
+    
   }
 }else{
   move_uploaded_file($_FILES["img"]["tmp_name"],'profile_img/'.$img);
