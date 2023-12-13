@@ -11,7 +11,7 @@ $query=mysqli_query($conn,"select * from  job_category");
             <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="admin_dashboard.php">Dashoard</a></li>
-              <li class="breadcrumb-item"><a href="Job_create.php">Job create</a></li>
+              <li class="breadcrumb-item"><a href="Job_create.php">Job Create</a></li>
               <li class="breadcrumb-item"><a href="#">Create job</a></li>
             
             </ol>

@@ -20,7 +20,7 @@ while ($row=mysqli_fetch_array($query)) {
             <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="admin_dashboard.php">Dashoard</a></li>
-              <li class="breadcrumb-item"><a href="Job_create.php">ALL Job List</a></li>
+              <li class="breadcrumb-item"><a href="Job_create.php">Job Create</a></li>
               <li class="breadcrumb-item"><a href="#">Edit JOB</a></li>
             
             </ol>

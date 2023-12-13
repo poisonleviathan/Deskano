@@ -40,7 +40,7 @@ include('include/header.php');
 			              				<div class="form-group">
 				              				<div class="form-field">
 				              					<div class="icon"><span class="icon-briefcase"></span></div>
-								                <input type="text" name="key" id="key"  class="form-control" placeholder="eg. Garphic. Web Developer">
+								                <input type="text" name="key" id="key"  class="form-control" placeholder="eg. Web Developer">
 								              </div>
 							              </div>
 			              			</div>
@@ -49,18 +49,16 @@ include('include/header.php');
 			              					<div class="form-field">
 				              					<div class="select-wrap">
 						                      <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-						                      <select name="category" id="category" class="form-control">
-                                    <option value="">Category</option>
-                                    <?php 
-                                    include('connection/db.php');
-                                    $query=mysqli_query($conn,"select * from job_category");
-                                    while ($row=mysqli_fetch_array($query)) { ?>
-                                       <option value="<?php echo $row['id']; ?>"><?php echo $row['category']; ?></option>
+                                    <select name="category" id="category" class="form-control">
+                                      <option value="">Category</option>
+                                      <?php 
+                                      include('connection/db.php');
+                                      $query=mysqli_query($conn,"select * from job_category");
+                                      while ($row=mysqli_fetch_array($query)) { ?>
+                                        <option value="<?php echo $row['id']; ?>"><?php echo $row['category']; ?></option>
 
-                                     <?php } ?>
-						                   
-						                        
-						                      </select>
+                                      <?php } ?>
+                                    </select>
 						                    </div>
 								              </div>
 							              </div>
@@ -254,7 +252,7 @@ if (isset($_POST['search']) || isset($_GET['page'])) {
     	<div class="container">
     		<div class="row justify-content-center mb-5 pb-3">
           <div class="col-md-7 heading-section text-center ftco-animate">
-          	<span class="subheading">Categories work wating for you</span>
+          	<span class="subheading">Exciting opportunities, eagerly await your attention!</span>
             <h2 class="mb-4"><span>Current</span> Job Posts</h2>
           </div>
         </div>
@@ -288,7 +286,7 @@ if (isset($_POST['search']) || isset($_GET['page'])) {
         			<li><a href="#">Web Designer <span><span class="number" data-number="8000">0</span></span></a></li>
         			<li><a href="#">Customer Service <span class="number" data-number="4000">0</span></a></li>
         			<li><a href="#">Marketing &amp; Sales <span class="number" data-number="3300">0</span></a></li>
-        			<li><a href="#">Software Development <span class="number" data-number="1356">0</span></a></li>
+        			<li><a href="#">Copy Writing <span class="number" data-number="1356">0</span></a></li>
         		</ul>
         	</div>
         </div>
@@ -324,7 +322,7 @@ if (isset($_POST['search']) || isset($_GET['page'])) {
 		            <div class="block-18 text-center">
 		              <div class="text">
 		                <strong class="number" data-number="30000">0</strong>
-		                <span>Resume</span>
+		                <span>Resumes</span>
 		              </div>
 		            </div>
 		          </div>
@@ -332,7 +330,7 @@ if (isset($_POST['search']) || isset($_GET['page'])) {
 		            <div class="block-18 text-center">
 		              <div class="text">
 		                <strong class="number" data-number="10500">0</strong>
-		                <span>Company</span>
+		                <span>Companies</span>
 		              </div>
 		            </div>
 		          </div>
@@ -362,13 +360,95 @@ color:#2d2d2d;}
   color:#2d2d2d;
 }
       
-      </style>
+.learn1{
+  margin-left: auto;
+  margin-right: auto;
+  text-align:center;
+  width: 50%;
+}
+
+.padding{
+  padding-left:auto;
+  padding-right:auto;
+}
+
+.Searchbtn{
+  width: 40% !important;
+  height: 35px !important;
+}
+
+</style>
+
+<section class="learn1">
+  <div class="container">
+    <h2>Learn with Deskano</h2>
+  </div>
+  <div class="padding col-md-12 tab-wrap">		            
+		<div class="tab-content p-4" id="v-pills-tabContent">
+      <div class="tab-pane fade show active" id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-nextgen-tab">
+        <form action=""  method="post" class="learn search-job">
+          <div class="row">
+            <div class="col-md">
+              <div class="form-group">
+                <div class="form-field">
+                  <div class="select-wrap">
+                    <div class="icon"><span class="ion-ios-arrow-down"></span>
+                    </div>
+                      <select name="category" id="category" class="form-control">
+                        <option value="">Category</option>
+                        <?php 
+                        include('connection/db.php');
+                        $query=mysqli_query($conn,"select * from job_category");
+                        while ($row=mysqli_fetch_array($query)) { ?>
+                            <option value="<?php echo $row['id']; ?>"><?php echo $row['category']; ?></option>
+
+                          <?php } ?>
+                      </select>
+                  </div>   
+                </div> 
+              </div>
+            </div>
+            <div class="col-md">
+              <div class="form-group">
+                <div class="form-field">
+                  <input type="submit" value="Search" name="search" id="search" class="Searchbtn form-control btn btn-primary">
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<?php
+if (isset($_POST['search']) || isset($_GET['page'])) {
+    $page = $_GET['page'];
+
+    if ($page == "") {
+        $keyword = $_POST['key'];
+        $category = $_POST['category'];
+        $page1 = 0;
+    } else {
+        $keyword = $_GET['keyword'];
+        $category = $_GET['category'];
+        $page1 = ($page * 3) - 3;
+    }
+
+    $query1 = "SELECT * FROM all_jobs LEFT JOIN company ON all_jobs.customer_email=company.admin WHERE keyword LIKE '%$keyword%' OR category='$category' LIMIT $page1,3";
+
+    $sql = mysqli_query($conn, $query1);
+
+    $error = mysqli_num_rows($sql);
+?>
+<?php } ?>
 
  <section class="ftco-section testimony-section"id="seekers">
       <div class="container" >
         <div class="row justify-content-center mb-5 pb-3">
           <div class="col-md-7 text-center heading-section ftco-animate">
-          	<span class="subheading">Testimonial</span>
+          	<span class="subheading">Testimonials</span>
             <h2 class="mb-4"><span>Satisfied</span> Job Seekers</h2>
           </div>
         </div>
@@ -548,7 +628,7 @@ color:#2d2d2d;}
             <div class="row d-flex justify-content-center"  >
                 <div class="col-md-7 text-center heading-section heading-section-white ftco-animate"  >
                     <h2>Subscribe to our Newsletter</h2>
-                    <p>Are you on the hunt for your dream job? Look no further! Job Portal offers a vast database of job listings across diverse industries. Create a profile, upload your resume, and start browsing through opportunities that match your skills, experience, and aspirations. With our advanced search features and personalized job alerts, your next career move is just a click away</p>
+                    <p>Are you on the hunt for your dream job? Look no further! Deskano offers a vast database of job listings across diverse industries. Create a profile, upload your resume, and start browsing through opportunities that match your skills, experience, and aspirations. With our advanced search features and personalized job alerts, your next career move is just a click away</p>
                     <div class="row d-flex justify-content-center mt-4 mb-4">
                         <div class="col-md-8">
                             <form action="#" class="subscribe-form">
@@ -609,9 +689,9 @@ color:#2d2d2d;}
             	<h2 class="ftco-heading-2">Have a Questions?</h2>
             	<div class="block-23 mb-3">
 	              <ul>
-	                <li><span class="icon icon-map-marker"></span><span class="text">1175,Harmu Housing Colony, Ranchi, Jharkhand</span></li>
-	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+91 8210-099-1423</span></a></li>
-	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@learncod.com</span></a></li>
+	                <li><span class="icon icon-map-marker"></span><span class="text">542, Peradeniya Rd, Kandy</span></li>
+	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+94778358111</span></a></li>
+	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">deskanoofficial.com</span></a></li>
 	              </ul>
 	            </div>
             </div>

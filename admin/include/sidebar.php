@@ -232,6 +232,12 @@
                   Edit Profile
                 </a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="learn.php">
+                  <i class="fa fa-user" aria-hidden="true"></i>
+                  Learn
+                </a>
+              </li>
             </ul>
           </div>
         </nav>

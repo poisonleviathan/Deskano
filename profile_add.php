@@ -156,42 +156,49 @@ body {
 session_start();
 
 include('connection/db.php');
- $img=$_FILES['img']['name'];
- $user_email= $_SESSION['email'];
-  $first_name=$_POST['first_name'];
-  $last_name=$_POST['last_name'];
-  $dob=$_POST['dob'];
-   $number=$_POST['number'];
-   $email=$_POST['email'];
+$img=$_FILES['img']['name'];
+$user_email= $_SESSION['email'];
+$first_name=$_POST['first_name'];
+$last_name=$_POST['last_name'];
+$dob=$_POST['dob'];
+$number=$_POST['number'];
+$email=$_POST['email'];
 $tmp_name =$_FILES['img']['tmp_name'];
 
 $sql=mysqli_query($conn,"select * from profiles where user_email='{$_SESSION['email']}'");
 $sql1=mysqli_query($conn,"select * from jobskeer where email='{$_SESSION['email']}'");
-  $sql_check=mysqli_num_rows($sql);
-  $sql_check1=mysqli_num_rows($sql1);
-if (!empty($sql_check && $sql_check1)) {
-  $query1 = mysqli_query($conn, "UPDATE jobskeer SET first_name = '$first_name', last_name = '$last_name', dob = '$dob', mobile_number = '$number', email = '$email' WHERE email='$user_email'");
-  $query=mysqli_query($conn,"update profiles Set img='$img', first_name='$first_name', last_name = '$last_name', dob='$dob',number='$number',email='$email' where user_email='$user_email' ");
-    // $query= mysqli_query($conn,"insert into ()")
-    if($query){
+$sql_check=mysqli_num_rows($sql);
+$sql_check1=mysqli_num_rows($sql1);
 
-    }
+if (!empty($sql_check && $sql_check1)) {
+  move_uploaded_file($_FILES["img"]["tmp_name"],'profile_img/'.$img);
+  $query1 = mysqli_query($conn, "UPDATE jobskeer SET first_name = '$first_name', last_name = '$last_name', dob = '$dob', mobile_number = '$number', email = '$email' WHERE email='$user_email'");
+  $query=mysqli_query($conn,"UPDATE profiles SET first_name='$first_name', last_name = '$last_name', dob='$dob',number='$number',email='$email' where user_email='$user_email' ");
+    // $query= mysqli_query($conn,"insert into ()")
     if($query) {
         echo "<h1>Profile updated Successfully !!</h1>";
     }else{
       echo "<h1>Some Error Please Try Again !!</h1>";
     }
-
-	}else{
-			move_uploaded_file($_FILES["img"]["tmp_name"],'profile_img/'.$img);
-
-			$query=mysqli_query($conn,"insert into profiles(img,name,dob,number,email,user_email)values('$img','$name','$dob','$number','$email','$user_email')");
+}else{
+      $query1 = mysqli_query($conn, "UPDATE jobskeer SET first_name = '$first_name', last_name = '$last_name', dob = '$dob', mobile_number = '$number', email = '$email' WHERE email='$user_email'");
+			$query=mysqli_query($conn,"UPDATE profiles SET first_name='$first_name', last_name = '$last_name', dob='$dob',number='$number',email='$email' where user_email='$user_email' ");
 			// $query= mysqli_query($conn,"insert into ()")
 			if($query) {
-				 echo "<h1>Profile Added Successfully !!</h1>";
+        echo "<h1>Profile updated Successfully !!</h1>";
 			}else{
 				echo "<h1>Some Error Please Try Again !!</h1>";
 			}
+}
+
+if (!empty($img)) {
+  move_uploaded_file($_FILES["img"]["tmp_name"],'profile_img/'.$img);
+  $query=mysqli_query($conn,"UPDATE profiles SET img='$img' where email='{$_SESSION['email']}'");
+  if($query) {
+    
+  }
+}else{
+  move_uploaded_file($_FILES["img"]["tmp_name"],'profile_img/'.$img);
 }
  ?>
  

@@ -30,6 +30,9 @@
                 <th>Job Title</th>
                 <th>Job Seeker Name</th>
                 <th>Job Seeker Email</th>
+                <th>Job Seeker Country</th>
+                <th>Job Seeker Province</th>
+                <th>Job Seeker City</th>
                 <th>Salary</th>
                 <th>Action</th>
             </tr>
@@ -55,6 +58,12 @@
                 
               <td><?php echo $row['job_seeker']; ?></td>
 
+              <td><?php echo $row['Country']; ?></td>
+
+              <td><?php echo $row['State']; ?></td>
+
+              <td><?php echo $row['City']; ?></td>
+
               <td>Rs. <?php echo $row['salary']; ?>/=</td>
                 
               <!-- <td><a href="http://localhost/Deskano/files/<?php echo $row['file']; ?>">Download File </a></td> -->
@@ -77,6 +86,9 @@
                 <th>Job Title</th>
                 <th>Job Seeker Name</th>
                 <th>Job Seeker Email</th>
+                <th>Job Seeker Country</th>
+                <th>Job Seeker Province</th>
+                <th>Job Seeker City</th>
                 <th>Salary</th>
                 <th>Action</th>
             </tr>
