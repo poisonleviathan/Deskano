@@ -143,7 +143,7 @@ while ($row=mysqli_fetch_array($query)) {
                 </div>   
                 <?php //}; ?>
                 
-               <input type="submit" name="submit" id="submit" value="submit" placeholder="Submit" href="apply_job_page.php" class=" btn btn-primary btn-block ">
+               <input type="submit" name="submit" id="submit" value="Submit" placeholder="Submit" href="apply_job_page.php" class=" btn btn-primary btn-block ">
            </div>
             </form>
                </div>

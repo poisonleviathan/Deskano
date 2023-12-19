@@ -26,7 +26,7 @@
              <form action="" method="post" style="margin:3%; padding: 3%;" name="Company_form" id="Company_form">
                  <div class="form-group">
                     <label for="Cutomer Email">Category Name</label>
-                     <input type="text"  name="category" id="category" class="form-control" placeholder="Enter Company Name">
+                     <input type="text"  name="category" id="category" class="form-control" placeholder="Enter Category Name">
                  </div>
                     <div class="form-group">
                     <label for="Cutomer Username">Description</label>

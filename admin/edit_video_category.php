@@ -5,10 +5,10 @@
  include('include/sidebar.php');
 
 $id=$_GET['edit'];
- $query= mysqli_query($conn,"select * from job_category where id = '$id'");
+ $query= mysqli_query($conn,"select * from video_category where id = '$id'");
  while ($row=mysqli_fetch_array($query)) {
  	 $category=$row['category'];
- 	 $des=$row['des'];
+ 	 $des=$row['description'];
  	
  }
 
@@ -17,13 +17,13 @@ $id=$_GET['edit'];
             <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="admin_dashboard.php">Dashoard</a></li>
-              <li class="breadcrumb-item"><a href="category.php">Category</a></li>
+              <li class="breadcrumb-item"><a href="video_category.php">Video Category</a></li>
               <li class="breadcrumb-item"><a href="#">Update Category</a></li>
             
             </ol>
           </nav>
           <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
-       <h1 class="h2"> Update Category</h1>
+       <h1 class="h2"> Update Video Category</h1>
             <div class="btn-toolbar mb-2 mb-md-0">
               <div class="btn-group mr-2">
                
@@ -95,7 +95,7 @@ $id=$_GET['edit'];
  	
  	
 
-  $query1=mysqli_query($conn,"update job_category  set category='$category',des='$des' where id='$id'");
+  $query1=mysqli_query($conn,"update video_category  set category='$category',description='$des' where id='$id'");
   if ($query1) {
   	echo "<script>alert('Record has been Update successfully  !!!!')</script>";
   }else{

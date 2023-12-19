@@ -14,6 +14,12 @@ while ($row=mysqli_fetch_array($query)) {
 	 $email=$row['email'];
    $user_email=$row['user_email'];
 }
+
+//if the user account not fount, it will redirects to the home page
+if ($_SESSION['email'] == null) {
+  echo '<script>window.location.href = "logout.php";</script>';
+}
+
  ?>
 
 
@@ -116,10 +122,10 @@ $conn->close();
 
       <div class="row">
         <div class="col-md-6">
-          <td> Enter Your MObile Number : </td>
+          <td> Enter Your Mobile Number : </td>
         </div>
           <div class="col-md-6">
-          <td><input type="Number" name="number" id="number" value="<?php if(!empty($number)) echo $number; ?>" placeholder="Enter Your MObile Number ..." class="form-group" > </td>
+          <td><input type="Number" name="number" id="number" value="<?php if(!empty($number)) echo $number; ?>" placeholder="Enter Your Mobile Number ..." class="form-group" > </td>
         </div>
       </div>
 
@@ -129,14 +135,27 @@ $conn->close();
         </div>
         <div class="col-md-6">
           <td><input type="Email" name="email" id="email" value="<?php if(!empty($email)) echo $email; ?>" placeholder="Your Email ..." class="form-group" readonly> </td>
-          <td><input type="submit" id="submit" placeholder="Update" value="Update" name="submit" class="btn btn-success"></td>
+          
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <td><input style="width:50%;" type="button" id="delete" placeholder="Delete" value="Delete" name="delete" class="btn btn-danger" onclick="deletee()" ></td>
+        </div>
+        <div class="col-md-6">
+          <td><input style="width:50%; height:90%;" type="submit" id="submit" placeholder="Update" value="Update" name="submit" class="btn btn-success"></td>
         </div>
       </div>
   <div class="form-group">
     
   </div>
 
-
+  <script>
+    function deletee() {
+        // Redirect to another page when the "Delete" button is clicked
+        window.location.href = 'profile_delete.php';
+    }
+  </script>
 
   <?php
 

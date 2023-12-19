@@ -152,8 +152,12 @@ body {
       <main role="main" class="inner cover">
         <h1 class="cover-heading">Cover your page.</h1>
 
-            <?php 
+<?php 
 session_start();
+
+if ($_SESSION['email'] == null) {
+  echo '<script>window.location.href = "logout.php";</script>';
+}
 
 include('connection/db.php');
 $img=$_FILES['img']['name'];

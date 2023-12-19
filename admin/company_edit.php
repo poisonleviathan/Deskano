@@ -35,26 +35,27 @@ $id=$_GET['edit'];
           <div style="width: 60%; margin-left: 20%; background-color: #F2F4F4;" >
             <div id="msg"></div>
              <form action="" method="post" style="margin:3%; padding: 3%;" name="customer_form" id="customer_form">
-                 <div class="form-group">
-                    <label for="Cutomer Email">Enter  Company Name</label>
-                    <input type="Company" name="Company" id="Company"  value="<?php echo $company_name ?>" class="form-control" placeholder="Enter company name">
-                 </div>
-                    <div class="form-group">
-                    <label for="Cutomer Username">Enter Description</label>
-                    <textarea name="des" id="des" class="form-control" cols="30" rows="10"><?php echo $des ?></textarea>
-                 </div>
-                 
-                  <div type="hidden" class="form-group">
-                    <label for="Cutomer Username">Select Company Admin</label>
-                    
-                    <input name="admin" class="form-control" id="admin" value="<?php echo $email ?>" readonly>
-                 </div>
+                <div class="form-group">
+                  <label for="Cutomer Email">Enter  Company Name</label>
+                  <input type="Company" name="Company" id="Company"  value="<?php echo $company_name ?>" class="form-control" placeholder="Enter company name">
+                </div>
 
-                    <input type="hidden" name="id" id="id" value= " <?php echo $_GET['edit']; ?>">
-                      <div class="form-group">
+                <div class="form-group">
+                  <label for="Cutomer Username">Enter Description</label>
+                  <textarea name="des" id="des" class="form-control" cols="30" rows="10"><?php echo $des ?></textarea>
+                </div>
+                 
+                <div type="hidden" class="form-group">
+                  <label for="Cutomer Username">Select Company Admin</label>
+                    
+                  <input name="admin" class="form-control" id="admin" value="<?php echo $email ?>" readonly>
+                </div>
+
+                <input type="hidden" name="id" id="id" value= " <?php echo $_GET['edit']; ?>">
+                <div class="form-group">
                    
-                    <input type="submit" class="btn btn-block btn-success" placeholder="Update" name="submit" id="submit">
-                 </div>
+                  <input type="submit" class="btn btn-block btn-success" placeholder="Update" name="submit" id="submit">
+                </div>
              </form>
 
 

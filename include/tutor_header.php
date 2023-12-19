@@ -2,7 +2,7 @@
 session_start();
 error_reporting(0);
  include('connection/db.php');
- $header=mysqli_query($conn,"select * from profiles where user_email='{$_SESSION['email']}'");
+ $header=mysqli_query($conn,"select * from tutor where email='{$_SESSION['email']}'");
  while ($row=mysqli_fetch_array($header)) {
   $img=$row['img'];
   $name=$row['first_name'];
@@ -11,7 +11,7 @@ error_reporting(0);
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title style="color:white;">Deskano - Largest Job Platform</title>
+    <title class="header-title" style="color:white;">Deskano - Largest Job Platform</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -117,20 +117,13 @@ error_reporting(0);
 
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
-	          <li class="nav-item nav-item1 <?php if($page=='home'){echo 'active';} ?>"><a href="index.php" class="nav-link">Home</a></li>
-	          <!-- <li class="nav-item <?php if($page=='about'){echo 'active';} ?>"><a href="about.php" class="nav-link">About</a></li> -->
 
-	          <!-- <li class="nav-item <?php if($page=='blog'){echo 'active';} ?>"><a href="blog.php" class="nav-link">Blog</a></li> -->
-	          
-            <li class="nav-item nav-item1 <?php if($page=='learn'){echo 'active';} ?>"><a href="learnguest.php" class="nav-link">Learn</a></li>
-            
+            <li class="nav-item nav-item1 <?php if($page=='learn'){echo 'active';} ?>"><a href="tutor_home.php" class="nav-link">Learn</a></li>
+
             <li class="nav-item nav-item1 <?php if($page=='contact'){echo 'active';} ?>"><a href="contact.php" class="nav-link">Contact</a></li>
-
 	            <?php 
              if ( isset( $_SESSION['email'])==true) { ?>
-              <li class="nav-item nav-item1 cta mr-md-2"><a href="#" class="nav-link"><?php if (empty($name)) {
-                
-            echo $_SESSION['email']; } else{ echo $name ;} ?></a></li>
+              <li class="nav-item nav-item1 cta mr-md-2"><a href="#" class="nav-link"><?php if (empty($name)) {echo $_SESSION['email']; } else{ echo $name ;} ?></a></li>
               
               <li  class="nav-item ">
 

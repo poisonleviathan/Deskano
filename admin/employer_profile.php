@@ -20,6 +20,10 @@ while ($row=mysqli_fetch_array($query)) {
 <?php
  $conn=mysqli_connect("localhost","root","","Deskano");
 
+ if ($_SESSION['email'] == null) {
+   echo '<script>window.location.href = "logout.php";</script>';
+ }
+
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
@@ -136,19 +140,22 @@ $conn->close();
 
             <div class="row" style="margin-top: 20px;">
                 <div class="col-md-6">
+                    <input style="width:50%;" type="button" id="delete" value="Delete" name="delete" class="btn btn-danger" onclick="deletee()">
                 </div>
                 <div class="col-md-6">
-                    <input type="submit" id="submit" value="Update" name="submit" class="btn btn-success">
+                    <input style="width:50%; height:90%;" type="submit" id="submit" value="Update" name="submit" class="btn btn-success">
                 </div>
             </div>
-
         </div>
-
     </form>
-
 </div>
 
-
+<script>
+    function deletee() {
+        // Redirect to another page when the "Delete" button is clicked
+        window.location.href = 'empProfile_delete.php';
+    }
+</script>
 
 
 <?php 

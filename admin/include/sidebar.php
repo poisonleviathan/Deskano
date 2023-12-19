@@ -48,6 +48,13 @@
               </li>
 
               <li class="nav-item">
+                <a class="nav-link" href="video_category.php">
+                  <i class="fa fa-video-camera" aria-hidden="true"></i>
+                  Video Category
+                </a>
+              </li>
+
+              <li class="nav-item">
                 <a class="nav-link" href="apply_jobs.php">
                   <i class="fa fa-file" aria-hidden="true"></i>
                   Applied Jobs
@@ -133,6 +140,13 @@
                 <a class="nav-link" href="category.php">
                   <i class="fa fa-file" aria-hidden="true"></i>
                   Category
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="video_category.php">
+                  <i class="fa fa-video-camera" aria-hidden="true"></i>
+                  Video Category
                 </a>
               </li>
 
@@ -230,12 +244,6 @@
                 <a class="nav-link" href="employer_profile.php">
                   <i class="fa fa-user" aria-hidden="true"></i>
                   Edit Profile
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="learn.php">
-                  <i class="fa fa-user" aria-hidden="true"></i>
-                  Learn
                 </a>
               </li>
             </ul>
