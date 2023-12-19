@@ -1,15 +1,14 @@
 <?php 
    $page='home';
    include('include/header.php');
-  
-    ?>
+?>
         <section class="ftco-about d-md-flex">
 
     </section>
    <div class="container" style="padding-top: 8%;">
     <!-- <h2>Get Started:</h2> -->
     <p>
-      Join Job Portal today and take the next step in your career journey. Whether you're a job seeker or an employer, our platform is here to help you succeed. Sign up now and unlock a world of opportunities!<br>
+      Join Deskano today and take the next step in your career journey. Whether you're a job seeker or an employer, our platform is here to help you succeed. Sign up now and unlock a world of opportunities!<br>
       Feel free to customize this text to align with your specific job portal's mission, features, and branding. Additionally, consider adding any unique selling points or services that set your job portal apart from others in the industry.
     </p>
     <div class="id_all_jobs">
@@ -64,6 +63,31 @@
             </form>
          </div>
       </div>
+      <div class="col-lg-6 col-sm-12 col-md-6" style="margin-left:auto; margin-right:auto; margin-bottom:  3%;">
+         <div style="box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px; padding: 40px; ">
+            <form class="form-signin" action="login.php" method="post" >
+               <!--  <img class="mb-4" src="https://www.thejobsportal.co.za/sites/default/files/jobsportal.png" alt="" style="margin-left: -15%" width="372" height="122"> -->
+               <h1 class="h3 mb-3 font-weight-normal">Tutor Sign In</h1>
+                <p><b>For Demo you can use<br></b> Email: tutor@tutor.com <br> Password: Tutor65k@!</p>
+               <div class="form-group">
+                  <label for="inputEmail" class="sr-only">Email address</label>
+                  <input type="email" id="inputEmail" name="tutoremail" class="form-control" placeholder="Email address" required autofocus>
+               </div>
+               <div class="form-group">
+                  <label for="inputPassword" class="sr-only">Password</label>
+                  <input type="password" id="inputPassword" name="tutorPassword" class="form-control" placeholder="Password" required>
+               </div>
+               <!--  <div class="checkbox mb-3">
+                  <label>
+                    <input type="checkbox" value="remember-me"> Remember me
+                  </label>
+                  </div> -->
+                  <button class="btn btn-lg btn-primary btn-block"  name="tutorsubmit" type="submit" >Login</button>
+               <a href="tutor_sign_up.php">Create an Account</a>
+              
+            </form>
+         </div>
+      </div>
    </div>
     </div>
 
@@ -81,7 +105,7 @@
          <div class="row d-flex justify-content-center">
             <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
                <h2>Subcribe to our Newsletter</h2>
-               <p>Are you on the hunt for your dream job? Look no further! Job Portal  offers a vast database of job listings across diverse industries. Create a profile, upload your resume, and start browsing through opportunities that match your skills, experience, and aspirations. With our advanced search features and personalized job alerts, your next career move is just a click away</p>
+               <p>Are you on the hunt for your dream job? Look no further! Deskano  offers a vast database of job listings across diverse industries. Create a profile, upload your resume, and start browsing through opportunities that match your skills, experience, and aspirations. With our advanced search features and personalized job alerts, your next career move is just a click away</p>
                <div class="row d-flex justify-content-center mt-4 mb-4">
                   <div class="col-md-8">
                      <form action="#" class="subscribe-form">
@@ -144,9 +168,9 @@
                <h2 class="ftco-heading-2">Have a Question?</h2>
                <div class="block-23 mb-3">
                   <ul>
-                     <li><span class="icon icon-map-marker"></span><span class="text">1175,Harmu Housing Colony, Ranchi, Jharkhand</span></li>
-                     <li><a href="#"><span class="icon icon-phone"></span><span class="text">+91 8210-099-1423</span></a></li>
-                     <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@learncod.com</span></a></li>
+                     <li><span class="icon icon-map-marker"></span><span class="text">542, Peradeniya Rd, Kandy</span></li>
+	                  <li><a href="#"><span class="icon icon-phone"></span><span class="text">+94778358111</span></a></li>
+	                  <li><a href="#"><span class="icon icon-envelope"></span><span class="text">deskanoofficial.com</span></a></li>
                   </ul>
                </div>
             </div>
@@ -229,17 +253,39 @@
     
     
    if (mysqli_num_rows($query)>0) {
-       
-     $_SESSION['email']= $email;
-   //   header('location:admin_dashboard.php');
-     echo "<script>window.location.href = 'http://localhost/Deskano/admin/admin_dashboard.php'; </script>";
+         $_SESSION['email']= $email;
+         //   header('location:admin_dashboard.php');
+         echo "<script>window.location.href = 'http://localhost/Deskano/admin/admin_dashboard.php'; </script>";
+         
+         }else{
+         echo "<script>alert('Email or password is  incorrect ,Please try again')</script>";
+         }
    
-   }else{
-     echo "<script>alert('Email or password is  incorrect ,Please try again')</script>";
-   }
    
-   
-   }
+      }
    }
    
     ?>
+
+<?php 
+   include('connection/db.php');
+   
+   if (isset($_POST['tutorsubmit'])) {
+      $email=$_POST['tutoremail'];
+      $pass=md5($_POST['tutorPassword']);     
+      echo $sql ="select * from tutor where email='$email' and password='$pass'";
+      $query=mysqli_query($conn,$sql);
+
+     if ($query) {
+         if (mysqli_num_rows($query)>0) {
+            
+         $_SESSION['email']= $email;
+            echo "<script>window.location.href = 'http://localhost/Deskano/tutor_home.php'; </script>";
+            exit();
+
+         }else{
+         echo "<script>alert('Email or password is  incorrect ,Please try again')</script>";
+         }
+      }
+   }
+   ?>
