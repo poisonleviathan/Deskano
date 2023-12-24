@@ -165,7 +165,7 @@
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="employers.php">
+                <a class="nav-link" href="superEmployers.php">
                 <i class="fa fa-users" aria-hidden="true"></i>
 
                  Employers
@@ -173,7 +173,7 @@
               </li>
 
              <li class="nav-item">
-                <a class="nav-link" href="JobSkeers_auth.php">
+                <a class="nav-link" href="superJobseeker.php">
                 <i class="fa fa-users" aria-hidden="true"></i>
 
                  Employees

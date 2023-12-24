@@ -142,7 +142,7 @@ if (empty($email) || empty($password) || empty($first_name) || empty($last_name)
             $conn2=mysqli_connect("localhost","root","","deskano");
 
             $querry ="INSERT INTO profiles (first_name, last_name, dob, number, email, user_email) VALUES ('$first_name', '$last_name', '$dob', '$mobile_number', '$email', '$email')";
-            $query = "INSERT INTO jobskeer (email, password, first_name, last_name, dob, mobile_number, status) VALUES ('$email', '$hashedPassword', '$first_name', '$last_name', '$dob', '$mobile_number', 'Active')";
+            $query = "INSERT INTO jobskeer (email, password, first_name, last_name, dob, mobile_number, exp, status) VALUES ('$email', '$hashedPassword', '$first_name', '$last_name', '$dob', '$mobile_number', '$experience', 'Active')";
 
             if ($conn1->query($querry) == TRUE) {
 
