@@ -143,7 +143,7 @@
                   <li><a href="#" class="py-2 d-block">Register</a></li>
                   <li><a href="#" class="py-2 d-block">Post a Job</a></li>
                   <li><a href="#" class="py-2 d-block">Blog</a></li>
-                  <li><a href="#" class="py-2 d-block">Faq</a></li>
+                  <li><a href="faq.php" class="py-2 d-block">Faq</a></li>
                </ul>
             </div>
          </div>

@@ -38,6 +38,17 @@ error_reporting(0);
     <script src="country-region-dropdown-menu-master/assets/js/geodatasource-cr.js"></script>
     <link rel="stylesheet" href="country-region-dropdown-menu-master/assets/css/geodatasource-countryflag.css">
 
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <!--FAQ-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+
+
     <!-- link to all languages po files -->
     <link rel="gettext" type="application/x-po" href="country-region-dropdown-menu-master/languages/ar/LC_MESSAGES/ar.po" />
     <link rel="gettext" type="application/x-po" href="country-region-dropdown-menu-master/languages/cs/LC_MESSAGES/cs.po" />
@@ -60,35 +71,35 @@ error_reporting(0);
 
     <script type="text/javascript" src="country-region-dropdown-menu-master/assets/js/Gettext.js"></script>
 
-    <style>
+<style>
 
-#ftco-navbar {
-  display: block;
-  visibility: visible; 
-  opacity: 1;
-  position: relative;
-  z-index: 999;
-}
+  #ftco-navbar {
+    display: block;
+    visibility: visible; 
+    opacity: 1;
+    position: relative;
+    z-index: 999;
+  }
 
-.ftco-navbar-light {
-  display: block !important;
-  background: black !important;
-}
+  .ftco-navbar-light {
+    display: block !important;
+    background: black !important;
+  }
 
-.collapse {
-  display: block!important; 
-}
+  .collapse {
+    display: block!important; 
+  }
 
-.collapsing {
-  visibility: visible;
-}
+  .collapsing {
+    visibility: visible;
+  }
 
-.navbar-nav {
-  display: flex!important;
-}
-.hero-wrap .overlay{
-  background:#00000000;
-}
+  .navbar-nav {
+    display: flex!important;
+  }
+  .hero-wrap .overlay{
+    background:#00000000;
+  }
 
 </style>
 <style type="text/css">
@@ -104,8 +115,8 @@ error_reporting(0);
 
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  </head>
-  <body>
+</head>
+<body id="body">
     
 
   <nav class="navbar navbar-expand-lg navbar-light ftco_navbar ftco-navbar-light" id="ftco-navbar">
@@ -123,8 +134,14 @@ error_reporting(0);
 	          <!-- <li class="nav-item <?php if($page=='blog'){echo 'active';} ?>"><a href="blog.php" class="nav-link">Blog</a></li> -->
 	          
             <li class="nav-item nav-item1 <?php if($page=='learn'){echo 'active';} ?>"><a href="learnguest.php" class="nav-link">Learn</a></li>
+
+            <li class="nav-item nav-item1 <?php if($page=='shop'){echo 'active';} ?>"><a href="shop.php" class="nav-link">Deskano Shop</a></li>
+
+            <li class="nav-item nav-item1 <?php if($page=='card'){echo 'active';} ?>"><a href="plus.php" class="nav-link">Deskano Plus</a></li>
             
             <li class="nav-item nav-item1 <?php if($page=='contact'){echo 'active';} ?>"><a href="contact.php" class="nav-link">Contact</a></li>
+
+            <li class="nav-item nav-item1 <?php if($page=='faq'){echo 'active';} ?>"><a href="faq.php" class="nav-link">FAQ</a></li>
 
 	            <?php 
              if ( isset( $_SESSION['email'])==true) { ?>
@@ -155,4 +172,3 @@ error_reporting(0);
 	    </div>
 	  </nav>
     <!-- END nav -->
-    

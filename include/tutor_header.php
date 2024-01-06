@@ -120,7 +120,9 @@ error_reporting(0);
 
             <li class="nav-item nav-item1 <?php if($page=='learn'){echo 'active';} ?>"><a href="tutor_home.php" class="nav-link">Learn</a></li>
 
-            <li class="nav-item nav-item1 <?php if($page=='contact'){echo 'active';} ?>"><a href="contact.php" class="nav-link">Contact</a></li>
+            <li class="nav-item nav-item1 <?php if($page=='uploads'){echo 'active';} ?>"><a href="uploads.php" class="nav-link">Uploads</a></li>
+
+            <li class="nav-item nav-item1 <?php if($page=='contact'){echo 'active';} ?>"><a href="tutor_contact.php" class="nav-link">Contact</a></li>
 	            <?php 
              if ( isset( $_SESSION['email'])==true) { ?>
               <li class="nav-item nav-item1 cta mr-md-2"><a href="#" class="nav-link"><?php if (empty($name)) {echo $_SESSION['email']; } else{ echo $name ;} ?></a></li>

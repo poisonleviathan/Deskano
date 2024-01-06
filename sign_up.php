@@ -82,7 +82,7 @@
 
     <?php
     use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
+    use PHPMailer\PHPMailer\Exception;
 
 require 'admin/email/vendor/autoload.php';
    include('include/footer.php');
@@ -134,9 +134,6 @@ if (empty($email) || empty($password) || empty($first_name) || empty($last_name)
         } else {
             // Hash the password
             $hashedPassword = md5($password);
-
-            // Insert data into the database
-            // $query = "INSERT INTO jobskeer (email, password, first_name, middle_name, last_name, dob, mobile_number, exp, college, anual_salery, status, qualification) VALUES ('$email', '$hashedPassword', '$first_name', '$middle_name', '$last_name', '$dob', '$mobile_number', '$experience', '$collegename', '$salary', 'Active', '$qualification')";
 
             $conn1=mysqli_connect("localhost","root","","deskano");
             $conn2=mysqli_connect("localhost","root","","deskano");

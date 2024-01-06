@@ -14,80 +14,75 @@
     </div>
 </div>
 
-<main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
-            
-          <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
-       <h1 class="h2"> Upload to Learn</h1>
-            <div class="btn-toolbar mb-2 mb-md-0">
-              <div class="btn-group mr-2">
-               
-              </div>
-              <!-- <a class="btn btn-primary" href="add_cutomer.php">Add Customer</a> -->
+<main role="main" style="margin-left: auto; margin-right: auto" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+    <!-- Header section -->
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
+        <h1 class="h2">Upload to Learn</h1>
+    </div>
+
+    <!-- Form section -->
+    <div style="width: 60%; padding: 3%; margin-left: 20%; margin-right: 20%; background-color: #F2F4F4; border-radius: 15px;">
+        <div id="msg"></div>
+        <form action="video_add.php" method="post" style="margin: 5%; padding: 3%;" enctype="multipart/form-data" name="customer_form" id="customer_form">
+            <input type="hidden" name="user_email" value="<?php echo $_SESSION['email']; ?>">
+
+            <div class="form-group">
+                <label for="video-title">Enter the Video Title</label>
+                <input name="des" id="des" placeholder="PHP Web Developing" class="form-control">
             </div>
-          </div>
 
-          <div style="width: 60%; padding: 3%; margin-left: 20%; background-color: #F2F4F4;">
-              <div id="msg"></div>
-              <form action="video_add.php" method="post" style="margin:5%; padding: 3%;" enctype="multipart/form-data" name="customer_form" id="customer_form">
-              
-                <input type="hidden" name="user_email" value="<?php echo $_SESSION['email']; ?>">
-              
-                  <div class="form-group">
-                      <label for="video-title">Enter the Video Title</label>
-                      <input name="des" id="des" placeholder="PHP Web Developing" class="form-control">
-                  </div>
-                  <div class="form-group">
-                    <label for="">Select the Category</label>
-                         <select name="category" class="form-control" id="category">
-                          <?php 
-                          $query=mysqli_query($conn,"select * from  video_category");
-                           while ($row=mysqli_fetch_array($query)) {
-                            ?>
-                              <option value="<?php echo $row['id'] ?>"><?php echo $row['category'] ?></option>
-                            <?php
-                           }
-                           ?>
-                              
-                          </select>
-                  </div>
-                  <div class="form-group">
-                      <label for="video-file">Choose a Video</label>
-                      <input type="file" class="form-control" name="video" id="video" style="border:solid black 1px; padding-top:1%; padding-bottom:1%" onchange="updateVideo()">
-                  </div>
+            <div class="form-group">
+                <label for="category">Select the Category</label>
+                <select name="category" class="form-control" id="category">
+                    <?php 
+                    $query = mysqli_query($conn, "SELECT * FROM video_category");
+                    while ($row = mysqli_fetch_array($query)) {
+                    ?>
+                        <option value="<?php echo $row['id'] ?>"><?php echo $row['category'] ?></option>
+                    <?php
+                    }
+                    ?>
+                </select>
+            </div>
 
-                  <div style="text-align:center;"  class="form-group">
-                      <video width="80%" height="50%" controls id="videoPlayer">
-                          Your browser does not support the video tag.
-                      </video>
-                  </div>
+            <div class="form-group">
+                <label for="video-file">Choose a Video</label>
+                <input type="file" class="form-control" name="video" id="video" style="border: solid black 1px; padding-top: 1%; padding-bottom: 1%" onchange="updateVideo()">
+            </div>
 
-                  <div class="form-group">
-                      <input type="submit" class="btn btn-block btn-success" placeholder="Update" name="submit" id="submit">
-                  </div>
-              </form>
+            <div style="text-align: center;" class="form-group">
+                <video width="80%" height="50%" controls id="videoPlayer">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
 
-              <script>
-                  function updateVideo() {
-                      var videoInput = document.getElementById('video');
-                      var videoPlayer = document.getElementById('videoPlayer');
+            <div class="form-group">
+                <input type="submit" class="btn btn-block btn-success" value="Update" name="submit" id="submit">
+            </div>
+        </form>
 
-                      // Check if a file is selected
-                      if (videoInput.files.length > 0) {
-                          var selectedVideo = URL.createObjectURL(videoInput.files[0]);
-                          // Update the video source dynamically
-                          videoPlayer.innerHTML = '<source src="' + selectedVideo + '" type="video/mp4">';
-                      }
-                  }
-              </script>
-          </div>
+        <!-- JavaScript to update video preview -->
+        <script>
+            function updateVideo() {
+                var videoInput = document.getElementById('video');
+                var videoPlayer = document.getElementById('videoPlayer');
 
+                // Check if a file is selected
+                if (videoInput.files.length > 0) {
+                    var selectedVideo = URL.createObjectURL(videoInput.files[0]);
+                    // Update the video source dynamically
+                    videoPlayer.innerHTML = '<source src="' + selectedVideo + '" type="video/mp4">';
+                }
+            }
+        </script>
+    </div>
 
+    <canvas class="my-4" id="myChart" width="900" height="380"></canvas>
+    <div class="table-responsive">
+        <!-- Content for the table goes here -->
+    </div>
+</main>
 
-          <canvas class="my-4" id="myChart" width="900" height="380"></canvas>
-          <div class="table-responsive">
-            
-          </div>
-        </main>
       </div>
     </div>
 

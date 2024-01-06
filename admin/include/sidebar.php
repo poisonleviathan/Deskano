@@ -69,6 +69,13 @@
               </li>
 
               <li class="nav-item">
+                <a class="nav-link" href="learnAdmin.php">
+                  <i class="fa fa-video-camera" aria-hidden="true"></i>
+                 Learn 
+                </a>
+              </li>
+
+              <li class="nav-item">
                 <a class="nav-link" href="employers.php">
                 <i class="fa fa-users" aria-hidden="true"></i>
 
@@ -89,6 +96,14 @@
                 <i class="fa fa-envelope" aria-hidden="true"></i>
 
                  Employer Contact
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="tutor_contact.php">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+
+                 Tutor Contact
                 </a>
               </li>
 
@@ -165,6 +180,13 @@
               </li>
 
               <li class="nav-item">
+                <a class="nav-link" href="learnSuperAdmin.php">
+                  <i class="fa fa-video-camera" aria-hidden="true"></i>
+                 Learn 
+                </a>
+              </li>
+
+              <li class="nav-item">
                 <a class="nav-link" href="superEmployers.php">
                 <i class="fa fa-users" aria-hidden="true"></i>
 
@@ -185,6 +207,14 @@
                 <i class="fa fa-envelope" aria-hidden="true"></i>
 
                  Employer Contact
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="tutor_contact.php">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+
+                 Tutor Contact
                 </a>
               </li>
               
