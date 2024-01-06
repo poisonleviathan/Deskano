@@ -23,7 +23,6 @@
                 <th>Name</th>
                 <th>Experience</th>
                 <th>Mobile</th>
-                <th>Action</th>
             </tr>
         </thead>
         <tbody>
@@ -49,25 +48,6 @@
                  ?></td>
                
                <td><?php echo $row['mobile_number']; ?></td>
-                 <td>
-                 <?php 
-
-                  if($row['status'] != 'Active'){
-                   ?>
-                    <div class="row">
-                       <div  class="btn-group">
-                        <form method="POST" action="JobSkeers_auth.php">
-                           <input type="hidden" name="userid" value="<?php echo $row['id'];?>">
-                            <button type="submit" name="activeuser" class="btn btn-success"><span class="glyphicon glyphicon glyphicon-ok"></span> </button>
-                        </form>
-                        
-                          </div>
-                    </div>
-                  <?php }else{
-                    echo "<p style='color:green'>Accepted </p>";
-                  } ?>
-                 </td>
-
             </tr>
           <?php $i++; }  ?>
         </tbody>
@@ -78,7 +58,6 @@
                 <th>Name</th>
                 <th>Experience</th>
                 <th>Mobile</th>
-                <th>Action</th>
             </tr>
         </tfoot>
     </table>
