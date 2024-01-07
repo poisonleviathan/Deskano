@@ -36,13 +36,14 @@
 
         <?php 
          include('connection/db.php');
+         $i=1;
 
         $query=mysqli_query($conn,"select * from  contact_form");
         while($row=mysqli_fetch_array($query)){
         ?>
                     
             <tr>
-                <td><?php echo $row['id']; ?></td>
+                <td><?php echo $i; ?></td>
                 <td><?php echo $row['email']; ?></td>
                 <td><?php echo $row['name']; ?></td>
                 <td><?php echo $row['subject']; ?></td>
@@ -61,7 +62,7 @@
                
                  </td>
             </tr>
-          <?php }  ?>
+          <?php $i++; }  ?>
         </tbody>
         <tfoot>
             <tr>

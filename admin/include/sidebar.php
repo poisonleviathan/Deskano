@@ -114,6 +114,14 @@
                  Contact Us
                 </a>
               </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="deskanoPlus2.php">
+                <i class="fa fa-plus-circle" aria-hidden="true"></i>
+
+                 Deskano Plus
+                </a>
+              </li>
             </ul>
           </div>
         </nav>
@@ -226,6 +234,14 @@
                 </a>
               </li>
 
+              <li class="nav-item">
+                <a class="nav-link" href="deskanoPlus.php">
+                <i class="fa fa-plus-circle" aria-hidden="true"></i>
+
+                 Deskano Plus
+                </a>
+              </li>
+
             </ul>
           </div>
         </nav>
@@ -240,7 +256,7 @@
             <ul class="nav flex-column">
               <br>
               <li class="nav-item">
-                <a class="nav-link active" href="admin_dashboard.php">
+                <a class="nav-link active" href="emp_dashboard.php">
                  <i class="fa fa-home" aria-hidden="true"></i>
                   Dashboard <span class="sr-only">(current)</span>
                 </a>
@@ -274,6 +290,12 @@
                 <a class="nav-link" href="employer_profile.php">
                   <i class="fa fa-user" aria-hidden="true"></i>
                   Edit Profile
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="checkUserButton" href="employeePlus.php">
+                  <i class="fa fa-user" aria-hidden="true"></i>
+                  Deskano Plus
                 </a>
               </li>
             </ul>

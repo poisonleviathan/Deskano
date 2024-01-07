@@ -213,8 +213,8 @@ $result = $conn->query($sql);
 
 <body>
 
-<div class="ftco-search col-md-6">
-    <div class="row col-md-6 category_center" id="watch">
+<div class="ftco-search col-md-6" id="watch">
+    <div class="row col-md-6 category_center">
         <div class="col-md-12 nav-link-wrap">
             <div class="nav nav-pills text-center" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                 <a class="nav-link active mr-md-1" id="v-pills-1-tab" data-toggle="pill" href="#v-pills-1" role="tab" aria-controls="v-pills-1" aria-selected="true">Select a Category</a>
