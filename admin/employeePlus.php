@@ -1,12 +1,12 @@
 <?php
   include('connection/db.php');
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
   <style>
     body {
       font-family: 'Helvetica Neue', sans-serif;
@@ -125,14 +125,14 @@
 <body>
 
 <div class="row h2">
-  <a href="shop.php" id="back">Back</a>
+  <a href="emp_dashboard.php" id="back">Back</a>
   <h2>CHECKOUT</h2>
 </div>
 
 <div class="row">
   <div class="col-75">
     <div class="container">
-      <form action="./card.php" method="post">
+      <form action="./plus.php" method="post">
         <div class="row">
           <div class="col-50">
             <h3>Billing Address</h3>
@@ -205,17 +205,16 @@ if (isset($_POST['submit'])) {
   $exp_year = $_POST['expyear'];
   $cvv = $_POST['cvv'];
 
-  $query = "INSERT INTO card_details(name, email, address, city, state, zip, card_name, card_num, exp_month, exp_year, cvv) VALUES ('$name', '$email', '$address', '$city', '$state', '$zip', '$card_name', '$card_number', '$exp_month', '$exp_year', '$cvv')";
+  $query = "INSERT INTO plus_card_details(name, email, address, city, state, zip, card_name, card_num, exp_month, exp_year, cvv) VALUES ('$name', '$email', '$address', '$city', '$state', '$zip', '$card_name', '$card_number', '$exp_month', '$exp_year', '$cvv')";
 
   if(mysqli_query($conn, $query)){
-    echo "<script>alert('Order placed successfully!')</script>";
-    // header('location:shop.php');
-  }else{
+    // echo "<script>alert('Payment Successful! \\n We will get back to you soon')</script>";
+    echo "<script>window.location.href = 'employeePlusAfterPayment.php';</script>";
+    exit();
+  } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
   }
 }
-
 ?>
-
 </body>
 </html>

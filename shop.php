@@ -67,8 +67,8 @@
           </li>
 
           <li class="navbar-item">
-                    <a href="faq.php" class="navbar-link" data-nav-link>FAQ</a>
-                </li>
+              <a href="faq.php" class="navbar-link" data-nav-link>FAQ</a>
+          </li>
 
           <li class="navbar-item" style="margin-left:100px;">
             <a href="index.php" class="navbar-link" data-nav-link>Back</a>
@@ -104,7 +104,7 @@
 
           <p class="hero-text">Sale up to 40% off today</p>
 
-          <a href="#" class="btn">Shop Now</a>
+          <a href="#shop" class="btn">Shop Now</a>
 
         </div>
       </section>
@@ -259,7 +259,7 @@
                   New in this <span class="span">year</span>
                 </h3>
 
-                <a href="#" class="btn">Read More</a>
+                <a href="#RM" class="btn">Read More</a>
 
               </div>
             </li>

@@ -7,7 +7,7 @@
             <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="admin_dashboard.php">Dashoard</a></li>
-              <li class="breadcrumb-item"><a href="#">Tutor Contact</a></li>
+              <li class="breadcrumb-item"><a href="#">Contact Us</a></li>
             
             </ol>
           </nav>
@@ -25,38 +25,39 @@
         <thead>
             <tr>
                 <th>ID</th>
-                <th>Email</th>
                 <th>Name</th>
-                <th>Subject</th>
-                <th>Message</th>
+                <th>Email</th>
+                <th>Address</th>
+                <th>Province</th>
+                <th>ZIP</th>
                 <th>Action</th>
             </tr>
         </thead>
         <tbody>
 
         <?php 
-         include('connection/db.php');
+        include('connection/db.php');
+        $i=1;
 
-        $i = 1;
-
-        $query=mysqli_query($conn,"select * from tutor_contact");
+        $query=mysqli_query($conn,"select * from  plus_card_details");
         while($row=mysqli_fetch_array($query)){
         ?>
                     
             <tr>
                 <td><?php echo $i; ?></td>
-                <td><?php echo $row['email']; ?></td>
                 <td><?php echo $row['name']; ?></td>
-                <td><?php echo $row['subject']; ?></td>
-                <td><?php echo $row['msg']; ?></td>
+                <td><?php echo $row['email']; ?></td>
+                <td><?php echo $row['address']; ?></td>
+                <td><?php echo $row['state']; ?></td>
+                <td><?php echo $row['zip']; ?></td>
                
                  <td>
               
                     <div class="row">
                        <div  class="btn-group">
-                          <form method="POST" action="tutor_contact.php">
+                          <form method="POST" action="contect_us.php">
                             <input type="hidden" name="userid" value="<?php echo $row['id'];?>">
-                              <a href="tutor_contact_delete.php?del=<?php echo $row['id'];  ?>" class="btn btn-danger"><span class="fa fa-remove"></span> </a>
+                              <a href="plus_delete.php?del=<?php echo $row['id'];  ?>" class="btn btn-danger"><span class="fa fa-remove"></span> </a>
                           </form>
                         </div>
                     </div>
@@ -68,10 +69,11 @@
         <tfoot>
             <tr>
                 <th>ID</th>
-                <th>Email</th>
                 <th>Name</th>
-                <th>Subject</th>
-                <th>Message</th>
+                <th>Email</th>
+                <th>Address</th>
+                <th>Province</th>
+                <th>ZIP</th>
                 <th>Action</th>
             </tr>
         </tfoot>
@@ -126,10 +128,10 @@
     if ($query) {
 
      
-      echo "<script>alert('Successfully Removed !');</script>";
+      echo "<script>alert('Successfully Removed !')</script>";
 
     }else{
-      echo "<script>alert('Some Error Please Try Again!');</script>";
+      echo "<script>alert('Some Error Please Try Again!')</script>";
     }
 
 
