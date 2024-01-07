@@ -125,7 +125,7 @@
 <body>
 
 <div class="row h2">
-  <a href="emp_dashboard.php" id="back">Back</a>
+  <a style="cursor:pointer;" onclick="goBack()" id="back">Back</a>
   <h2>CHECKOUT</h2>
 </div>
 
@@ -216,5 +216,11 @@ if (isset($_POST['submit'])) {
   }
 }
 ?>
+
+<script>
+    function goBack() {
+        window.history.back();
+    }
+</script>
 </body>
 </html>
