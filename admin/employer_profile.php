@@ -47,7 +47,7 @@ $conn->close();
 ?>
 <style>
         body {
-            background-color: #f0f0f0; /* Background color for the entire page */
+            background-color: #ffffff; /* Background color for the entire page */
         }
 
         .container {
@@ -77,7 +77,14 @@ $conn->close();
             cursor: pointer;
         }
     </style>
-
+<!-- HTML code for the contact form goes here -->
+<main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="emp_dashboard.php">Dashboard</a></li>
+              <li class="breadcrumb-item"><a href="#">Edit Profile</a></li>
+            </ol>
+          </nav>
  <div class="container" style="padding-left: 5%; padding-right: 5%; margin: 2% auto; width: 60%;">
 
     <form action="empProfile_add.php" method="POST" id="profile_form" name="profile_form" enctype="multipart/form-data">
