@@ -66,7 +66,7 @@
       <nav class="navbar" style="width:100%;" data-navbar>
         <ul class="navbar-list">
           <li class="navbar-item" style="margin-right: auto; margin-left: auto;">
-            <a href="admin_dashboard.php" class="navbar-link hover:underline" style="" data-nav-link>Back</a>
+            <a href="emp_dashboard.php" class="navbar-link hover:underline" style="" data-nav-link>Back</a>
           </li>
         </ul>
       </nav>

@@ -88,20 +88,36 @@
     <nav class="navbar" style="width:100%;" data-navbar>
       <ul class="navbar-list" style="display: flex; align-items: center; padding: 0;">
 
-          <li class="navbar-item" style="list-style: none; margin-right: auto;">
-              <a href="index.php" class="navbar-link hover:underline" data-nav-link>Back</a>
+          <li class="navbar-item">
+            <a href="index.php" class="navbar-link" data-nav-link>Home</a>
           </li>
 
-          <li class="navbar-item" style="list-style: none;">
-              <a href="#" class="navbar-link hover:underline" data-nav-link>Home</a>
+          <li class="navbar-item">
+              <a href="learnguest.php" class="navbar-link" data-nav-link>Learn</a>
           </li>
 
-          <li class="navbar-item" style="list-style: none;">
-              <a href="#" class="navbar-link hover:underline" data-nav-link>Recent</a>
+          <li class="navbar-item">
+              <a href="shop.php" class="navbar-link" data-nav-link>Deskano Shop</a>
           </li>
 
-          <li class="navbar-item" style="list-style: none;">
-              <a href="member.php" class="navbar-link hover:underline" data-nav-link>Membership</a>
+          <li class="navbar-item">
+              <a href="plusbanner.php"class="navbar-link" data-nav-link>Deskano Plus</a>
+          </li>
+
+          <li class="navbar-item">
+              <a href="blogIndex.php" style="color:black;" class="navbar-link" data-nav-link>Blog</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="contact.php" class="navbar-link" data-nav-link>Contact</a>
+          </li>
+
+          <li class="navbar-item">
+              <a href="faq.php" class="navbar-link" data-nav-link>FAQ</a>
+          </li>
+
+          <li class="navbar-item">
+              <a href="member.php" class="navbar-link" data-nav-link>Member</a>
           </li>
 
       </ul>
@@ -168,7 +184,7 @@
         <div class="container">
 
           <h1 class="h1 hero-title">
-            <strong class="strong">Hey, we’re DESKANO.</strong> Share your thoughts and ideas.
+            <strong class="strong">Hey, we’re DESKANO-Blog.</strong> Share your thoughts and ideas.
           </h1>
 
           <div class="wrapper">
@@ -228,8 +244,9 @@
               <div class="blog-card">
 
                 <figure class="card-banner img-holder" style="--width: 500; --height: 600;">
-                  <img src="./assets/images/featured-1.jpg" width="500" height="600" loading="lazy"
+                  <a href="blog1.php"><img src="./assets/images/featured-1.jpg" width="500" height="600" loading="lazy"
                     alt="New technology is not good or evil in and of itself" class="img-cover">
+                  </a>
 
                   <ul class="avatar-list absolute">
 
@@ -286,8 +303,9 @@
               <div class="blog-card">
 
                 <figure class="card-banner img-holder" style="--width: 500; --height: 600;">
-                  <img src="./assets/images/featured-2.jpg" width="500" height="600" loading="lazy"
+                  <a href="blog2.php"><img src="./assets/images/featured-2.jpg" width="500" height="600" loading="lazy"
                     alt="It’s a new era in design, there are no rules" class="img-cover">
+                  </a>
 
                   <ul class="avatar-list absolute">
 
@@ -334,8 +352,9 @@
               <div class="blog-card">
 
                 <figure class="card-banner img-holder" style="--width: 500; --height: 600;">
-                  <img src="./assets/images/featured-3.jpg" width="500" height="600" loading="lazy"
+                  <a href="blog3.php"><img src="./assets/images/featured-3.jpg" width="500" height="600" loading="lazy"
                     alt="Perfection has to do with the end product" class="img-cover">
+                  </a>
 
                   <ul class="avatar-list absolute">
 
@@ -386,8 +405,9 @@
               <div class="blog-card">
 
                 <figure class="card-banner img-holder" style="--width: 500; --height: 600;">
-                  <img src="./assets/images/featured-4.jpg" width="500" height="600" loading="lazy"
+                  <a href="blog4.php"><img src="./assets/images/featured-4.jpg" width="500" height="600" loading="lazy"
                     alt="Everyone has a different life story" class="img-cover">
+                  </a>
 
                   <ul class="avatar-list absolute">
 

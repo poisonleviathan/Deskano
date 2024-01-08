@@ -125,7 +125,7 @@ error_reporting(0);
             
             <li class="nav-item nav-item1 <?php if($page=='contact'){echo 'active';} ?>"><a href="shop.php" class="nav-link">Deskano Shop</a></li>
             
-            <li class="nav-item nav-item1 <?php if($page=='card'){echo 'active';} ?>"><a href="plus.php" class="nav-link">Deskano Plus</a></li>
+            <li class="nav-item nav-item1 <?php if($page=='card'){echo 'active';} ?>"><a href="plusbanner.php" class="nav-link">Deskano Plus</a></li>
 
             <li class="nav-item nav-item1 <?php if($page=='contact'){echo 'active';} ?>"><a href="contact.php" class="nav-link">Contact</a></li>
             

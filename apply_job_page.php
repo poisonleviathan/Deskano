@@ -64,6 +64,7 @@ while ($row=mysqli_fetch_array($query)) {
               <div style=" padding: 2%;">
                 <input type="hidden" name="job_seeker" value="<?php echo $_SESSION['email']; ?> " id="job_seeker">
                 <input type="hidden" name="id_job" value="<?php echo $id_job; ?> " id="id_job">
+                <input type="hidden" name="title" value="<?php echo $title ?> " id="title">
                <div class="row" style="margin-bottom:10px">
                   <div class="col-sm-6">
                     <label for="" style="font-weight: bold;color: #1A5276">Enter Your First Name <span style="color:red">*</span></label>
@@ -92,7 +93,7 @@ while ($row=mysqli_fetch_array($query)) {
                     <input type="number" class="form-control" name="number" id="number" size="10" maxlength="10" title="Enter 10 digit mobile number" placeholder="Mobile number" required autofocus>
                   </div>
                   <div class="col-sm-6">
-                    <label for="" style="font-weight: bold;color: #1A5276">Email <span style="color:red">*</span></label>
+                    <label for="" style="font-weight: bold;color: #1A5276">Email</label>
                     <input type="text" class="form-control "  value="<?php echo $_SESSION['email']; ?> " disabled>
                   </div>
                 </div>
@@ -112,11 +113,15 @@ while ($row=mysqli_fetch_array($query)) {
                 </div>
 
                 <div class="row" style="margin-bottom:10px">
-                  <div class="col-sm-6">
-                    <label style="float: left; font-weight: bold;color: #1A5276" >Experience <span style="color:red">*</span></label>
-                    <input type="number" class="form-control" name="experience" maxlength="2" placeholder="3" class="form-control" required>
+                  <div class="col-sm-4">
+                    <label style="float: left; font-weight: bold;color: #1A5276" >Job Title </label>
+                    <input type="text" class="form-control" name="title" value="<?php echo $title; ?>" placeholder="Job Title" class="form-control" disabled required>
                   </div>
-                  <div class="col-sm-6" id="college_name">
+                  <div class="col-sm-4">
+                    <label style="float: left; font-weight: bold;color: #1A5276" >Experience <span style="color:red">*</span></label>
+                    <input type="number" class="form-control" name="experience" maxlength="2" placeholder="Years" class="form-control" required>
+                  </div>
+                  <div class="col-sm-4" id="college_name">
                     <label style="float: left; font-weight: bold;color: #1A5276" >Name of College <span style="color:red">*</span></label>
                     <input type="text" name="collegename" class="form-control"required >   
                   </div> 

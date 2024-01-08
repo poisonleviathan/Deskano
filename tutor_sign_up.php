@@ -7,7 +7,6 @@
     <div class="container" style="padding-top: 8%;">
         <p>
             Join Deskano today and take the next step in your career journey. Whether you're a job seeker, an employer or a tutor, our platform is here to help you succeed. Sign up now and unlock a world of opportunities!<br>
-            Feel free to customize this text to align with your specific Deskano's mission, features, and branding. Additionally, consider adding any unique selling points or services that set your Deskano apart from others in the industry.
         </p>
         <div style=" margin-bottom: 10px;box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px; padding: 20px;">
             <div class="signup-container">

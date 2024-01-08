@@ -143,17 +143,30 @@ const appliedJobsChart = new Chart(appliedJobsChartCanvas, {
 
 <script>
   $(function() {
-    function count($this){
-        var current = parseInt($this.html(), 10);
-        $this.html(++current);
-        if(current !== $this.data('count')){
-            setTimeout(function(){count($this)}, 100);
-        }
-    }        
+  function count($this) {
+    var current = parseInt($this.html(), 10);
+
+    // Stop counting if the current value is already at the target count
+    if (current === $this.data('count')) {
+      return;
+    }
+
+    $this.html(++current);
+    if (current !== $this.data('count')) {
+      setTimeout(function() {
+        count($this);
+      }, 100);
+    }
+  }
+
   $(".number").each(function() {
-      $(this).data('count', parseInt($(this).html(), 10));
+    $(this).data('count', parseInt($(this).html(), 10));
+
+    // Start the count animation only if the initial value is not 0
+    if ($(this).data('count') > 0) {
       $(this).html('0');
       count($(this));
+    }
   });
 });
 </script>

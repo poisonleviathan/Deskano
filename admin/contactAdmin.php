@@ -70,7 +70,7 @@ while ($row1=mysqli_fetch_array($query1)) {
         </div>
         <div class="row block-9">
           <div class="col-md-6 order-md-last d-flex">
-           <form action="contactAdmin.php" method="POST" class="bg-white p-5 contact-form">
+           <form action="contactAdmin.php" method="POST" style="margin-bottom:10px;" class="bg-white p-5 contact-form">
               <div class="form-group">
                 <input type="text" class="form-control" value="<?php echo $first_name?>" name="name" placeholder="Your Name">
               </div>
@@ -83,7 +83,7 @@ while ($row1=mysqli_fetch_array($query1)) {
               <div class="form-group">
                 <textarea  id="" cols="30" rows="7" name="msg" class="form-control" placeholder="Message"></textarea>
               </div>
-              <div class="form-group">
+              <div class="form-group" style="text-align:center;">
                 <input type="submit" name="submit" value="Send Message" class="btn btn-primary py-3 px-5">
               </div>
             </form>

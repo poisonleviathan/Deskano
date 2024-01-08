@@ -9,7 +9,6 @@
     <!-- <h2>Get Started:</h2> -->
     <p>
       Join Deskano today and take the next step in your career journey. Whether you're a job seeker or an employer, our platform is here to help you succeed. Sign up now and unlock a world of opportunities!<br>
-      Feel free to customize this text to align with your specific job portal's mission, features, and branding. Additionally, consider adding any unique selling points or services that set your job portal apart from others in the industry.
     </p>
     <div class="id_all_jobs">
          <div class="row"  >

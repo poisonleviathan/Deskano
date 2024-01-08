@@ -21,13 +21,17 @@
     - primary meta tag
   -->
   <title>DESKANO-PLUS</title>
-  <meta name="title" content="Deskano">
-  <meta name="description" content="Online job platform">
+  <meta name="title" content="Kitter - Hight Quality Pet Food">
+  <meta name="description" content="">
+
+  <!-- 
+    - favicon
+  -->
 
   <!-- 
     - custom css link
   -->
-  <link rel="stylesheet" href="./css/plusAfterPayment.css">
+  <link rel="stylesheet" href="./css/plusbanner.css">
   
 
   <!-- 
@@ -54,26 +58,31 @@
   -->
 
   <header class="header" data-header>
-    <div class="container">
+    <div class="container" style="margin-left:auto; margin-right:auto;">
 
-      
+      <a href="#" class="logo"></a>
+
+      <nav class="navbar" style="margin-left:auto; margin-right:auto;" data-navbar>
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <a style="cursor:pointer;" onclick="goBack()" class="navbar-link" data-nav-link>Back</a>
+          </li>
+
+          <script>
+            function goBack() {
+                window.history.back();
+            }
+        </script>
+
+        </ul>
+      </nav>
 
       <button class="nav-toggle-btn" aria-label="toggle manu" data-nav-toggler>
         <ion-icon name="menu-outline" aria-hidden="true" class="menu-icon"></ion-icon>
         <ion-icon name="close-outline" aria-label="true" class="close-icon"></ion-icon>
       </button>
 
-      <nav class="navbar" style="width:100%;" data-navbar>
-        <ul class="navbar-list">
-          <li class="navbar-item" style="margin-right: auto; margin-left: auto;">
-            <a href="emp_dashboard.php" class="navbar-link hover:underline" style="" data-nav-link>Back</a>
-          </li>
-        </ul>
-      </nav>
-
-      <a href="#" class="logo"></a>
-        </ul>
-      </nav>
     </div>
   </header>
 
@@ -85,16 +94,16 @@
       -->
 
       <section class="section hero has-bg-image" id="home" aria-label="home"
-        style="background-image: url('./images/abc.png')">
+        style="background-image: url('./images/abcd.png')">
         <div class="container">
 
           <h1 class="h1 hero-title">
-            <span class="span">Welcome to the</span>Family
+            <span class="span">DESKANO</span>PLUS
           </h1>
 
-          <p class="hero-text">We'll get back to you soon</p>
+          <p class="hero-text">We value Your Future</p>
 
-          
+          <a href="employerPlus.php" class="btn">Buy Now</a>
 
         </div>
       </section>
@@ -112,7 +121,8 @@
           <ul class="grid-list">
 
             <li>
-              <div class="offer-card has-bg-image img-holder" style="background-image: url('./images/ppt.png'); --width: 540; --height: 374;">
+              <div class="offer-card has-bg-image img-holder"
+                style="background-image: url('./images/ppt.png'); --width: 540; --height: 374;">
 
                 <p class="card-subtitle"></p>
 
@@ -126,7 +136,8 @@
             </li>
 
             <li>
-              <div class="offer-card has-bg-image img-holder" style="background-image: url('./images/laa.png'); --width: 540; --height: 374;">
+              <div class="offer-card has-bg-image img-holder"
+                style="background-image: url('./images/laa.png'); --width: 540; --height: 374;">
 
                 <p class="card-subtitle"></p>
 
@@ -140,7 +151,8 @@
             </li>
 
             <li>
-              <div class="offer-card has-bg-image img-holder" style="background-image: url('./images/bee.png'); --width: 540; --height: 374;">
+              <div class="offer-card has-bg-image img-holder"
+                style="background-image: url('./images/bee.png'); --width: 540; --height: 374;">
 
                 <p class="card-subtitle"></p>
 
@@ -171,8 +183,8 @@
           <a href="#" class="logo">DESKANO PLUS</a>
 
           <p class="footer-text">
-            If you have any question, please contact our VIP <a href="mailto:support@gmail.com"
-              class="link">deskano.officialvip@gmail.com</a>
+            If you have any question, please contact our customer support <a href="mailto:support@gmail.com"
+              class="link">deskano.official@gmail.com</a>
           </p>
 
           <ul class="contact-list">

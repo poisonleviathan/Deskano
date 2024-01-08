@@ -6,12 +6,12 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
  <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
-            <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="admin_dashboard.php">Dashboard</a></li>
-            
-            </ol>
-          </nav>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="admin_dashboard.php">Dashboard</a></li>
+    
+    </ol>
+  </nav>
 
 <style>
   #analytics{
@@ -49,20 +49,34 @@
 
 <script>
   $(function() {
-    function count($this){
-        var current = parseInt($this.html(), 10);
-        $this.html(++current);
-        if(current !== $this.data('count')){
-            setTimeout(function(){count($this)}, 100);
-        }
-    }        
+  function count($this) {
+    var current = parseInt($this.html(), 10);
+
+    // Stop counting if the current value is already at the target count
+    if (current === $this.data('count')) {
+      return;
+    }
+
+    $this.html(++current);
+    if (current !== $this.data('count')) {
+      setTimeout(function() {
+        count($this);
+      }, 100);
+    }
+  }
+
   $(".number").each(function() {
-      $(this).data('count', parseInt($(this).html(), 10));
+    $(this).data('count', parseInt($(this).html(), 10));
+
+    // Start the count animation only if the initial value is not 0
+    if ($(this).data('count') > 0) {
       $(this).html('0');
       count($(this));
+    }
   });
 });
 </script>
+
 
 <div id="analytics">
   <div class="row ">
@@ -140,6 +154,6 @@
     ?>
   </div>
 </div>
-
+    </main>
   </body>
 </html>

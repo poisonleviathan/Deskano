@@ -125,7 +125,7 @@
 <body>
 
 <div class="row h2">
-  <a href="index.php" id="back">Back</a>
+  <a href="plusbanner.php" id="back">Back</a>
   <h2>CHECKOUT</h2>
 </div>
 
