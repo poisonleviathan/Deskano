@@ -21,6 +21,7 @@
                 <th>ID</th>
                 <th>Email</th>
                 <th>Name</th>
+                <th>Job Title</th>
                 <th>Experience</th>
                 <th>Mobile</th>
                 <th>College</th>
@@ -46,6 +47,7 @@
                 <td><?php echo $i; ?></td>
                 <td><?php echo $row['email']; ?></td>
                 <td><?php echo $row['name'];  ?></td>
+                <td><?php echo $row['job_title'];  ?></td>
                 <td><?php 
                 if(empty($row['exp'])){
 
@@ -68,6 +70,7 @@
                 <th>ID</th>
                 <th>Email</th>
                 <th>Name</th>
+                <th>Job Title</th>
                 <th>Experience</th>
                 <th>Mobile</th>
                 <th>college</th>

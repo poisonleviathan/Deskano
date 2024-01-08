@@ -120,11 +120,13 @@ error_reporting(0);
     
 
   <nav class="navbar navbar-expand-lg navbar-light ftco_navbar ftco-navbar-light" id="ftco-navbar">
-  <div class="container style="background-color: transparent;>
+    <div class="container style="background-color: transparent;>
 
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu">Menu</span> 
 	      </button>
+
+        <img src="./images/deskano logo.jpg" style="width:100px; height:75px;" alt="Job Platform Logo">
 
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
@@ -137,7 +139,9 @@ error_reporting(0);
 
             <li class="nav-item nav-item1 <?php if($page=='shop'){echo 'active';} ?>"><a href="shop.php" class="nav-link">Deskano Shop</a></li>
 
-            <li class="nav-item nav-item1 <?php if($page=='card'){echo 'active';} ?>"><a href="plus.php" class="nav-link">Deskano Plus</a></li>
+            <li class="nav-item nav-item1 <?php if($page=='card'){echo 'active';} ?>"><a href="plusbanner.php" class="nav-link">Deskano Plus</a></li>
+
+            <li class="nav-item nav-item1 <?php if($page=='blog'){echo 'active';} ?>"><a href="blogIndex.php" class="nav-link">Blog</a></li>
             
             <li class="nav-item nav-item1 <?php if($page=='contact'){echo 'active';} ?>"><a href="contact.php" class="nav-link">Contact</a></li>
 

@@ -1,5 +1,3 @@
-
-
 <style>
   .product-card {
   display: flex;
@@ -33,7 +31,7 @@
     - #HEADER
   -->
 
-  <header id="top" class="header" data-header>
+  <header class="header" data-header>
     <div class="container">
 
       <button class="nav-toggle-btn" aria-label="toggle manu" data-nav-toggler>
@@ -59,7 +57,11 @@
           </li>
 
           <li class="navbar-item">
-              <a href="plus.php"class="navbar-link" data-nav-link>Deskano Plus</a>
+              <a href="plusbanner.php"class="navbar-link" data-nav-link>Deskano Plus</a>
+          </li>
+
+          <li class="navbar-item">
+              <a href="blogIndex.php" class="navbar-link" data-nav-link>Blog</a>
           </li>
 
           <li class="navbar-item">
@@ -70,13 +72,7 @@
               <a href="faq.php" class="navbar-link" data-nav-link>FAQ</a>
           </li>
 
-          <li class="navbar-item" style="margin-left:100px;">
-            <a href="index.php" class="navbar-link" data-nav-link>Back</a>
-          </li>
-
         </ul>
-
-        
       </nav>
 
       
@@ -99,7 +95,7 @@
         <div class="container">
 
           <h1 class="h1 hero-title">
-            <span class="span">High Quality</span> COURSES
+            <span id="top" class="span">High Quality</span> COURSES
           </h1>
 
           <p class="hero-text">Sale up to 40% off today</p>

@@ -27,6 +27,7 @@ if (isset($_POST['submit'])) {
     $Country = $_POST['Country'];
     $State = $_POST['State'];
     $City = $_POST['City'];
+    $title = $_POST['title'];
 
     if (strlen($number) != 10) {
         echo '<p class="lead">Please Enter a Valid 10-Digit Mobile Number</p>';
@@ -36,16 +37,15 @@ if (isset($_POST['submit'])) {
     $q = "SELECT * FROM job_apply WHERE job_seeker='$job_seeker' AND id_job='$id_job'";
     $sql = mysqli_query($conn, $q);
     if (mysqli_num_rows($sql) > 0) {
-          echo '<div><div class="alert alert-warning">
-            <strong>Warning!</strong> Already Applied
-          </div></div>';
+          echo '<script>alert(Warning! Already Applied);</script>';
 
     } else {
         move_uploaded_file($tmp_name, 'files/' . $file);
 
         // $sql = "INSERT INTO job_apply (first_name, last_name, dob, file, id_job, job_seeker, mobile_number, exp, collage, qualification, percentage, passout) VALUES ('$first_name', '$last_name', '$dob', '$file', '$id_job', '$job_seeker', '$number', '$experience', '$collegename', '$qualification', '$percentage', '$passout')";
 
-        $sql = "INSERT INTO job_apply (First_name, Last_name, dob, file, id_job, job_seeker, mobile_number, experience, qualification, salary, passout, college, country, state, city) VALUES ('$first_name', '$last_name', '$dob', '$file', '$id_job', '$job_seeker', '$number', '$experience', '$qualification', '$expectingSalary', '$passout', '$collegename', '$Country', '$State', '$City')";
+        $sql = "INSERT INTO job_apply (First_name, Last_name, dob, file, id_job, job_seeker, mobile_number, experience, qualification, salary, passout, college, country, state, city, job_title) VALUES ('$first_name', '$last_name', '$dob', '$file', '$id_job', '$job_seeker', '$number', '$experience', '$qualification', '$expectingSalary', '$passout', '$collegename', '$Country', '$State', '$City', '$title')";
+        
         $query = mysqli_query($conn, $sql);
 
       if ($query) {

@@ -32,6 +32,7 @@
     - custom css link
   -->
   <link rel="stylesheet" href="./css/plusbanner.css">
+  
 
   <!-- 
     - google font link
@@ -104,179 +105,88 @@
   </header>
 
   <main>
+    <article>
+
       <!-- 
         - #HERO
       -->
 
       <section class="section hero has-bg-image" id="home" aria-label="home"
-        style="background-image: url('./images/abcde.png')">
+        style="background-image: url('./images/abcd.png')">
         <div class="container">
 
           <h1 class="h1 hero-title">
-            <span class="span">Contact Us</span>
+            <span class="span">DESKANO</span>PLUS
           </h1>
 
-          <p class="hero-text">24/7 Customer Service</p>
+          <p class="hero-text">We value Your Future</p>
 
-          <a href="#cntct" class="btn">Contact Now</a>
+          <a href="plus.php" class="btn">Buy Now</a>
 
         </div>
       </section>
 
-      <?php
-$page = 'contact';
+      <!-- 
+        - #OFFERS
+      -->
+      <h2 class="h2 section-title">
+        <span class="span">What We</span> Offer
+      </h2>
 
-require 'admin/email/vendor/autoload.php';
+      <section class="section offer" aria-label="offer">
+        <div class="container">
 
-if (isset($_POST['submit'])) {
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $subject = $_POST['subject'];
-    $msg = $_POST['msg'];
+          <ul class="grid-list">
 
-    // Insert data into the database
-    $query = "INSERT INTO contact_form (name, email, subject, msg) VALUES ('$name', '$email', '$subject', '$msg')";
+            <li>
+              <div class="offer-card has-bg-image img-holder"
+                style="background-image: url('./images/ppt.png'); --width: 540; --height: 374;">
 
-    if (mysqli_query($conn, $query)) {
-            echo "<script>alert('Thanks for contacting us. We will get back to you soon.')</script>";
-    } else {
-        echo "<script>alert('Error inserting data. Please try again.')</script>";
-    }
-}
-?>
+                <p class="card-subtitle"></p>
 
-<!-- HTML code for the contact form goes here -->
+                <h3 class="h3 card-title">
+                  Prioritize Your<span class="span">Posts</span>
+                </h3>
 
-<section id="cntct" class="ftco-section contact-section bg-light">
-  <div class="container">
-      <div class="row block-9">
-          <div class="col-md-6 d-flex">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.646098016557!2d80.61746657499991!3d7.281047492726175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae3673f5e22ab3b%3A0xcbaef11262bec73!2sAPIIT%20Kandy%20Campus!5e0!3m2!1sen!2slk!4v1701073955204!5m2!1sen!2slk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
-          <div id="form" class="col-md-6 order-md-last d-flex">
-              <form action="contact.php" method="POST" class="bg-white p-5 contact-form">
-              <h3>Contact Us</h3>
-              <div class="form-group">
-              <input type="text" class="form-control" name="name" placeholder="Your Name" required>
-            </div>
-            <div class="form-group">
-              <input type="text" class="form-control" name="email" placeholder="Your Email" required>
-            </div>
-            <div class="form-group">
-              <input type="text" class="form-control" name="subject" placeholder="Subject" required>
-            </div>
-            <div class="form-group">
-              <textarea  id="" cols="30" rows="7" name="msg" class="form-control" placeholder="Message" required></textarea>
-            </div>
-            <div class="form-group">
-              <input type="submit" name="submit" value="Send Message" class="btn btn-primary py-3 px-5">
-            </div>
-              </form>
-          </div>
-      </div>
-  </div>
-</section>
+                <a href="#" class="btn">Read More</a>
 
+              </div>
+            </li>
 
-<style>
-  /* Add this CSS code for styling the contact form section */
+            <li>
+              <div class="offer-card has-bg-image img-holder"
+                style="background-image: url('./images/laa.png'); --width: 540; --height: 374;">
 
-.ftco-section.contact-section {
-    padding: 7em 0;
-}
+                <p class="card-subtitle"></p>
 
-#cntct{
-  width:80%;
-  margin-left:auto;
-  margin-right:auto;
-}
+                <h3 class="h3 card-title">
+                  Get More <span class="span">Reach</span>
+                </h3>
 
-#form{
-  text-align:center;
-}
+                <a href="#" class="btn">Read More</a>
 
-#form h3{
-  padding-bottom:20px;
-}
+              </div>
+            </li>
 
-.contact-form {
-    width: 90%;
-    background-color: #fff;
-    border-radius: 15px;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-    padding: 30px;
-    transition: transform 0.3s ease-in-out;
-}
+            <li>
+              <div class="offer-card has-bg-image img-holder"
+                style="background-image: url('./images/bee.png'); --width: 540; --height: 374;">
 
-.contact-form:hover {
-    transform: translateY(-5px);
-}
+                <p class="card-subtitle"></p>
 
-.form-group {
-    margin-bottom: 20px;
-}
+                <h3 class="h3 card-title">
+                  VIP Customer<span class="span">Service</span>
+                </h3>
 
-.form-control {
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    padding: 10px;
-    transition: border-color 0.3s ease-in-out;
-}
+                <a href="#" class="btn">Read More</a>
 
-.form-control:focus {
-    border-color: #6c757d;
-}
+              </div>
+            </li>
 
-.btn-primary {
-    background-color: #3498db;
-    color: #fff;
-    border: none;
-    border-radius: 10px;
-    padding: 12px 20px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-}
+          </ul>
 
-.btn-primary:hover {
-    background-color: #217dbb;
-}
-
-/* Add this CSS code to style the map and ensure it is responsive */
-
-iframe {
-    width: 90%;
-    height: 100%;
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-}
-
-/* Add this CSS code to make the form and map in the same row on larger screens */
-
-@media (min-width: 768px) {
-    .block-9 {
-        display: flex;
-    }
-
-    .col-md-6 {
-        flex: 0 0 50%;
-        max-width: 50%;
-    }
-
-    .col-md-6 iframe {
-        margin-left: 30px; /* Adjust the margin as needed */
-    }
-}
-
-
-</style>
-
-		<style>
-      .ftco-section-parallax .parallax-img{
-        background:#CF9966;
-      }
-    </style>
-      
+        </div>
+      </section>
   <!-- 
     - #FOOTER
   -->

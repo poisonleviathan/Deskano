@@ -10,7 +10,7 @@
 ?>
 
    <div class="container-fluid">
-      <div class="row">
+      <div class="row" style="height:1000px;">
         <nav class="col-md-2 d-none d-md-block bg-light sidebar">
           <div class="sidebar-sticky">
             <ul class="nav flex-column">
@@ -122,6 +122,22 @@
                  Deskano Plus
                 </a>
               </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="subscribeAdmin.php">
+                <i class="fa fa-bell" aria-hidden="true"></i>
+
+                 Subscription
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="blogAdmin.php">
+                <i class="fa fa-bell" aria-hidden="true"></i>
+
+                 Blog Members
+                </a>
+              </li>
             </ul>
           </div>
         </nav>
@@ -129,7 +145,7 @@
 } else if(mysqli_num_rows($query2)>0){
 ?>
 <div class="container-fluid">
-      <div class="row">
+      <div class="row" style="height:1000px;">
         <nav class="col-md-2 d-none d-md-block bg-light sidebar">
           <div class="sidebar-sticky">
             <ul class="nav flex-column">
@@ -242,6 +258,22 @@
                 </a>
               </li>
 
+              <li class="nav-item">
+                <a class="nav-link" href="subscribeAdmin.php">
+                <i class="fa fa-bell" aria-hidden="true"></i>
+
+                 Subscription
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="blogAdmin.php">
+                <i class="fa fa-bell" aria-hidden="true"></i>
+
+                 Blog Members
+                </a>
+              </li>
+
             </ul>
           </div>
         </nav>
@@ -250,7 +282,7 @@
   }else if(mysqli_num_rows($sql)>0){
  ?>
 <div class="container-fluid">
-      <div class="row">
+      <div class="row" style="height:1000px;">
         <nav class="col-md-2 d-none d-md-block bg-light sidebar">
           <div class="sidebar-sticky">
             <ul class="nav flex-column">
@@ -293,7 +325,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" id="checkUserButton" href="employeePlus.php">
+                <a class="nav-link" id="checkUserButton" href="employerPlusBanner.php">
                   <i class="fa fa-user" aria-hidden="true"></i>
                   Deskano Plus
                 </a>

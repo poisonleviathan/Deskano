@@ -135,62 +135,103 @@
 </head>
 
 <body>
-    <div class="registration-form">
-        <div class="form-header">
-            <h2>Register Now</h2>
-            <p>You're just a step away from DESKANO family </p>
+    <form action="member.php" method="post">
+        <div class="registration-form">
+            <div class="form-header">
+                <h2>Register Now</h2>
+                <p>You're just a step away from DESKANO family </p>
+            </div>
+            <div class="form-container">
+                <div class="form-group">
+                    <input type="text" name="first_name" class="form-control" placeholder="First Name" required/>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="middle_name" class="form-control" placeholder="Middle Name" />
+                </div>
+                <div class="form-group">
+                    <input type="text" name="last_name" class="form-control" placeholder="Last Name" required/>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" class="form-control" placeholder="Email" required/>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="mobile" class="form-control" placeholder="Mobile Number" required/>
+                </div>
+                <div class="form-group radio-group">
+                    <label class="radio">
+                        <input type="radio" name="gender" value="male" checked>
+                        <span> Male </span>
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="gender" value="female">
+                        <span>Female </span>
+                    </label>
+                </div>
+                <button class="submit-button" type="submit" name="submit">Register</button>
+            </div>
+            <div class="form-footer">
+                &copy; 2024 DESKANO Blog Registration. All rights reserved.
+            </div>
         </div>
-        <div class="form-container">
-            <div class="form-group">
-                <input type="text" class="form-control" placeholder="First Name" />
-            </div>
-            <div class="form-group">
-                <input type="text" class="form-control" placeholder="Middle Name" />
-            </div>
-            <div class="form-group">
-                <input type="email" class="form-control" placeholder="Last Name" />
-            </div>
-            <div class="form-group">
-                <input type="password" class="form-control" placeholder="Email" />
-            </div>
-            <div class="form-group">
-                <input type="password" class="form-control" placeholder="Mobile Number" />
-            </div>
-            <div class="form-group radio-group">
-                <label class="radio">
-                    <input type="radio" name="gender" value="male" checked>
-                    <span> Male </span>
-                </label>
-                <label class="radio">
-                    <input type="radio" name="gender" value="female">
-                    <span>Female </span>
-                </label>
-            </div>
-            <button class="submit-button" onclick="registerUser()">Register</button>
-        </div>
-        <div class="form-footer">
-            &copy; 2024 Luxury Registration. All rights reserved.
-        </div>
-    </div>
+    </form>
+    
 
-    <div class="overlay" id="overlay"></div>
-    <div class="modal" id="myModal">
-        <p>You are registered!</p>
-        <button onclick="closeModalAndRedirect()">Close</button>
-    </div>
+    <?php
+include('connection/db.php');
 
-    <script>
-        function registerUser() {
-            document.getElementById('overlay').style.display = 'block';
-            document.getElementById('myModal').style.display = 'block';
+if (isset($_POST['submit'])) {
+    $first_name = mysqli_real_escape_string($conn, $_POST['first_name']);
+    $middle_name = mysqli_real_escape_string($conn, $_POST['middle_name']);
+    $last_name = mysqli_real_escape_string($conn, $_POST['last_name']);
+    $email = mysqli_real_escape_string($conn, $_POST['email']);
+    $number = mysqli_real_escape_string($conn, $_POST['mobile']);
+    $gender = mysqli_real_escape_string($conn, $_POST['gender']);
+
+    if (strlen($number) != 10) {
+        echo '<p class="lead">Please Enter a Valid 10-Digit Mobile Number</p>';
+        exit(0);
+    }
+
+    $query = "SELECT * FROM blog_register WHERE email='$email'";
+    $result = mysqli_query($conn, $query);
+
+    if (mysqli_num_rows($result) > 0) {
+        echo '<script>alert("Warning! Already Applied");</script>';
+    } else {
+        $sql = "INSERT INTO blog_register (first_name, middle_name, last_name, email, mobile, gender) VALUES ('$first_name', '$middle_name', '$last_name', '$email', '$number', '$gender')";
+        
+        $query = mysqli_query($conn, $sql);
+
+        if ($query) {
+            echo "<script>alert('You have successfully registerd to DESKANO Blogs'); window.location.href = 'blogIndex.php';</script>";
+        } else {
+            echo '<div class="alert alert-danger">
+                    <strong>Error!</strong> Form submission failed
+                  </div>';
         }
+    }
+}
+?>
 
-        function closeModalAndRedirect() {
-            document.getElementById('overlay').style.display = 'none';
-            document.getElementById('myModal').style.display = 'none';
-            window.location.href = 'blogIndex.php';
-        }
-    </script>
+<div class="overlay" id="overlay"></div>
+<div class="modal" id="myModal">
+    <p>You are registered!</p>
+    <button onclick="closeModalAndRedirect()">Close</button>
+</div>
+
+<script>
+    function registerUser() {
+        document.getElementById('overlay').style.display = 'block';
+        document.getElementById('myModal').style.display = 'block';
+    }
+
+    function closeModalAndRedirect() {
+        document.getElementById('overlay').style.display = 'none';
+        document.getElementById('myModal').style.display = 'none';
+        window.location.href = 'blogIndex.php';
+    }
+</script>
+
 </body>
 
 </html>

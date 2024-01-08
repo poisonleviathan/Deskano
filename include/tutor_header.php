@@ -115,6 +115,8 @@ error_reporting(0);
 	        <span class="oi oi-menu">Menu</span> 
 	      </button>
 
+        <img src="./images/deskano logo.jpg" style="width:100px; height:75px;" alt="Job Platform Logo">
+
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
 
@@ -132,7 +134,7 @@ error_reporting(0);
             <div class="dropdown">
                <img src="profile_img/<?php if(empty($img)){echo "logo.png";}else{ echo $img;} ?>" class="img-circle dropdown-toggle" type="button" data-toggle="dropdown" alt="Profile picture" width="50" height="50" style="cursor:pointer">
                <ul class="dropdown-menu" style="padding:10px;">
-                <li><a href="my_profile.php" style="color:black;">My Profile</a></li>
+                <li><a href="tutor_profile.php" style="color:black;">My Profile</a></li>
                 <li ><a href="logout.php" style="color:red;">Logout</a></li>
               </ul>
             </div>

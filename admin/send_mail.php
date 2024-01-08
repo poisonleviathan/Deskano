@@ -27,8 +27,7 @@
         <?php 
          include('connection/db.php');
      $id=$_GET['id'];
-      $sql= "select * from   job_apply LEFT JOIN all_jobs
-ON job_apply.id_job = all_jobs.job_id   where id='$id'";
+      $sql= "select * from job_apply LEFT JOIN all_jobs ON job_apply.id_job = all_jobs.job_id   where id='$id'";
 
          $query=mysqli_query($conn,$sql);
      
@@ -38,9 +37,10 @@ ON job_apply.id_job = all_jobs.job_id   where id='$id'";
              $mobile= $row['mobile_number'];
              $exp= $row['experience'];
              $college= $row['college'];
+             $title= $row['job_title'];
 
 
-        $sql= "insert into selected_canditate(name,email,mobile,exp,college,emp)values('$name','$email','$mobile','$exp','$college','".$_SESSION['email']."')";
+        $sql= "insert into selected_canditate(name,email,mobile,job_title,exp,college,emp)values('$name','$email','$mobile','$title','$exp','$college','".$_SESSION['email']."')";
 
           $sqlInsertquery= mysqli_query($conn,$sql);
 

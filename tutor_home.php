@@ -28,17 +28,17 @@
 
             <div class="form-group">
                 <label for="video-title">Enter the Video Title</label>
-                <input name="des" id="des" placeholder="PHP Web Developing" class="form-control">
+                <input name="des" id="des" placeholder="PHP Web Developing" class="form-control" required>
             </div>
 
             <div class="form-group">
                 <label for="category">Select the Category</label>
-                <select name="category" class="form-control" id="category">
+                <select name="category" class="form-control" id="category" required>
                     <?php 
                     $query = mysqli_query($conn, "SELECT * FROM video_category");
                     while ($row = mysqli_fetch_array($query)) {
                     ?>
-                        <option value="<?php echo $row['id'] ?>"><?php echo $row['category'] ?></option>
+                        <option value="<?php echo $row['id'] ?>" required><?php echo $row['category'] ?></option>
                     <?php
                     }
                     ?>
@@ -47,7 +47,7 @@
 
             <div class="form-group">
                 <label for="video-file">Choose a Video</label>
-                <input type="file" class="form-control" name="video" id="video" style="border: solid black 1px; padding-top: 1%; padding-bottom: 1%" onchange="updateVideo()">
+                <input type="file" class="form-control" name="video" id="video" style="border: solid black 1px; padding-top: 1%; padding-bottom: 1%" onchange="updateVideo()" required>
             </div>
 
             <div style="text-align: center;" class="form-group">

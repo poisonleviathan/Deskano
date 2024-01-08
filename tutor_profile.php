@@ -1,18 +1,19 @@
 <?php 
 
 include('connection/db.php');
-include('include/header.php');
-include('include/my_profile.php');
-$query=mysqli_query($conn,"select * from profiles where user_email='{$_SESSION['email']}'");
+include('include/tutor_header.php');
+include('include/tutor_profile.php');
+$query=mysqli_query($conn,"select * from tutor where email='{$_SESSION['email']}'");
 
 while ($row=mysqli_fetch_array($query)) {
-	 $img=$row['img'];
-	 $first_name=$row['first_name'];
-   $last_name=$row['last_name'];
-	 $dob=$row['dob'];
-	 $number=$row['number'];
-	 $email=$row['email'];
-   $user_email=$row['user_email'];
+	$img=$row['img'];
+	$first_name=$row['first_name'];
+  $last_name=$row['last_name'];
+	$dob=$row['dob'];
+	$number=$row['mobile'];
+	$email=$row['email'];
+  $user_email=$row['email'];
+  $qualification=$row['last_qualification'];
 }
 
 //if the user account not fount, it will redirects to the home page
@@ -22,8 +23,6 @@ if ($_SESSION['email'] == null) {
 
  ?>
 
-
-
 <?php
  $conn=mysqli_connect("localhost","root","","Deskano");
 
@@ -32,7 +31,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT * FROM jobskeer";
+$sql = "SELECT * FROM tutor";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -80,7 +79,7 @@ $conn->close();
 
  <br>
   <div class="container1" style="padding-left: 5%; padding-right: 5%; margin-left: 25%; width: 50%; border: 1px solid gray; padding: 10px; ">
-    <form action="profile_add.php" method="POST" id="profile_form" name="profile_form" enctype="multipart/form-data">
+    <form action="tutor_profile_add.php" method="POST" id="profile_form" name="profile_form" enctype="multipart/form-data">
       <div style="margin-left: 30%;">
       <div class="row">
           <div class="col-md-6" style="margin-bottom:10px;">
@@ -134,14 +133,18 @@ $conn->close();
           <td> Your Email : </td>
         </div>
         <div class="col-md-6">
-          <td><input type="Email" name="email" id="email" value="<?php if(!empty($email)) echo $email; ?>" placeholder="Your Email ..." class="form-group" readonly> </td>
-          
+          <td><input type="Email" name="email" id="email" value="<?php if(!empty($email)) echo $email; ?>" placeholder="Your Email ..." class="form-group" readonly> </td> 
         </div>
       </div>
       <div class="row">
-        <div class="col-md-4">
-          <td><a href="jobseeker_applied_jobs.php" style="width:75%; height:100%;" type="button" id="jobs" placeholder="Jobs" value="Jobs" name="jobs" class="btn btn-primary">Applied Jobs</a></td>
+        <div class="col-md-6">
+          <td> Last Qualification : </td>
         </div>
+        <div class="col-md-6">
+          <td><input type="text" name="qualification" id="qualification" value="<?php if(!empty($qualification)) echo $qualification; ?>" placeholder="Your Last Qualification ..." class="form-group"> </td> 
+        </div>
+      </div>
+      <div class="row">
         <div class="col-md-4">
           <td><input style="width:75%;" type="button" id="delete" placeholder="Delete" value="Delete" name="delete" class="btn btn-danger" onclick="deletee()" ></td>
         </div>
@@ -156,11 +159,7 @@ $conn->close();
   <script>
     function deletee() {
         // Redirect to another page when the "Delete" button is clicked
-        window.location.href = 'profile_delete.php';
-    }
-    function jobs() {
-        // Redirect to another page when the "Jobs" button is clicked
-        window.location.href = 'jobseeker_applied_jobs.php';
+        window.location.href = 'tutor_profile_delete.php';
     }
   </script>
 
@@ -189,8 +188,7 @@ $conn->close();
       $email = $_POST['email'];
       $user_email = $_POST['user_email'];
   }
-  $query = mysqli_query($conn, "UPDATE profiles SET first_name = '$first_name', last_name = '$last_name', dob = '$dob', number = '$number', email = '$email', user_email = '$user_email'");
-  $query1 = mysqli_query($conn, "UPDATE jobskeer SET first_name = '$first_name', last_name = '$last_name', dob = '$dob', mobile_number = '$number', email = '$email'");
+  $query = mysqli_query($conn, "UPDATE profiles SET first_name = '$first_name', last_name = '$last_name', dob = '$dob', mobile = '$number', last_qualification = ''$qualification");
   if (isset($_POST['submit']) && $query1){
 
   }

@@ -1,5 +1,3 @@
-
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -167,16 +165,14 @@ $dob=$_POST['dob'];
 $number=$_POST['number'];
 $email=$_POST['email'];
 $tmp_name =$_FILES['img']['tmp_name'];
+$qualification=$_POST['qualification'];
 
-$sql=mysqli_query($conn,"select * from profiles where user_email='{$_SESSION['email']}'");
-$sql1=mysqli_query($conn,"select * from jobskeer where email='{$_SESSION['email']}'");
+$sql=mysqli_query($conn,"select * from tutor where email='{$_SESSION['email']}'");
 $sql_check=mysqli_num_rows($sql);
-$sql_check1=mysqli_num_rows($sql1);
 
-if (!empty($sql_check && $sql_check1)) {
+if (!empty($sql_check)) {
   move_uploaded_file($_FILES["img"]["tmp_name"],'profile_img/'.$img);
-  $query1 = mysqli_query($conn, "UPDATE jobskeer SET first_name = '$first_name', last_name = '$last_name', dob = '$dob', mobile_number = '$number', email = '$email' WHERE email='$user_email'");
-  $query=mysqli_query($conn,"UPDATE profiles SET first_name='$first_name', last_name = '$last_name', dob='$dob',number='$number',email='$email' where user_email='$user_email' ");
+  $query = mysqli_query($conn, "UPDATE tutor SET first_name = '$first_name', last_name = '$last_name', dob = '$dob', mobile = '$number', last_qualification = '$qualification' WHERE email='$user_email'");
     // $query= mysqli_query($conn,"insert into ()")
     if($query) {
         echo "<h1>Profile updated Successfully !!</h1>";
@@ -184,19 +180,18 @@ if (!empty($sql_check && $sql_check1)) {
       echo "<h1>Some Error Please Try Again !!</h1>";
     }
 }else{
-      $query1 = mysqli_query($conn, "UPDATE jobskeer SET first_name = '$first_name', last_name = '$last_name', dob = '$dob', mobile_number = '$number', email = '$email' WHERE email='$user_email'");
-			$query=mysqli_query($conn,"UPDATE profiles SET first_name='$first_name', last_name = '$last_name', dob='$dob',number='$number',email='$email' where user_email='$user_email' ");
-			// $query= mysqli_query($conn,"insert into ()")
-			if($query) {
-        echo "<h1>Profile updated Successfully !!</h1>";
-			}else{
-				echo "<h1>Some Error Please Try Again !!</h1>";
-			}
+    $query = mysqli_query($conn, "UPDATE profiles SET first_name = '$first_name', last_name = '$last_name', dob = '$dob', mobile = '$number', last_qualification = '$qualification' WHERE email='$user_email'");
+        // $query= mysqli_query($conn,"insert into ()")
+        if($query) {
+            echo "<h1>Profile updated Successfully !!</h1>";
+        }else{
+            echo "<h1>Some Error Please Try Again !!</h1>";
+        }
 }
 
 if (!empty($img)) {
   move_uploaded_file($_FILES["img"]["tmp_name"],'profile_img/'.$img);
-  $query=mysqli_query($conn,"UPDATE profiles SET img='$img' where email='{$_SESSION['email']}'");
+  $query=mysqli_query($conn,"UPDATE tutor SET img='$img' where email='{$_SESSION['email']}'");
   if($query) {
     
   }
@@ -209,7 +204,7 @@ if (!empty($img)) {
        
 
         <p class="lead">
-          <a href="http://localhost/Deskano/my_profile.php"  class="btn btn-lg btn-secondary">Back</a>
+          <a href="http://localhost/Deskano/tutor_profile.php"  class="btn btn-lg btn-secondary">Back</a>
         </p>
       </main>
 

@@ -74,7 +74,7 @@ include('include/header.php');
 			              			<div class="col-md">
 			              				<div class="form-group">
 			              					<div class="form-field">
-								                <input type="submit" value="Search" name="search" id="search" class="form-control btn btn-primary">
+								                <input style="height:35px;" type="submit" value="Search" name="search" id="search" class="form-control btn btn-primary">
 								              </div>
 							              </div>
 			              			</div>
@@ -241,6 +241,7 @@ if (isset($_POST['search']) || isset($_GET['page'])) {
     }
     .number{
       color: #CF9966!important;
+      float:right;
       
     }
     .category li a span.number{
@@ -305,7 +306,7 @@ if (isset($_POST['search']) || isset($_GET['page'])) {
 		          <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
 		            <div class="block-18 text-center">
 		              <div class="text">
-		                <strong class="number" data-number="1350000">0</strong>
+		                <strong class="number" data-number="7435">0</strong>
 		                <span>Jobs</span>
 		              </div>
 		            </div>
@@ -313,7 +314,7 @@ if (isset($_POST['search']) || isset($_GET['page'])) {
 		          <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
 		            <div class="block-18 text-center">
 		              <div class="text">
-		                <strong class="number" data-number="40000">0</strong>
+		                <strong class="number" data-number="3170">0</strong>
 		                <span>Members</span>
 		              </div>
 		            </div>
@@ -321,7 +322,7 @@ if (isset($_POST['search']) || isset($_GET['page'])) {
 		          <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
 		            <div class="block-18 text-center">
 		              <div class="text">
-		                <strong class="number" data-number="30000">0</strong>
+		                <strong class="number" data-number="2870">0</strong>
 		                <span>Resumes</span>
 		              </div>
 		            </div>
@@ -329,7 +330,7 @@ if (isset($_POST['search']) || isset($_GET['page'])) {
 		          <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
 		            <div class="block-18 text-center">
 		              <div class="text">
-		                <strong class="number" data-number="10500">0</strong>
+		                <strong class="number" data-number="297">0</strong>
 		                <span>Companies</span>
 		              </div>
 		            </div>
@@ -391,8 +392,8 @@ color:#2d2d2d;}
                     </span>
                   </div>
                   <div class="text">
-                    <p class="mb-4">I found my dream job through this portal. It's been an amazing experience, and I highly recommend it to anyone looking for a new opportunity.</p>
-                    <p class="name">Ragini Kumari</p>
+                    <p class="mb-4">I found my dream job through this platform. It's been an amazing experience, and I highly recommend it to anyone looking for a new opportunity.</p>
+                    <p class="name">Kaveesha Rathnayake</p>
                     <span class="position">Marketing Manager</span>
                   </div>
                 </div>
@@ -405,8 +406,8 @@ color:#2d2d2d;}
                     </span>
                   </div>
                   <div class="text">
-                    <p class="mb-4">This job portal made my job search so much easier. I'm grateful for the opportunities it provided me with.</p>
-                    <p class="name">Rahul Tewari</p>
+                    <p class="mb-4">This job platform made my job search so much easier. I'm grateful for the opportunities it provided me with.</p>
+                    <p class="name">Thanuja Alwis</p>
                     <span class="position">Interface Designer</span>
                   </div>
                 </div>
@@ -419,8 +420,8 @@ color:#2d2d2d;}
                     </span>
                   </div>
                   <div class="text">
-                    <p class="mb-4">I love the user-friendly interface of this job portal. It made the job hunting process stress-free.</p>
-                    <p class="name">Amrita Patel</p>
+                    <p class="mb-4">I love the user-friendly interface of this freelancing job platform. It made the job hunting process stress-free.</p>
+                    <p class="name">Virasha Sandeepani</p>
                     <span class="position">UI Designer</span>
                   </div>
                 </div>
@@ -433,8 +434,8 @@ color:#2d2d2d;}
                     </span>
                   </div>
                   <div class="text">
-                    <p class="mb-4">I've been using this job portal for years, and it never disappoints. It's a fantastic resource for both job seekers and employers.</p>
-                    <p class="name">Naina Lal</p>
+                    <p class="mb-4">I've been using this job platform for years, and it never disappoints. It's a fantastic resource for both job seekers and employers.</p>
+                    <p class="name">Tania Fernandez</p>
                     <span class="position">HR Manager</span>
                   </div>
                 </div>
@@ -447,8 +448,8 @@ color:#2d2d2d;}
                     </span>
                   </div>
                   <div class="text">
-                    <p class="mb-4">As a recent graduate, I wasn't sure where to start my job search. This portal guided me through the process and helped me secure my first job.</p>
-                    <p class="name">Alex Turner</p>
+                    <p class="mb-4">As a recent graduate, I wasn't sure where to start my job search. This platform guided me through the process and helped me secure my first job.</p>
+                    <p class="name">Viraj Lakruwan</p>
                     <span class="position">System Analyst</span>
                   </div>
                 </div>
@@ -493,8 +494,8 @@ color:#2d2d2d;}
                   <div><a href="blogIndex.php">Admin</a></div>
                   <div><a href="blogIndex.php" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
                 </div>
-                <h3 class="heading"><a href="blogIndex.php">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias architecto enim non iste maxime optio, ut com</p>
+                <h3 style="text-align:justify;" class="heading"><a href="blogIndex.php">Tech Revolution: Empowering Careers with Innovation. Explore the intersection of technology and jobs in the ever-evolving landscape of opportunities.</a></h3>
+               <p style="text-align:justify;">Dive into the dynamic fusion of technology and employment, where innovation shapes new career horizons. Discover how the tech landscape transforms professions, creating exciting avenues for skill-driven success.</p>
               </div>
             </div>
           </div>
@@ -508,8 +509,8 @@ color:#2d2d2d;}
                   <div><a href="blogIndex.php">Admin</a></div>
                   <div><a href="blogIndex.php" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
                 </div>
-                <h3 class="heading"><a href="blogIndex.php">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet nobis natus incidunt officia assumenda.</p>
+                <h3 style="text-align:justify;" class="heading"><a href="blogIndex.php">Future-Proof Your Career: Navigating the Tech Terrain. Unleash the potential of cutting-edge advancements in technology for a thriving professional journey.</a></h3>
+               <p style="text-align:justify;">Embark on a journey of career resilience as technology reshapes industries. Explore how staying ahead in the tech game enhances employability and fuels personal growth in an ever-changing job market.</p>
               </div>
             </div>
           </div>
@@ -523,8 +524,8 @@ color:#2d2d2d;}
                   <div><a href="blogIndex.php">Admin</a></div>
                   <div><a href="blogIndex.php" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
                 </div>
-                <h3 class="heading"><a href="blogIndex.php">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi obcaecati praesentium,</p>
+                <h3 style="text-align:justify;" class="heading"><a href="blogIndex.php">Tech Marvels: Seamless Integration of Tech and Jobs. Explore unprecedented opportunities in the evolving landscape of technology-driven careers.</a></h3>
+               <p style="text-align:justify;">Dive into the symbiotic relationship of technology and jobs, unlocking endless possibilities in a landscape that seamlessly integrates innovation into career pathways.</p>
               </div>
             </div>
           </div>
@@ -538,8 +539,8 @@ color:#2d2d2d;}
                   <div><a href="blogIndex.php">Admin</a></div>
                   <div><a href="blogIndex.php" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
                 </div>
-                <h3 class="heading"><a href="blogIndex.php">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor minima, dolores quis, dolorum accusamu</p>
+                <h3 style="text-align:justify;" class="heading"><a href="blogIndex.php">Job Renaissance in the Digital Era: Thriving Amidst Tech Waves. Immerse yourself in the digital revolution, where career landscapes evolve with the pulse of technology.</a></h3>
+               <p style="text-align:justify;">Embark on a journey through the digital renaissance, where jobs undergo a transformative surge. Delve into the narratives of professionals thriving amidst tech waves, reshaping the future world of work.</p>
               </div>
             </div>
           </div>
@@ -556,13 +557,14 @@ color:#2d2d2d;}
             <div class="row d-flex justify-content-center"  >
                 <div class="col-md-7 text-center heading-section heading-section-white ftco-animate"  >
                     <h2>Subscribe to our Newsletter</h2>
-                    <p>Are you on the hunt for your dream job? Look no further! Deskano offers a vast database of job listings across diverse industries. Create a profile, upload your resume, and start browsing through opportunities that match your skills, experience, and aspirations. With our advanced search features and personalized job alerts, your next career move is just a click away</p>
+                    <p>Are you on the hunt for your dream job? Look no further! DESKANO offers a vast database of job listings across diverse industries. Create a profile, upload your resume, and start browsing through opportunities that match your skills, experience, and aspirations. With our advanced search features and personalized job alerts, your next career move is just a click away</p>
                     <div class="row d-flex justify-content-center mt-4 mb-4">
                         <div class="col-md-8">
-                            <form action="#" class="subscribe-form">
+                            <form action="subscribe.php" class="subscribe-form" method="post">
                                 <div class="form-group d-flex">
-                                    <input type="text" class="form-control" placeholder="Enter email address">
-                                    <input type="submit" value="Subscribe" class="submit px-3">
+                                <input type="text" name="NLemail" class="form-control" placeholder="Enter email address">
+                                <input type="submit" value="Subscribe" class="submit px-3">
+                                <input type="hidden" name="action" value="subscribe">
                                 </div>
                             </form>
                         </div>
@@ -582,7 +584,7 @@ color:#2d2d2d;}
         	<div class="col-md">
              <div class="ftco-footer-widget mb-4">
               <h2 class="ftco-heading-2">About</h2>
-              <p>Our mission is to empower individuals to take control of their careers and assist organizations in building exceptional teams. We pride ourselves on delivering a comprehensive job search and hiring experience that's tailored to your needs.</p>
+              <p style="text-align:justify;">Our mission is to empower individuals to take control of their careers and assist organizations in building exceptional teams. We pride ourselves on delivering a comprehensive job search and hiring experience that's tailored to your needs.</p>
               <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
                 <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
                 <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
@@ -595,10 +597,10 @@ color:#2d2d2d;}
               <h2 class="ftco-heading-2">Employers</h2>
               <ul class="list-unstyled">
                 <li><a href="#" class="py-2 d-block">How it works</a></li>
-                <li><a href="#" class="py-2 d-block">Register</a></li>
+                <li><a href="login.php" class="py-2 d-block">Register</a></li>
                 <li><a href="#" class="py-2 d-block">Post a Job</a></li>
-                <li><a href="#" class="py-2 d-block">Blog</a></li>
-                <li><a href="faq.php" class="py-2 d-block">Faq</a></li>
+                <li><a href="blogIndex.php" class="py-2 d-block">Blog</a></li>
+                <li><a href="faq.php" class="py-2 d-block">FAQs</a></li>
               </ul>
             </div>
           </div>
