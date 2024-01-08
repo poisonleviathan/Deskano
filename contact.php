@@ -288,7 +288,7 @@ iframe {
 
         <div class="footer-brand">
 
-          <a href="#" class="logo">DESKANO PLUS</a>
+          <a href="#" class="logo">DESKANO CONTACT</a>
 
           <p class="footer-text">
             If you have any question, please contact our customer support <a href="mailto:support@gmail.com"

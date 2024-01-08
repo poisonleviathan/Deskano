@@ -34,7 +34,7 @@ session_start();
   <body class="text-center">
  <!-- <div id="msg"></div> -->
     <form class="form-signin" id="admin_login" method="post" action="admin_login.php" name="admin_login">
-      <img class="mb-4" src="img/logo.png" alt="" width="102" height="102">
+      <img class="mb-4" src="./images/deskano logo.png" alt="" width="102" height="102">
       <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
 
       <label for="inputEmail" class="sr-only">Email address</label>
@@ -44,7 +44,7 @@ session_start();
       <input type="password" name="pass"  id="pass" class="form-control" placeholder="Password" required>
         <br>
       <input class="btn btn-lg btn-primary btn-block" name="submit" id="submit" type="submit" placeholder="sign in">
-      <p class="mt-5 mb-3 text-muted">&copy; 2020-2021</p>
+      <p class="mt-5 mb-3 text-muted">&copy; 2023-2024</p>
     </form>
   </body>
 </html>

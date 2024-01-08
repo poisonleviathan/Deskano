@@ -60,7 +60,7 @@ $result = $conn->query($sql);
         <ion-icon name="menu-outline" aria-hidden="true" class="menu-icon"></ion-icon>
         <ion-icon name="close-outline" aria-label="true" class="close-icon"></ion-icon>
       </button>
-      <a href="#" class="logo-learn" style="color:black; padding-left:30px;">DESKANO-SHOP</a>
+      <a href="#" class="logo-learn" style="color:black; padding-left:30px;">DESKANO-LEARN</a>
 
         <nav class="navbar" data-navbar>
             <ul class="navbar-list">
