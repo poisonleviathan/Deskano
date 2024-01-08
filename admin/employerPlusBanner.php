@@ -62,11 +62,11 @@
 
       <a href="#" class="logo"></a>
 
-      <nav class="navbar" style="margin-left:auto; margin-right:auto;" data-navbar>
+      <nav class="navbar" style="margin-left:auto; margin-right:250px;" data-navbar>
         <ul class="navbar-list">
 
           <li class="navbar-item">
-            <a style="cursor:pointer;" onclick="goBack()" class="navbar-link" data-nav-link>Back</a>
+            <a style="cursor:pointer; text-decoration:underline;" onclick="goBack()" class="navbar-link" data-nav-link>Back</a>
           </li>
 
           <script>

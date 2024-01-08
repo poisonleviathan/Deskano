@@ -118,6 +118,30 @@ $result = $conn->query($sql);
                 </a>
               </li>
 
+              <li class="nav-item">
+                <a class="nav-link" href="deskanoPlus.php">
+                <i class="fa fa-plus-circle" aria-hidden="true"></i>
+
+                 Deskano Plus
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="subscribeAdmin.php">
+                <i class="fa fa-bell" aria-hidden="true"></i>
+
+                 Subscription
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="blogAdmin.php">
+                <i class="fa fa-bell" aria-hidden="true"></i>
+
+                 Blog Members
+                </a>
+              </li>
+
             </ul>
           </div>
         </nav>

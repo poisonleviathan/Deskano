@@ -92,31 +92,31 @@
             <a href="index.php" class="navbar-link" data-nav-link>Home</a>
           </li>
 
-          <li class="navbar-item">
+          <li style="margin-left:10px; padding:10px;" class="navbar-item">
               <a href="learnguest.php" class="navbar-link" data-nav-link>Learn</a>
           </li>
 
-          <li class="navbar-item">
+          <li style="margin-left:10px; padding:10px;" class="navbar-item">
               <a href="shop.php" class="navbar-link" data-nav-link>Deskano Shop</a>
           </li>
 
-          <li class="navbar-item">
+          <li style="margin-left:10px; padding:10px;" class="navbar-item">
               <a href="plusbanner.php"class="navbar-link" data-nav-link>Deskano Plus</a>
           </li>
 
-          <li class="navbar-item">
+          <li style="margin-left:10px; padding:10px;" class="navbar-item">
               <a href="blogIndex.php" style="color:black;" class="navbar-link" data-nav-link>Blog</a>
           </li>
 
-          <li class="navbar-item">
+          <li style="margin-left:10px; padding:10px;" class="navbar-item">
             <a href="contact.php" class="navbar-link" data-nav-link>Contact</a>
           </li>
 
-          <li class="navbar-item">
+          <li style="margin-left:10px; padding:10px;" class="navbar-item">
               <a href="faq.php" class="navbar-link" data-nav-link>FAQ</a>
           </li>
 
-          <li class="navbar-item">
+          <li style="margin-left:10px; padding:10px;" class="navbar-item">
               <a href="member.php" class="navbar-link" data-nav-link>Member</a>
           </li>
 

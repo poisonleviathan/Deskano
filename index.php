@@ -494,8 +494,8 @@ color:#2d2d2d;}
                   <div><a href="blogIndex.php">Admin</a></div>
                   <div><a href="blogIndex.php" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
                 </div>
-                <h3 style="text-align:justify;" class="heading"><a href="blogIndex.php">Tech Revolution: Empowering Careers with Innovation. Explore the intersection of technology and jobs in the ever-evolving landscape of opportunities.</a></h3>
-               <p style="text-align:justify;">Dive into the dynamic fusion of technology and employment, where innovation shapes new career horizons. Discover how the tech landscape transforms professions, creating exciting avenues for skill-driven success.</p>
+                <h3 class="heading"><a href="blogIndex.php">Tech Revolution: Empowering Careers with Innovation. Explore the intersection of technology and jobs in the ever-evolving landscape of opportunities.</a></h3>
+               <p>Dive into the dynamic fusion of technology and employment, where innovation shapes new career horizons. Discover how the tech landscape transforms professions, creating exciting avenues for skill-driven success.</p>
               </div>
             </div>
           </div>
@@ -509,8 +509,8 @@ color:#2d2d2d;}
                   <div><a href="blogIndex.php">Admin</a></div>
                   <div><a href="blogIndex.php" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
                 </div>
-                <h3 style="text-align:justify;" class="heading"><a href="blogIndex.php">Future-Proof Your Career: Navigating the Tech Terrain. Unleash the potential of cutting-edge advancements in technology for a thriving professional journey.</a></h3>
-               <p style="text-align:justify;">Embark on a journey of career resilience as technology reshapes industries. Explore how staying ahead in the tech game enhances employability and fuels personal growth in an ever-changing job market.</p>
+                <h3 class="heading"><a href="blogIndex.php">Future-Proof Your Career: Navigating the Tech Terrain. Unleash the potential of cutting-edge advancements in technology for a thriving professional journey.</a></h3>
+               <p>Embark on a journey of career resilience as technology reshapes industries. Explore how staying ahead in the tech game enhances employability and fuels personal growth in an ever-changing job market.</p>
               </div>
             </div>
           </div>
@@ -524,8 +524,8 @@ color:#2d2d2d;}
                   <div><a href="blogIndex.php">Admin</a></div>
                   <div><a href="blogIndex.php" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
                 </div>
-                <h3 style="text-align:justify;" class="heading"><a href="blogIndex.php">Tech Marvels: Seamless Integration of Tech and Jobs. Explore unprecedented opportunities in the evolving landscape of technology-driven careers.</a></h3>
-               <p style="text-align:justify;">Dive into the symbiotic relationship of technology and jobs, unlocking endless possibilities in a landscape that seamlessly integrates innovation into career pathways.</p>
+                <h3 class="heading"><a href="blogIndex.php">Tech Marvels: Seamless Integration of Tech and Jobs. Explore unprecedented opportunities in the evolving landscape of technology-driven careers.</a></h3>
+               <p>Dive into the symbiotic relationship of technology and jobs, unlocking endless possibilities in a landscape that seamlessly integrates innovation into career pathways.</p>
               </div>
             </div>
           </div>
@@ -539,8 +539,8 @@ color:#2d2d2d;}
                   <div><a href="blogIndex.php">Admin</a></div>
                   <div><a href="blogIndex.php" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
                 </div>
-                <h3 style="text-align:justify;" class="heading"><a href="blogIndex.php">Job Renaissance in the Digital Era: Thriving Amidst Tech Waves. Immerse yourself in the digital revolution, where career landscapes evolve with the pulse of technology.</a></h3>
-               <p style="text-align:justify;">Embark on a journey through the digital renaissance, where jobs undergo a transformative surge. Delve into the narratives of professionals thriving amidst tech waves, reshaping the future world of work.</p>
+                <h3 class="heading"><a href="blogIndex.php">Job Renaissance in the Digital Era: Thriving Amidst Tech Waves. Immerse yourself in the digital revolution, where career landscapes evolve with the pulse of technology.</a></h3>
+               <p>Embark on a journey through the digital renaissance, where jobs undergo a transformative surge. Delve into the narratives of professionals thriving amidst tech waves, reshaping the future world of work.</p>
               </div>
             </div>
           </div>
