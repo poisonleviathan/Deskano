@@ -51,7 +51,7 @@
   <!-- 
     - primary meta tags
   -->
-  <title>Deskano - Hey, we’re DESKANO. See our thoughts, stories and ideas.</title>
+  <title>DESKANO - The Largest Job Platform</title>
   <meta name="title" content="Deskano - Hey, we’re DESKANO. See our thoughts, stories and ideas.">
   <meta name="description" content="This is a blog by Deskano">
 

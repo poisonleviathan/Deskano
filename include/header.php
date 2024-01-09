@@ -82,8 +82,8 @@ error_reporting(0);
   }
 
   .ftco-navbar-light {
-    display: block !important;
-    background: black !important;
+  
+    background: #2d2d2d !important;
   }
 
   .collapse {
@@ -116,10 +116,17 @@ error_reporting(0);
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
-<body id="body">
-    
+<body id="body" style="background-color:#2d2d2d; margin-left:20px; margin-right:20px;">
 
-  <nav class="navbar navbar-expand-lg navbar-light ftco_navbar ftco-navbar-light" id="ftco-navbar">
+
+<style>
+  .nabara{
+    border:solid 0.01px #CF9966;
+  }
+</style>
+
+<div class="nabara" style="padding-bottom:17px; border-top-style:none; padding-top:17px; border-radius:0px 0px 20px 20px;">
+  <nav style=" color:#2d2d2d; border:solid #2d2d2d;" class="navbar navbar-expand-lg navbar-light ftco_navbar ftco-navbar-light" id="ftco-navbar">
     <div class="container style="background-color: transparent;>
 
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
@@ -130,22 +137,22 @@ error_reporting(0);
 
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
-	          <li class="nav-item nav-item1 <?php if($page=='home'){echo 'active';} ?>"><a href="index.php" class="nav-link">Home</a></li>
+	          <li class="nav-item nav-item1 <?php if($page=='home'){echo 'active';} ?>"><a href="index.php" class="nav-link" style="font-size:14pt;">Home</a></li>
 	          <!-- <li class="nav-item <?php if($page=='about'){echo 'active';} ?>"><a href="about.php" class="nav-link">About</a></li> -->
 
 	          <!-- <li class="nav-item <?php if($page=='blog'){echo 'active';} ?>"><a href="blog.php" class="nav-link">Blog</a></li> -->
 	          
-            <li class="nav-item nav-item1 <?php if($page=='learn'){echo 'active';} ?>"><a href="learnguest.php" class="nav-link">Learn</a></li>
+            <li class="nav-item nav-item1 <?php if($page=='learn'){echo 'active';} ?>"><a href="learnguest.php" class="nav-link" style="font-size:14pt;">Learn</a></li>
 
-            <li class="nav-item nav-item1 <?php if($page=='shop'){echo 'active';} ?>"><a href="shop.php" class="nav-link">Deskano Shop</a></li>
+            <li class="nav-item nav-item1 <?php if($page=='shop'){echo 'active';} ?>"><a href="shop.php" class="nav-link" style="font-size:14pt;">Deskano Shop</a></li>
 
-            <li class="nav-item nav-item1 <?php if($page=='card'){echo 'active';} ?>"><a href="plusbanner.php" class="nav-link">Deskano Plus</a></li>
+            <li class="nav-item nav-item1 <?php if($page=='card'){echo 'active';} ?>"><a href="plusbanner.php" class="nav-link" style="font-size:14pt;">Deskano Plus</a></li>
 
-            <li class="nav-item nav-item1 <?php if($page=='blog'){echo 'active';} ?>"><a href="blogIndex.php" class="nav-link">Blog</a></li>
+            <li class="nav-item nav-item1 <?php if($page=='blog'){echo 'active';} ?>"><a href="blogIndex.php" class="nav-link" style="font-size:14pt;">Blog</a></li>
             
-            <li class="nav-item nav-item1 <?php if($page=='contact'){echo 'active';} ?>"><a href="contact.php" class="nav-link">Contact</a></li>
+            <li class="nav-item nav-item1 <?php if($page=='contact'){echo 'active';} ?>"><a href="contact.php" class="nav-link" style="font-size:14pt;">Contact</a></li>
 
-            <li class="nav-item nav-item1 <?php if($page=='faq'){echo 'active';} ?>"><a href="faq.php" class="nav-link">FAQ</a></li>
+            <li class="nav-item nav-item1 <?php if($page=='faq'){echo 'active';} ?>"><a href="faq.php" class="nav-link" style="font-size:14pt;">FAQ</a></li>
 
 	            <?php 
              if ( isset( $_SESSION['email'])==true) { ?>
@@ -165,7 +172,7 @@ error_reporting(0);
          </li>
               <?php
              }else{ ?>
-              <li id="login_btn" class="nav-item cta mr-md-2"><a href="login.php" class="nav-link">Login</a></li>
+              <li id="login_btn" class="nav-item cta mr-md-2"><a href="login.php" class="nav-link" style="font-size:14pt;">Login</a></li>
            
               <?php  
              }
@@ -175,4 +182,5 @@ error_reporting(0);
 	      </div>
 	    </div>
 	  </nav>
+    </div>
     <!-- END nav -->

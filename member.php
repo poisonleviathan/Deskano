@@ -16,13 +16,18 @@
             height: 100vh;
         }
 
+        .mem_form{
+            width: 50%;
+            margin-left:450px;
+            margin-right:auto;
+        }
+
         .registration-form {
             background-color: #fff; /* White Background */
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
             border-radius: 12px;
             overflow: hidden;
             width: 80%;
-            max-width: 600px;
         }
 
         .form-header {
@@ -130,12 +135,37 @@
         .modal button:hover {
             background-color: #484848; /* Darker Gray on Hover */
         }
+
+        .back-top-btn {
+            position: fixed;
+            bottom: 10px;
+            right: 20px;
+            background-color: var(--portland-orange);
+            color: var(--white);
+            font-size: 25px;
+            padding: 10px;
+            border-radius: 50%;
+            box-shadow: var(--shadow-2);
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition-1);
+            z-index: 4;
+            }
+
+            .back-top-btn.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(-10px);
+        }
     </style>
     <title>User Registration</title>
 </head>
 
 <body>
-    <form action="member.php" method="post">
+    <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+        <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+    </a>
+    <form class="mem_form" action="member.php" method="post">
         <div class="registration-form">
             <div class="form-header">
                 <h2>Register Now</h2>

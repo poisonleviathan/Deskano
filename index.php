@@ -5,7 +5,7 @@ include('include/header.php');
 ?>
   <style type="text/css">
   	.active-page {
-    background-color: #FF0000;
+    background-color: #2d2d2d;
     color: #fff;
     border-radius: 50%;
     border-color: #FF00AA;
@@ -13,13 +13,16 @@ include('include/header.php');
 
 
   </style>
-    <div class="hero-wrap js-fullheight" style="background-image: url(images/Home.png);" data-stellar-background-ratio="0.5">
+  <div style="border-radius:50px 50px 0px 0px; border-right:solid 1px #CF9966; border-left:solid 1px #CF9966;">
+
+  
+    <div class="hero-wrap js-fullheight" style=" border-right:solid 1px #CF9966; border-left:solid 1px #CF9966; background-image: url(images/homeimage.png); margin-top:20px; border-radius:50px 50px 0px 0px;" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutsters slider-text js-fullheight align-items-center justify-content-start" data-scrollax-parent="true">
           <div class="col-xl-10 ftco-animate mb-5 pb-5" data-scrollax=" properties: { translateY: '70%' }">
           	<!-- <p class="mb-4 mt-5 pt-5" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">We have <span class="number" data-number="850000">0</span> great job offers you deserve!</p> -->
-            <h1 style="font-family: 'Poppins Medium', sans-serif;" class="mb-5" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">"Connect And Thrive"</h1>
+            <h1 style="font-family: 'Poppins Medium', sans-serif;" class="mb-5" data-scrollax="properties: { translateY: '30%', opacity:1.6 }">"Connect And Thrive"</h1>
 
 						<div class="ftco-search">
 							<div class="row">
@@ -298,7 +301,7 @@ if (isset($_POST['search']) || isset($_GET['page'])) {
 
 		
    
-    <section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url(images/bg_1.jpg);" data-stellar-background-ratio="0.5">
+    <section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url(images/indexImg1.png);" data-stellar-background-ratio="0.5">
     	<div class="container">
     		<div class="row justify-content-center">
     			<div class="col-md-10">
@@ -377,7 +380,7 @@ color:#2d2d2d;}
       <div class="container" >
         <div class="row justify-content-center mb-5 pb-3">
           <div class="col-md-7 text-center heading-section ftco-animate">
-          	<span class="subheading">Testimonials</span>
+          	<span class="subheading" style="font-size:30px;">Testimonials</span>
             <h2 class="mb-4"><span>Satisfied</span> Job Seekers</h2>
           </div>
         </div>
@@ -479,8 +482,8 @@ color:#2d2d2d;}
       <div class="container "  >
         <div class="row justify-content-center mb-5 pb-3">
           <div class="col-md-7 heading-section text-center ftco-animate">
-          	<span class="subheading">Our Blog</span>
-            <h2><span>Recent</span> Blog</h2>
+          	<span class="subheading" style="font-size:30px;">Our Blog</span>
+            <h2><span>Recent</span> Blogs</h2>
           </div>
         </div>
         <div class="row d-flex">
@@ -552,7 +555,7 @@ color:#2d2d2d;}
       background-color: #CF9966;}
       </style>
     <section class="ftco-section-parallax" >
-    <div class="parallax-img d-flex align-items-center" id="newsletter">
+    <div class="parallax-img d-flex align-items-center" style="background-image: url(images/newsletter.png); object-fit:contain;" id="newsletter">
         <div class="container"  >
             <div class="row d-flex justify-content-center"  >
                 <div class="col-md-7 text-center heading-section heading-section-white ftco-animate"  >
@@ -658,7 +661,7 @@ color:#2d2d2d;}
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
-    
+  </div>
   </body>
 </html>
 <!-- <script>
