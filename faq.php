@@ -20,7 +20,7 @@
   <!-- 
     - primary meta tag
   -->
-  <title>DESKANO-PLUS</title>
+  <title>DESKANO - The Largest Job Platform</title>
   <meta name="title" content="Kitter - Hight Quality Pet Food">
   <meta name="description" content="">
 

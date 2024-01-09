@@ -20,7 +20,7 @@
   <!-- 
     - primary meta tag
   -->
-  <title>DESKANO-PLUS</title>
+  <title>DESKANO - The Largest Job Platform</title>
   <meta name="title" content="Kitter - Hight Quality Pet Food">
   <meta name="description" content="">
 
@@ -45,7 +45,7 @@
   <!-- 
     - preload images
   -->
-  <link rel="preload" as="image" href="./images/abc.png">
+  <link rel="preload" as="image" href="./images/abcdef.png">
 
 
 </head>
@@ -59,7 +59,7 @@
   <header class="header" data-header>
     <div class="container" style="float:right; padding-right: 250px;">
 
-      <a href="#" class="logo"></a>
+    <a href="#" style="color:white; padding-left:30px;" class="logo">DESKANO-CONTACT</a>
 
       <nav class="navbar" data-navbar>
         <ul class="navbar-list">
@@ -109,7 +109,7 @@
       -->
 
       <section class="section hero has-bg-image" id="home" aria-label="home"
-        style="background-image: url('./images/abcde.png')">
+        style="background-image: url('./images/abcdef.png')">
         <div class="container">
 
           <h1 class="h1 hero-title">

@@ -11,6 +11,7 @@
 }
 </style>
 
+<title>DESKANO - The Largest Job Platform</title>
   <!-- custom css link -->
   <link rel="stylesheet" href="./shop_assets/css/style.css">
   
@@ -25,14 +26,14 @@
   <!-- 
     - preload images
   -->
-  <link rel="preload" as="image" href="./shop_assets/images/hero-banner.jpg">
+  <link rel="preload" as="image" href="./shop_assets/images/shop.png">
 
   <!-- 
     - #HEADER
   -->
 
   <header class="header" data-header>
-    <div class="container">
+    <div class="container" style="float:right; padding-right: 250px;">
 
       <button class="nav-toggle-btn" aria-label="toggle manu" data-nav-toggler>
         <ion-icon name="menu-outline" aria-hidden="true" class="menu-icon"></ion-icon>
@@ -80,9 +81,6 @@
   </header>
 
 
-
-
-
   <main>
     <article>
 
@@ -91,7 +89,7 @@
       -->
 
       <section class="section hero has-bg-image" id="home" aria-label="home"
-        style="background-image: url('./shop_assets/images/hero-banner.png')">
+        style="background-image: url('./shop_assets/images/shop.png')">
         <div class="container">
 
           <h1 class="h1 hero-title">

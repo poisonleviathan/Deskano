@@ -1,10 +1,11 @@
-/*!
- * Bootstrap v4.1.0 (https://getbootstrap.com/)
- * Copyright 2011-2018 The Bootstrap Authors
- * Copyright 2011-2018 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- */
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 132deg;
+  inherits: false;
+}
  :root {
+  --card-height: 65vh;
+  --card-width: calc(var(--card-height) / 1.5);
   --blue: #007bff;
   --indigo: #6610f2;
   --purple: #6f42c1;
@@ -62,7 +63,7 @@ body {
   line-height: 1.5;
   color: #212529;
   text-align: left;
-  background-color: #fff; }
+  background-color: #2d2d2d; }
 
 [tabindex="-1"]:focus {
   outline: 0 !important; }
@@ -7262,7 +7263,7 @@ a.text-dark:hover, a.text-dark:focus {
 
 body {
   font-family: "Nunito Sans", Arial, sans-serif;
-  background: #fff;
+  background-color: #2d2d2d;
   font-size: 16px;
   line-height: 1.8;
   font-weight: 400;
@@ -7293,13 +7294,14 @@ h1, h2, h3, h4, h5,
   color: #157efb !important; }
 
 .ftco-navbar-light {
-  background: black !important;
+  /* background: black !important;
   position: absolute;
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-/*  top: 20px;*/
+  box-shadow: #cf9966 0px 1px 2px 0px,  rgba(0) 0px 1px 3px 1px;
+/*  top: 20px
   left: 0;
   right: 0;
-  z-index: 3; }
+  z-index: 3;*/
+ } 
   @media (max-width: 991.98px) {
     .ftco-navbar-light {
       background: #000000 !important;
@@ -7347,7 +7349,7 @@ h1, h2, h3, h4, h5,
       bottom: 10px;
       left: 0;
       width: 2px;
-      background: rgba(255, 255, 255, 0.05); }
+       }
       @media (max-width: 991.98px) {
         .ftco-navbar-light .navbar-nav > .nav-item.ftco-seperator:before {
           display: none; } }

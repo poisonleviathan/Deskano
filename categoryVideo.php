@@ -54,7 +54,9 @@ if (isset($_POST['search'])) {
   <!-- 
     - preload images
   -->
-  <link rel="preload" as="image" href="./images/hero-banner.png">
+  <link rel="preload" as="image" href="./images/learn.png">
+  <body style="background-image: url(images/learnVideo.png);">
+    
   <header id="top" class="header" data-header>
     <div class="container row col-md-12" id="top">
 
@@ -62,37 +64,37 @@ if (isset($_POST['search'])) {
         <ion-icon name="menu-outline" aria-hidden="true" class="menu-icon"></ion-icon>
         <ion-icon name="close-outline" aria-label="true" class="close-icon"></ion-icon>
       </button>
-      <a href="#" class="logo-learn" style="color:black; padding-left:30px;">DESKANO-SHOP</a>
+      <a href="#" class="logo-learn" style="color:white; padding-left:30px;">DESKANO-LEARN</a>
 
         <nav class="navbar" data-navbar>
             <ul class="navbar-list">
 
                 <li class="navbar-item">
-                    <a href="index.php" style="color:black;" class="navbar-link" data-nav-link>Home</a>
+                    <a href="index.php" class="navbar-link" data-nav-link>Home</a>
                 </li>    
             
                 <li class="navbar-item">
-                    <a href="learnguest.php" style="color:black;" class="navbar-link" data-nav-link>Learn</a>
+                    <a href="learnguest.php" class="navbar-link" data-nav-link>Learn</a>
                 </li>
 
                 <li class="navbar-item">
-                    <a href="shop.php" style="color:black;" class="navbar-link" data-nav-link>Deskano Shop</a>
+                    <a href="shop.php" class="navbar-link" data-nav-link>Deskano Shop</a>
                 </li>
 
                 <li class="navbar-item">
-                    <a href="plusbanner.php" style="color:black;" class="navbar-link" data-nav-link>Deskano Plus</a>
+                    <a href="plusbanner.php" class="navbar-link" data-nav-link>Deskano Plus</a>
                 </li>
 
                 <li class="navbar-item">
-                    <a href="blogIndex.php" style="color:black;" class="navbar-link" data-nav-link>Blog</a>
+                    <a href="blogIndex.php" class="navbar-link" data-nav-link>Blog</a>
                 </li>
 
                 <li class="navbar-item">
-                    <a href="contact.php" style="color:black;" class="navbar-link" data-nav-link>Contact</a>
+                    <a href="contact.php" class="navbar-link" data-nav-link>Contact</a>
                 </li>
 
                 <li class="navbar-item">
-                    <a href="faq.php" style="color:black;" class="navbar-link" data-nav-link>FAQ</a>
+                    <a href="faq.php" class="navbar-link" data-nav-link>FAQ</a>
                 </li>
             </ul>
         </nav>
@@ -105,7 +107,7 @@ if (isset($_POST['search'])) {
       <!-- 
         - #HERO
       -->
-      <section class="section hero has-bg-image" id="home" aria-label="home" style="background-image: url('./images/hero-banner.png')">
+      <section class="section hero has-bg-image" id="home" aria-label="home" style="background-image: url('./images/learn.png')">
         
         
         <div class="container">
@@ -138,12 +140,16 @@ if (isset($_POST['search'])) {
     }
 
     .ftco-search {
-        background-color: #ececec;
-        padding: 20px;
-        border-radius: 15px;
-        margin: 20px auto;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
+       padding: 20px;
+       margin: 20px auto;
+       background: rgba( 255, 255, 255, 0.25 );
+       box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+       backdrop-filter: blur( 4px );
+       -webkit-backdrop-filter: blur( 4px );
+       border-radius: 10px;
+       border: 1px solid rgba( 255, 255, 255, 0.18 );
+       
+   }
 
     .category_center{
         border-radius: 15px;
@@ -211,6 +217,10 @@ if (isset($_POST['search'])) {
             justify-content: center;
         }
         
+    }
+
+    .section-title, .card-title{
+      color:white;
     }
 </style>
 
@@ -359,6 +369,17 @@ if (isset($_POST['search'])) {
     </div>
 </div>
 
+<style>
+  .video-container{
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+</style>
+
 <?php
 $query = mysqli_query($conn, "SELECT * FROM learn WHERE TRIM(category) = '$selectedCategory'");
     // Check if there are any results
@@ -374,7 +395,7 @@ $query = mysqli_query($conn, "SELECT * FROM learn WHERE TRIM(category) = '$selec
                 <div id="msg"></div>
                 <form action="video_add.php" method="post" style="margin: 5%; padding: 3%;" enctype="multipart/form-data" name="customer_form" id="customer_form">
                     <div style="text-align: center;" class="form-group">
-                        <h3><?php echo $title?></h3>
+                        <h3 style="color:white;"><?php echo $title?></h3>
                         <video width="80%" height="50%" controls>
                             <source src="videos/<?php echo $videoFileName; ?>" type="video/mp4">
                             Your browser does not support the video tag.

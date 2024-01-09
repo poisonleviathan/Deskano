@@ -27,7 +27,7 @@ $result = $conn->query($sql);
   <!-- 
     - primary meta tag
   -->
-  <title>DESKANO-LEARN</title>
+  <title>DESKANO - The Largest Job Platform</title>
 
   <!-- 
     - favicon
@@ -50,9 +50,9 @@ $result = $conn->query($sql);
   <!-- 
     - preload images
   -->
-  <link rel="preload" as="image" href="./images/hero-banner.png">
+  <link rel="preload" as="image" href="./images/learn.png">
 
-<body id="top">
+<body id="top" style="background-image: url(images/learnVideo.png);">
   <header class="header" data-header>
     <div class="container row col-md-12" id="top">
 
@@ -60,37 +60,37 @@ $result = $conn->query($sql);
         <ion-icon name="menu-outline" aria-hidden="true" class="menu-icon"></ion-icon>
         <ion-icon name="close-outline" aria-label="true" class="close-icon"></ion-icon>
       </button>
-      <a href="#" class="logo-learn" style="color:black; padding-left:30px;">DESKANO-LEARN</a>
+      <a href="#" class="logo-learn" style="color:white; padding-left:30px;">DESKANO-LEARN</a>
 
         <nav class="navbar" data-navbar>
             <ul class="navbar-list">
 
                 <li class="navbar-item">
-                    <a href="index.php" style="color:black;" class="navbar-link" data-nav-link>Home</a>
+                    <a href="index.php" style="color:white;" class="navbar-link" data-nav-link>Home</a>
                 </li>
             
                 <li class="navbar-item">
-                    <a href="learnguest.php" style="color:black;" class="navbar-link" data-nav-link>Learn</a>
+                    <a href="learnguest.php" style="color:white;" class="navbar-link" data-nav-link>Learn</a>
                 </li>
 
                 <li class="navbar-item">
-                    <a href="shop.php" style="color:black;" class="navbar-link" data-nav-link>Deskano Shop</a>
+                    <a href="shop.php" style="color:white;" class="navbar-link" data-nav-link>Deskano Shop</a>
                 </li>
 
                 <li class="navbar-item">
-                    <a href="plusbanner.php" style="color:black;" class="navbar-link" data-nav-link>Deskano Plus</a>
+                    <a href="plusbanner.php" style="color:white;" class="navbar-link" data-nav-link>Deskano Plus</a>
                 </li>
 
                 <li class="navbar-item">
-                    <a href="blogIndex.php" style="color:black;" class="navbar-link" data-nav-link>Blog</a>
+                    <a href="blogIndex.php" style="color:white;" class="navbar-link" data-nav-link>Blog</a>
                 </li>
 
                 <li class="navbar-item">
-                    <a href="contact.php" style="color:black;" class="navbar-link" data-nav-link>Contact</a>
+                    <a href="contact.php" style="color:white;" class="navbar-link" data-nav-link>Contact</a>
                 </li>
 
                 <li class="navbar-item">
-                    <a href="faq.php" style="color:black;" class="navbar-link" data-nav-link>FAQ</a>
+                    <a href="faq.php" style="color:white;" class="navbar-link" data-nav-link>FAQ</a>
                 </li>
             </ul>
         </nav>
@@ -103,7 +103,7 @@ $result = $conn->query($sql);
       <!-- 
         - #HERO
       -->
-      <section class="section hero has-bg-image" id="home" aria-label="home" style="background-image: url('./images/hero-banner.png')">
+      <section class="section hero has-bg-image" id="home" aria-label="home" style="background-image: url('./images/learn.png')">
         
         
         <div class="container">
@@ -135,11 +135,15 @@ $result = $conn->query($sql);
     }
 
     .ftco-search {
-        background-color: #ececec;
         padding: 20px;
-        border-radius: 15px;
         margin: 20px auto;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        background: rgba( 255, 255, 255, 0.25 );
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 4px );
+        -webkit-backdrop-filter: blur( 4px );
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18 );
+        
     }
 
     .category_center{
@@ -185,9 +189,12 @@ $result = $conn->query($sql);
         width: 60%;
         padding: 3%;
         margin: 20px auto;
-        background-color: #ececec;
-        border-radius: 15px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        background: rgba( 255, 255, 255, 0.25 );
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 4px );
+        -webkit-backdrop-filter: blur( 4px );
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18 );
     }
 
     h3 {
@@ -208,6 +215,10 @@ $result = $conn->query($sql);
             justify-content: center;
         }
         
+    }
+
+    .section-title, .card-title{
+      color:white;
     }
 
 </style>
@@ -309,8 +320,10 @@ $result = $conn->query($sql);
 
       
       <h2 class="h2 section-title">
-        <span class="span">Select a Category</span>
+        <span  class="span">Select a Category</span>
       </h2>
+
+
 
 <div style="width:50%;" class="ftco-search col-md-6" id="watch">
     <div class="row col-md-6 category_center">
@@ -358,11 +371,22 @@ if ($result->num_rows > 0) {
         $title = $row['title'];
 ?>
 
-    <div class="video-container">
+<style>
+  .video-container{
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+</style>
+
+    <div class="video-container" >
         <div id="msg"></div>
-        <form action="video_add.php" method="post" style="margin: 5%; padding: 3%;" enctype="multipart/form-data" name="customer_form" id="customer_form">
+        <form action="video_add.php" method="post"  enctype="multipart/form-data" name="customer_form" id="customer_form">
             <div style="text-align: center;" class="form-group">
-                <h3 style="font-size:17pt; margin-bottom:10px;"><?php echo $title; ?></h3>
+                <h3 style="color:white;"><?php echo $title; ?></h3>
                 <video width="80%" height="50%" controls>
                     <source src="videos/<?php echo $videoFileName; ?>" type="video/mp4">
                     Your browser does not support the video tag.
