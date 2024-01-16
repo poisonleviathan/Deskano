@@ -115,7 +115,7 @@ error_reporting(0);
 	        <span class="oi oi-menu">Menu</span> 
 	      </button>
 
-        <img src="./images/deskano logo.jpg" style="width:100px; height:75px;" alt="Job Platform Logo">
+        <img src="./images/deskano logo.png" style="width:100px; height:75px;" alt="Job Platform Logo">
 
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">

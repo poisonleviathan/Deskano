@@ -10,10 +10,22 @@
     <p>
       Join Deskano today and take the next step in your career journey. Whether you're a job seeker or an employer, our platform is here to help you succeed. Sign up now and unlock a world of opportunities!<br>
     </p>
+
+    <style>
+      #sign{
+         background: rgba( 255, 255, 255, 0.25 );
+         box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+         backdrop-filter: blur( 4px );
+         -webkit-backdrop-filter: blur( 4px );
+         border-radius: 10px;
+         border: 1px solid rgba( 255, 255, 255, 0.18 );
+      }
+   </style>
+
     <div class="id_all_jobs">
          <div class="row"  >
       <div class="col-lg-6 col-sm-12 col-md-6" style="margin-bottom:  3%;">
-         <div style="box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px; padding: 40px; ">
+         <div id="sign" style="box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px; padding: 40px; ">
             <form class="form-signin" action="login.php" method="post" >
                <!-- <img class="mb-4" src="https://www.thejobsportal.co.za/sites/default/files/jobsportal.png" alt="" style="margin-left: -15%" width="372" height="122"> -->
                <h1 class="h3 mb-3 font-weight-normal">Job Seekers Sign In</h1>
@@ -26,19 +38,14 @@
                   <label for="inputPassword" class="sr-only">Password</label>
                   <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required>
                </div>
-               <!--  <div class="checkbox mb-3">
-                  <label>
-                    <input type="checkbox" value="remember-me"> Remember me
-                  </label>
-                  </div> -->
-                  <button class="btn btn-lg btn-primary btn-block"  name="submit" type="submit" >Login</button>
+               <button class="btn btn-lg btn-primary btn-block"  name="submit" type="submit" >Login</button>
                <!-- <input class="btn btn-lg btn-primary btn-block" type="submit"  name="submit" placeholder="sign in"> -->
                <a href="sign_up.php">Create a Account</a>
               </form>
          </div>
       </div>
       <div class="col-lg-6 col-sm-12 col-md-6" style="margin-bottom:  3%;">
-         <div style="box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px; padding: 40px; ">
+         <div id="sign" style="box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px; padding: 40px; ">
             <form class="form-signin" action="login.php" method="post" >
                <!--  <img class="mb-4" src="https://www.thejobsportal.co.za/sites/default/files/jobsportal.png" alt="" style="margin-left: -15%" width="372" height="122"> -->
                <h1 class="h3 mb-3 font-weight-normal">Employer Sign In</h1>
@@ -51,19 +58,14 @@
                   <label for="inputPassword" class="sr-only">Password</label>
                   <input type="password" id="inputPassword" name="employerPassword" class="form-control" placeholder="Password" required>
                </div>
-               <!--  <div class="checkbox mb-3">
-                  <label>
-                    <input type="checkbox" value="remember-me"> Remember me
-                  </label>
-                  </div> -->
-                  <button class="btn btn-lg btn-primary btn-block"  name="employersubmit" type="submit" >Login</button>
+               <button class="btn btn-lg btn-primary btn-block"  name="employersubmit" type="submit" >Login</button>
                <a href="employer_sign_up.php">Create an Account</a>
               
             </form>
          </div>
       </div>
       <div class="col-lg-6 col-sm-12 col-md-6" style="margin-left:auto; margin-right:auto; margin-bottom:  3%;">
-         <div style="box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px; padding: 40px; ">
+         <div id="sign" style="box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px; padding: 40px; ">
             <form class="form-signin" action="login.php" method="post" >
                <!--  <img class="mb-4" src="https://www.thejobsportal.co.za/sites/default/files/jobsportal.png" alt="" style="margin-left: -15%" width="372" height="122"> -->
                <h1 class="h3 mb-3 font-weight-normal">Tutor Sign In</h1>
@@ -76,12 +78,7 @@
                   <label for="inputPassword" class="sr-only">Password</label>
                   <input type="password" id="inputPassword" name="tutorPassword" class="form-control" placeholder="Password" required>
                </div>
-               <!--  <div class="checkbox mb-3">
-                  <label>
-                    <input type="checkbox" value="remember-me"> Remember me
-                  </label>
-                  </div> -->
-                  <button class="btn btn-lg btn-primary btn-block"  name="tutorsubmit" type="submit" >Login</button>
+               <button class="btn btn-lg btn-primary btn-block"  name="tutorsubmit" type="submit" >Login</button>
                <a href="tutor_sign_up.php">Create an Account</a>
               
             </form>

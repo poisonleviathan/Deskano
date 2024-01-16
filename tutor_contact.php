@@ -18,51 +18,7 @@ if (isset($_POST['submit'])) {
     $query = "INSERT INTO tutor_contact (name, email, subject, msg) VALUES ('$name', '$email', '$subject', '$msg')";
 
     if (mysqli_query($conn, $query)) {
-    //     try {
-    //         // Server settings for sending email
-    //         $mail = new PHPMailer(true);
-
-    //         // Enable verbose debug output
-    //         $mail->SMTPDebug = 0;
-
-    //         // Set mailer to use SMTP
-    //         $mail->isSMTP();
-
-    //         // Specify main and backup SMTP servers
-    //         $mail->Host = 'smtp.gmail.com';
-
-    //         // Enable SMTP authentication
-    //         $mail->SMTPAuth = true;
-
-    //         // SMTP username (your Gmail email)
-    //         $mail->Username = 'learncodezone@gmail.com';
-
-    //         // SMTP password (your Gmail password)
-    //         $mail->Password = 'ushnezokuknlhkcu';
-
-    //         // Enable TLS encryption
-    //         $mail->SMTPSecure = 'tls';
-
-    //         // TCP port to connect to
-    //         $mail->Port = 587;
-
-    //         // Sender and recipient email
-    //         $mail->setFrom('learncodezone@gmail.com', 'Learn Code Zone');
-    //         $mail->addAddress($email, $name);
-
-    //         // Email subject and body
-    //         $mail->Subject = 'Thank You for Contacting Us';
-    //         $mail->Body = 'Thank you for contacting us. We will get back to you as soon as possible.';
-
-    //         // Send the email
-    //         $mail->send();
-
-    //         echo "<script>alert('Thanks for contacting us. We will get back to you soon.')</script>";
-    //     } catch (Exception $e) {
-    //         echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
-    //     }
-    // } else {
-    //     echo "<script>alert('Error inserting data. Please try again.')</script>";
+   
     }
 }
 ?>
@@ -93,16 +49,16 @@ if (isset($_POST['submit'])) {
           <div class="col-md-6 order-md-last d-flex">
            <form action="tutor_contact.php" method="POST" class="bg-white p-5 contact-form">
               <div class="form-group">
-                <input type="text" class="form-control" name="name" placeholder="Your Name">
+                <input type="text" class="form-control" name="name" placeholder="Your Name" required>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" name="email" placeholder="Your Email">
+                <input type="text" class="form-control" name="email" placeholder="Your Email" required>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" name="subject" placeholder="Subject">
+                <input type="text" class="form-control" name="subject" placeholder="Subject" required>
               </div>
               <div class="form-group">
-                <textarea  id="" cols="30" rows="7" name="msg" class="form-control" placeholder="Message"></textarea>
+                <textarea  id="" cols="30" rows="7" name="msg" class="form-control" placeholder="Message" required></textarea>
               </div>
               <div class="form-group">
                 <input type="submit" name="submit" value="Send Message" class="btn btn-primary py-3 px-5">
