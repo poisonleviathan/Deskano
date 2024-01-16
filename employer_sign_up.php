@@ -3,12 +3,24 @@
    include('include/header.php');
    
     ?>
+
+    <style>
+      #sign{
+         background: rgba( 255, 255, 255, 0.25 );
+         box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+         backdrop-filter: blur( 4px );
+         -webkit-backdrop-filter: blur( 4px );
+         border-radius: 10px;
+         border: 1px solid rgba( 255, 255, 255, 0.18 );
+      }
+   </style>
+
     <section class="ftco-about d-md-flex"></section>
     <div class="container" style="padding-top: 8%;">
         <p>
             Join Deskano today and take the next step in your career journey. Whether you're a job seeker, an employer or a tutor, our platform is here to help you succeed. Sign up now and unlock a world of opportunities!<br>
         </p>
-        <div style=" margin-bottom: 10px;box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px; padding: 20px;">
+        <div id="sign" style=" margin-bottom: 10px;box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px; padding: 20px;">
             <div class="signup-container">
                 <form class="signup-form" action="employer_sign_up.php" method="post">
                     <h1>Employer Sign Up</h1>

@@ -40,7 +40,7 @@ $result = $conn->query($sql);
                         <div></div>
                         <h3><?php echo $title; ?></h3>
                     </div>
-                    <video width="60%" height="50%" controls>
+                    <video width="90%" height="50%" controls>
                         <source src="videos/<?php echo $videoFileName; ?>" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
