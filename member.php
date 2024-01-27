@@ -159,9 +159,47 @@
         }
     </style>
     <title>User Registration</title>
+
+      <link rel="stylesheet" href="./css/plusbanner.css">
+  
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bangers&family=Carter+One&family=Nunito+Sans:wght@400;700&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
+<header class="header" data-header>
+    <div class="container" style="float:left;">
+
+    <nav class="navbar" style="margin-left:auto; margin-right:auto;" data-navbar>
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <a style="cursor:pointer; color:black;" onclick="goBack()" class="navbar-link" data-nav-link>Back</a>
+          </li>
+
+          <script>
+            function goBack() {
+                window.history.back();
+            }
+        </script>
+
+        </ul>
+      </nav>
+
+      <button class="nav-toggle-btn" aria-label="toggle manu" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true" class="menu-icon"></ion-icon>
+        <ion-icon name="close-outline" aria-label="true" class="close-icon"></ion-icon>
+      </button>
+
+    </div>
+  </header>
     <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
         <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
     </a>

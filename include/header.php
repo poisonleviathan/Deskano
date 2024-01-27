@@ -137,7 +137,7 @@ error_reporting(0);
 
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
-	          <li class="nav-item nav-item1 <?php if($page=='home'){echo 'active';} ?>"><a href="index.php" class="nav-link" style="font-size:14pt;">Home</a></li>
+	          <li class="nav-item nav-item1 <?php if($page=='home'){echo 'active';} ?>"><a href="index.php" class="nav-link" style="font-size:14pt;">Jobs</a></li>
 	          <!-- <li class="nav-item <?php if($page=='about'){echo 'active';} ?>"><a href="about.php" class="nav-link">About</a></li> -->
 
 	          <!-- <li class="nav-item <?php if($page=='blog'){echo 'active';} ?>"><a href="blog.php" class="nav-link">Blog</a></li> -->

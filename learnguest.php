@@ -66,7 +66,7 @@ $result = $conn->query($sql);
             <ul class="navbar-list">
 
                 <li class="navbar-item">
-                    <a href="index.php" style="color:white;" class="navbar-link" data-nav-link>Home</a>
+                    <a href="index.php" style="color:white;" class="navbar-link" data-nav-link>Jobs</a>
                 </li>
             
                 <li class="navbar-item">

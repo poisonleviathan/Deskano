@@ -16,13 +16,13 @@ include('include/header.php');
   <div style="border-radius:50px 50px 0px 0px; border-right:solid 1px #CF9966; border-left:solid 1px #CF9966;">
 
   
-    <div class="hero-wrap js-fullheight" style=" border-right:solid 1px #CF9966; border-left:solid 1px #CF9966; background-image: url(images/homeimage.png); margin-top:20px; border-radius:50px 50px 0px 0px;" data-stellar-background-ratio="0.5">
+    <div class="hero-wrap js-fullheight" style=" border-right:solid 1px #CF9966; border-left:solid 1px #CF9966; background-image: url(images/homep.png); margin-top:20px; border-radius:50px 50px 0px 0px;" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutsters slider-text js-fullheight align-items-center justify-content-start" data-scrollax-parent="true">
           <div class="col-xl-10 ftco-animate mb-5 pb-5" data-scrollax=" properties: { translateY: '70%' }">
           	<!-- <p class="mb-4 mt-5 pt-5" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">We have <span class="number" data-number="850000">0</span> great job offers you deserve!</p> -->
-            <h1 style="font-family: 'Poppins Medium', sans-serif;" class="mb-5" data-scrollax="properties: { translateY: '30%', opacity:1.6 }">"Connect And Thrive"</h1>
+            <h1 style="font-family: 'Poppins Medium', sans-serif;" class="mb-5" data-scrollax="properties: { translateY: '30%', opacity:1.6 }"></h1>
 
 						<div class="ftco-search">
 							<div class="row">

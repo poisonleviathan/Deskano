@@ -1,6 +1,6 @@
 
     
-    <div class="hero-wrap js-fullheight" style="background-image: url('images/bg_2.jpg'); padding-bottom:10px;" data-stellar-background-ratio="0.5">
+    <div class="hero-wrap js-fullheight" style="border-radius: 30px; margin-top:20px; padding-top:20px; background-image: url('images/bg_2.jpg'); padding-bottom:10px;" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-start" data-scrollax-parent="true">

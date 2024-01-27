@@ -35,7 +35,7 @@ while ($row=mysqli_fetch_array($query)) {
 }
 ?>
 
-    <div class="hero-wrap js-fullheight" style="background-image: url('images/banner1.jpg');" data-stellar-background-ratio="0.5">
+    <div class="hero-wrap js-fullheight" style="border-radius: 30px; margin-top:20px; background-image: url('images/banner1.jpg');" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-start" data-scrollax-parent="true">
@@ -47,27 +47,34 @@ while ($row=mysqli_fetch_array($query)) {
       </div>
     </div>
 
+    <style>
+      .centered-h2 {
+        text-align: center;
+        color: #1A5276;
+      }
+    </style>
+
     <section class="ftco-section ftco-degree-bg">
       <div class="container-fluid"  style="margin-bottom:20px">
         <div class="row">
-            <div class="col-lg-6 col-md-6 col-sm-12 ftco-animate">
-              <h2 class="mb-3" style="color: #154360 "><td><?php echo ucfirst($title) ?></td></h2>
-              <h5 style="color: #154360 "><?php echo $city?>, <?php echo $state ?>, <?php echo $country ?></h5>
-               <div style="height: 47vh; overflow: scroll;">
+            <div class="col-lg-6 col-md-6 col-sm-12 ftco-animate" style="border-radius:10px; padding:10px; background: #ffffff">
+              <h2 class="mb-3 centered-h2"><?php echo ucfirst($title) ?></h2>
+              <h5 style="color: #1A5276"><?php echo $city?>, <?php echo $state ?>, <?php echo $country ?></h5>
+               <div style="height: 47vh; overflow-y: scroll;">
                   <p style="color: #1A5276"><?php echo ucfirst($des); ?></p>
                </div>
             </div>
 
             <div class="col-lg-6 col-md-6 col-sm-12 ftco-animate">            
                <div style="box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;">
-                <form action="apply_job.php" method="post" id="JobPortal" enctype="multipart/form-data">
+                <form action="apply_job.php" method="post" id="JobPortal" style="border-radius:10px; background: #ffffff;" enctype="multipart/form-data">
               <div style=" padding: 2%;">
                 <input type="hidden" name="job_seeker" value="<?php echo $_SESSION['email']; ?> " id="job_seeker">
                 <input type="hidden" name="id_job" value="<?php echo $id_job; ?> " id="id_job">
                 <input type="hidden" name="title" value="<?php echo $title ?> " id="title">
                <div class="row" style="margin-bottom:10px">
                   <div class="col-sm-6">
-                    <label for="" style="font-weight: bold;color: #1A5276">Enter Your First Name <span style="color:red">*</span></label>
+                    <label for="" style="font-weight: bold; color: #1A5276;">Enter Your First Name <span style="color:red">*</span></label>
                     <input type="text" class="form-control" name="first_name" id="first_name" value="<?php echo $firstname; ?> " placeholder="First Name..." required autofocus>
                   </div>
                   <div class="col-sm-6">

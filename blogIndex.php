@@ -89,7 +89,7 @@
       <ul class="navbar-list" style="display: flex; align-items: center; padding: 0;">
 
           <li class="navbar-item">
-            <a href="index.php" class="navbar-link" data-nav-link>Home</a>
+            <a href="index.php" class="navbar-link" data-nav-link>Jobs</a>
           </li>
 
           <li style="margin-left:10px; padding:10px;" class="navbar-item">
