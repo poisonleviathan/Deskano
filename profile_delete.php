@@ -4,12 +4,12 @@ include("connection/db.php");
 ?>
 <form method="post" action="">
     <div style="margin-top:30px; text-align:center;">
-        <h1>We are sorry to see you leave us...😥</h1>
-        <p style="font-size:16pt; color:black;">If you have any concerns or find anything unusual, please don't hesitate to reach out to us.</p>
+        <h1 style="color:white;">We are sorry to see you leave us...😥</h1>
+        <p style="color:white; font-size:16pt;">If you have any concerns or find anything unusual, please don't hesitate to reach out to us.</p>
         <p><a style="margin-top:20px; margin-bottom:20px;" href="contact.php" class="btn btn-primary">Contact Us</a></p>
-        <p style="font-size:16pt; margin-top:20px; color:black;">or</p>
+        <p style="color:white; font-size:16pt; margin-top:20px;">or</p>
         <input style="color:white; margin-top:20px; margin-bottom:10px;" type="submit" id="submit" placeholder="Delete Account" value="Delete Account" name="submit" class="btn btn-danger">
-        <p>Note: This action will permanently delete your account and cannot be undone.</p>
+        <p style="color:#dedede;">Note: This action will permanently delete your account and cannot be undone.</p>
         <p><a style="margin-top:20px; margin-bottom:20px; width:5%;" href="my_profile.php" class="btn btn-secondary">Back</a></p>
     </div>
 </form>

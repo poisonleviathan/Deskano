@@ -94,7 +94,7 @@
       -->
 
       <section class="section hero has-bg-image" id="home" aria-label="home"
-        style="background-image: url('./images/abcdef.png')">
+        style="background-image: url('./images/abc.png')">
         <div class="container">
 
           <h1 class="h1 hero-title">
